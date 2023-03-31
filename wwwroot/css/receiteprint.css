@@ -1,0 +1,138 @@
+﻿* {
+    font-size: 12px;
+    font-family: 'Times New Roman';
+}
+
+td,
+th,
+tr,
+table {
+    /*  border-top: 1px solid black;*/
+    border-collapse: collapse;
+    width: 100%;
+    padding-top: 10px;
+    word-break: break-word;
+}
+
+    td.description,
+    th.description, td.description span {
+        width: 75px;
+        max-width: 75px;
+        font-weight: 500;
+        font-family: Roboto Medium !important;
+        font-size: 13px;
+    }
+    td.addon,
+    th.addon, td.addon span {
+        padding-top: 2px;
+        padding-left: 20px;
+        width: 75px;
+        max-width: 75px;
+        font-weight: 500;
+        font-family: Roboto Medium !important;
+        font-size: 13px;
+        color: #0aaaaa !important;
+    }
+    td.quantity,
+    th.quantity {
+        width: 40px;
+        max-width: 40px;
+        word-break: break-all;
+    }
+
+    td.price,
+    th.price {
+        width: 40px;
+        max-width: 40px;
+        word-break: break-all;
+        font-weight: 500;
+        font-family: Roboto Medium !important;
+        font-size: 13px;
+        text-align: right;
+    }
+    td.pos_subtotal, td.pos_subtotal_price, td.pos_discount, td.pos_discount_price, td.pos_tax, td.pos_tax_price {
+        width: 75px;
+        max-width: 75px;        
+        font-family: Roboto Regular !important;
+        font-size: 13px;
+    }
+    td.pos_subtotal_price, td.pos_discount_price, td.pos_tax_price {
+        text-align: right;
+    }
+
+.centered {
+    text-align: center;
+    align-content: center;
+}
+
+.ticket {
+    width: 220px;
+    max-width: 220px;
+    padding: 5px;
+}
+
+img {
+    max-width: inherit;
+    width: inherit;
+}
+
+.customer_name, .company_N_o {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Roboto Medium !important;
+}
+.cust_phone, .cust_pin, .delivery_name {
+    font-size: 13px;
+    font-family: Roboto Regular !important;
+}
+.brd_top {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+.order_note_container {
+    width: 100%;
+    float: left;
+    background-color: #000;
+    padding: 5px;
+}
+.order_note_heading {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Roboto Medium" !important;
+    font-weight: 500 !important;
+}
+.order_note {
+    width: 100%;
+    float: left;    
+    border-right: none;
+    font-size: 13px;
+    color: #fff;
+    font-family: Roboto Regular !important;
+}
+.pB-5{
+    padding-bottom:5px
+}
+.pos_subtotal_price b {
+    font-family: "Roboto Medium" !important;
+    font-weight: 500 !important;
+    font-size:13px;
+}
+.vegan_seeds, .ord_items, .ord_item_status, .ord_items span {
+    font-size: 13px;
+    font-family: Roboto Regular !important;
+}
+@media print {
+    .hidden-print, .hidden-print * {
+        display: none !important;
+    }
+    .order_note_container {
+        width: 100%;
+        float: left;
+        background-color: #000;
+        padding: 5px;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+}

@@ -1,0 +1,9 @@
+﻿.input-group{display:block}
+.wizard-card .tab-content{padding:20px 40px}
+.m-bottom{margin-bottom:20px}
+.m-top{margin-top:20px}
+.login-button{background:#e32328;border:0;padding:6px 60px;border-radius:20px;color:#fff}
+.sign-up-text_color{color:#e32328}
+.font-weight_400{font-weight:400}
+.image-container {position: fixed;top: 0;left: 0;min-width: 100%;min-height: 100%;}
+.login-row {width: 420px !important;left: 50% !important;margin-left: -200px !important;}
