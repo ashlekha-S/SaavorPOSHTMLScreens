@@ -26,6 +26,10 @@
   <link href="wwwroot//css/toastr.css" rel="stylesheet" />
   <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
   <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
+  <!-- datepicker styles -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -191,261 +195,97 @@
     </div>
     <div id="layoutSidenav_content">
       <main>
-        <div class="container-fluid mb-5 pl-xl-2 px-2 ">
+        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
           <div class="row mt-3 ml-0">
-            <div class="col-12 col-md-9 pl-0 ">
-              <div class=" mt-4 bg-light register-type-section d-flex ">
-                <div class="meal-plan-service">
-
-                  <div class="meal-plan-upper">
-                    <div class="back-arrow"><img src="./img/arrow-left-solid.png"></div>
-                    <div class="user-info">
-                      <div>
-                        <h4>Jon Smith</h4>
-                        <p>Student</p>
-                      </div>
-                      <img src="./img/profile-img.png">
+            <div class="col-12 col-md-9 ">
+              <div class="meal-plan bg-light mt-4">
+<div class="row mb-5">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                       <div class="datepicker date input-group">
+                  <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                  </div>
+                </div> 
                     </div>
-                  </div>
-
-                  <h2 class="my-1">Meal Plan Service</h2>
-                  <table class="table-meal">
-
-                    <tbody>
-                      <tr>
-                        <td>Breakfast</td>
-                        <td class="table-cost">$10.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Lunch</td>
-                        <td class="table-cost">$10.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Supper</td>
-                        <td class="table-cost">$10.00 <button class="add-btn">Add <span>+</span></button>
-
-                      </tr>
-                    </tbody>
-
-                  </table>
-
-                  <div class=" mt-5 d-flex justify-content-between align-items-center">
-                    <h2>Item Look Up</h2>
-                    <div class="upc-input"><input type="text" value="UPC"></div>
-                  </div>
-                  <div class="search-bar mt-3"><input type="search" placeholder="Search item"> <button><svg
-                        class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa"
-                        data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                        data-fa-i2svg="">
-                        <path fill="currentColor"
-                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                        </path>
-                      </svg></button></div>
-                  <table class="table-meal mt-4">
-                    <thead class="table-head">
-                      <tr>
-                        <th colspan="2">Chips</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Doritos 1oz</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Funyuns Onions 1oz</td>
-                        <td class="table-cost">$1.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Latin Roots Tropical Taro With Sea Salt</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Lays 1oz.</td>
-                        <td class="table-cost">$2.99 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Plantain Chips 10oz</td>
-                        <td class="table-cost">$1.99 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                    </tbody>
-
-                  </table>
-                  <table class="table-meal mt-4">
-                    <thead class="table-head">
-                      <tr>
-                        <th colspan="2">Drinks</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Red Bull</td>
-                        <td class="table-cost">$5.00
-                          <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Peace Tea</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Regular Water</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>23.7oz Water</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Diet Dr. Pepper</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td>Goya Coconut Water</td>
-                        <td class="table-cost">$2.00 <button class="add-btn">Add <span>+</span></button>
-                        </td>
-
-                      </tr>
-                    </tbody>
-
-                  </table>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="datepicker date input-group ">
+                    <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                    </div>
+                  </div> 
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                        
+                    </div>
+                  
                 </div>
-                <div class="right-cart bg-light mt-5 ">
-                  <div>
-                    <h2>Cart</h2>
-                    <div class="d-flex justify-content-between">
-                      <p>Lunch</p>
-                      <p class="price">$12.00 <span><img src="./img/x.png"><span></p>
-                    </div>
-                  </div>
-                  <div class="bill-summary">
-                    <h2>Bill Summary</h2>
-                    <div class="d-flex justify-content-between">
-                      <p>Sub total</p>
-                      <p>$12.00 </p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <p>Taxes <span> <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></span></p>
-                      <p>$1.06 </p>
-                    </div>
+                
+               
+                 
+               
+                <script>
+                  var date = new Date();
+                  var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+                  $(function () {
 
-                    <div class="d-flex justify-content-between">
-                      <p class="price">Total</p>
-                      <p class="price">$12.00</p>
-                    </div>
-                   
-                  </div>
-                  <div class="mt-1as">
-                    <div class="d-flex justify-content-between">
-                      <div class="pament-btn"><input type="radio" value="cash" name="payment-type">
-                        <label class="label-btn">cash</label>
-                      </div>
-                      <div class="pament-btn"> <input type="radio" value="credit-debit" name="payment-type">
-                        <label class="label-btn">Credit/ Debit</label>
-                      </div>
-                      <div class="pament-btn"> <input type="radio" value="meal-plan" name="payment-type">
-                        <label class="label-btn">Meal Plan</label>
-                      </div>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="box-0 box">
-                      <button class="sub-red-input mt-1"  data-toggle="modal" data-target="#exampleModal">Complete</button>
-                    </div>
-                    <div class="box-1 box">
-                      <div class="card-payment mt-5">
-                        <label>
-                          <input name="pament-option" type="radio">
+                    $('.datepicker').datepicker({
+                      language: "es",
+                      autoclose: true,
+                      format: "dd/mm/yyyy",
+                      todayHighlight: true
+                    });
+                    $('.datepicker').datepicker('setDate', today);
+                  });
 
-                          <div class="d-flex align-items-center">
-                            <img src="./img/011-visa.png">
-                            <p class="ml-1">XXXX XXXX XXXX 9876<br>Visa</p>
-                          </div>
-                      </div>
-                      <div class="card-payment transition">
-                        <label>
-                          <input name="pament-option" type="radio">
+                </script>
 
-                          <div class="d-flex align-items-center">
-                            <h4 class="mt-4">Other Card</h4>
-                          </div>
-                          <input type="text" placeholder="Transaction ID">
-                        </label>
-                      </div>
-                      <button class="sub-red-input mt-3">Complete</button>
-                    </div>
-                    <div class="box-2 box">
-                      <div class="cart-amount">
-                        <p><b>Amount:</b> $1200</p>
-                        <div class="d-flex justify-content-between">
-                          <div class="left-side">
-                            <p><b>Used:</b> $700</p>
-                            <p class="available"><b>Available:</b><span class="price"> $500</span></p>
-                          </div>
-                          <div class="right-side">
-                            <p><b>Start:</b> Feb 02, </p>
-                            <p><b>End:</b> May 25, </p>
-                          </div>
-                        </div>
-
-                      </div>
-                      <button class="sub-red-input mt-3">Complete</button>
-                    </div>
-                    <script type="text/javascript">
-                      $(document).ready(function () {
-                        $('input[type="radio"]').click(function () {
-                          if ($(this).attr("value") == "cash") {
-                            $(".box").hide();
-                            $(".box-0").show();
-                          }
-                          if ($(this).attr("value") == "credit-debit") {
-                            $(".box").hide();
-                            $(".box-1").show();
-                          }
-                          if ($(this).attr("value") == "meal-plan") {
-                            $(".box").hide();
-                            $(".box-2").show();
-                          }
-                        });
-                      });
-                    </script>
-
-                  </div>
+                <div class="meal-top-section">
+                  <h2>Meal Plans</h2>
+                  <div class="meal-right"><button class="edit-btn">Edit</button><button class="add-btn"
+                      data-toggle="modal" data-target="#exampleModal">Add</button></div>
                 </div>
+                <table class="table mt-4 pt-1 meal-plan-table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Breakfast</th>
+                      <th scope="col">Lunch</th>
+                      <th scope="col">Supper</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Students</th>
+                      <td>$10</td>
+                      <td>$12</td>
+                      <td>$10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Faculty/staff</th>
+                      <td>$8</td>
+                      <td>$8</td>
+                      <td>$8</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Supper</th>
+                      <td>$12</td>
+                      <td>$12</td>
+                      <td>$12</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-
             </div>
             <div class="col-md-3 mt-4">
               <div class="right-menu bg-light">
                 <img src="./img/creat-western-dining.png">
                 <ul>
-                  <li><a href="#" class="right-nav-link">Today’s Menu</a></li>
-                  <li><a href="#" class="right-nav-link">Meal Plans</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
+                  <li><a href="./pos-meal-plans.html" class="right-nav-link ">Meal Plans</a></li>
                   <li><a href="#" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="#" class="right-nav-link">Reports</a></li>
+                  <li><a href="#" class="right-nav-link active" >Reports</a></li>
                   <li><a href="#" class="right-nav-link">End Shift</a></li>
                   <li><a href="#" class="right-nav-link">End Day</a></li>
                   <li><a href="#" class="right-nav-link">POS Settings</a></li>
@@ -456,21 +296,31 @@
       </main>
     </div>
   </div>
-  <!-- Modal -->
-<div class="modal fade complete-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body ">
-<img src="./img/icon_thankyou.png">
-<p class=" my-4 py-2">The purchase has been successfully completed.</p>
-<button type="button" class="red-btn " data-toggle="modal" data-target="#exampleModal">
-  Ok
-</button>
+  <!--Add meal Modal -->
+  <div class="modal fade add-meal-modal" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h2>Add</h2>
+          <div class="add-meal-form">
+            <form>
+              <input type="text" placeholder="Add Title">
+              <input type="text" placeholder="Breakfast Price">
+              <input type="text" placeholder="Lunch Price">
+              <input type="text" placeholder="Supper Price">
+              <input type="submit" value="Save">
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
- <!-- Modal end -->
+  <!-- Model end -->
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />
@@ -522,6 +372,10 @@
   <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
   <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
+  <!-- Datepicker -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
   <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
     <script src="wwwroot/js/toastr.min.js"></script>
     <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
