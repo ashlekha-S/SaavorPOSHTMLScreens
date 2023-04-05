@@ -58,8 +58,8 @@ body {
 .menu-type-btn:hover,
 .export-btn:hover,
 .meal-right .add-btn:hover,
-.meal-right .add-btn:hover,
-.add-meal-form input[type="submit"]:hover {
+.meal-right .add-btn:hover,.meal-right .edit-btn:hover,
+.add-meal-form input[type="submit"]:hover,  #custom-button:hover {
     color: #fff;
     text-decoration: none;
     background: #212529;
@@ -962,13 +962,271 @@ button.close {
     top: 15px;
     outline: none !important;
 }
+.pos-setting{
+    border-radius: 15px;
+}
+.pos-setting h2 {
+    font-size: 26px;
+    color: #444444;
+}
+ul.tab-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+.tab-menu-link {
+    border: 1px solid #AAAAAA;
+    padding: 5px 25px;
+    border-radius: 5px;
+    color: #495057;
+    font-size: 18px;
+    display: inline-block;
+}
+.tab-menu-link:hover {
+    background: #E32328;
+    color: #fff;
+    border-color: #E32328;
+    text-decoration: none;
+}
+.tab-menu-link.active {
+    background: #E32328;
+    color: #fff;
+    border-color: #E32328;
+}
+.pos-profile-section .card-header {
+    background: #F2F2F2;
+    border-radius: 10px !important;
+    margin-top: 20px;
+}
+.card-header h5 {
+    font-size: 20px;
+    color: #E32328 !important;
+    font-weight: 900;
+    width: 100%;
+    text-align: left;
+    text-decoration: none !important;
+    padding: 0px;
+}
+.operating-timing {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EAE8E8;
+    width: 94% ;
+    margin: auto;
+    font-size: 22px;
+    color: #444444;
+    padding: 15px 10px;
+    align-items: center;
+}
+.operating-timing p{
+    margin: 0px;
+}
+.operating-timing .open {
+    color: #20CE26;
+    font-size: 22px;
+    text-decoration: none !important;
+}
+.operating-timing .close {
+    font-size: 22px;
+    color: #B0B4B0;
+    font-weight: 400;
+    display: inline-block;
+}
+.operating-timing .close:hover {
+    color: #B0B4B0;
+}
+.email-section p {
+    font-size: 22px;
+    color: #444444;
+    margin: 0px;
+}
+#collapseTwo .card-body {
+    padding-bottom: 5px;
+}
 
+#custom-button {
+    padding: 8px 25px;
+    color: white;
+    background-color:#E32328;
+    border: 0px solid #000;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    outline: none;
+  }
+  #custom-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+  }
+  .servic-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #707070;
+    padding: 9px 15px;
+}
+.servic-type p {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444444;
+}
+.servic-type:last-child {
+    border: none;
+}
+a.aad-btn,.save-btn{
+    background: #E32328;
+    border: 0px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 83px;
+    padding: 6px;
+    outline: none !important;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none !important;
+}
+.pos-info-titel h3 {
+    font-size: 21px;
+    color: #E32328;
+    font-weight: 900;
+    margin: 0px;
+}
+.pos-info-titel {
+    background: #F2F2F2;
+    border-radius: 10px;
+    padding: 17px 20px;
+}
+.timepicker_wrapper {
+    display: none;
+}
+/* Style for the timepicker input field */
+#timepicker {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  /* Style for the timepicker wrapper */
+  .timepicker_wrapper {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    z-index: 1;
+    width: 200px;
+  }
+  
+  /* Style for the timepicker selects */
+  .timepicker_hour, .timepicker_minute, .timepicker_ampm {
+    margin-right: 8px;
+    font-size: 16px;
+    width: 50px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Style for the timepicker buttons */
+  .timepicker_cancel, .timepicker_select {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style for the timepicker select button */
+  .timepicker_select {
+    background-color: #E32328;
+  }
+  .timepicker {
+    background: url(../img/clock-solid.svg);
+    background-repeat: no-repeat;
+    height: 46px;
+    border: 1px solid #AAAAAA;
+    width: 100%;
+    background-position: right;
+    border-radius: 5px;
+    background-position-x: 97%;
+    padding: 10px 15px;
+}  
+.timepicker_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+input:checked+.slider {
+    background-color: #05BE05;
+}
+select.timepicker_hour::-webkit-scrollbar {
+    display: none;
+}
+select.timepicker_minute::-webkit-scrollbar {
+    display: none;
+}
+select.timepicker_ampm::-webkit-scrollbar {
+    display: none;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 7px;
+    bottom: 5px;
+}
+.switch {
+    height: 30px;
+}
+.open-details p {
+    font-size: 20px;
+    color: #444444;
+}
+.open-details input {
+    background-repeat: no-repeat;
+    height: 46px;
+    border: 1px solid #AAAAAA;
+    width: 100%;
+    background-position: right;
+    border-radius: 5px;
+    background-position-x: 97%;
+    padding: 10px 15px;
+}
+.bg-light {
+    background: #fff !important;
+}
+button.green-btn {
+    background: #05BE05;
+    border: 0px !important;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+.pos-setting-btn .save-btn {
+    width: 114px;
+    margin-top: 20px;
+}
+.roud-quntity {
+    width: 32px;
+}
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;
         color: #444444;
         font-weight: 700;
         font-family: 'Roboto';
+        padding: 5px;
     }
 
     .right-menu li {
@@ -979,12 +1237,18 @@ button.close {
         display: flex;
         align-items: center;
         gap: 15px;
+        justify-content: end;
     }
-
+    .right-menu {
+        height: auto;
+    }
     .table-cost .add-btn {
         padding: 8px 10px;
         width: 65px;
         margin: 0px;
+    }
+    tbody tr th, tbody tr td{
+        border: none;
     }
 
     .right-cart {
