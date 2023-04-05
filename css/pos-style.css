@@ -1089,6 +1089,122 @@ a.aad-btn,.save-btn{
     text-align: center;
     text-decoration: none !important;
 }
+.pos-info-titel h3 {
+    font-size: 21px;
+    color: #E32328;
+    font-weight: 900;
+    margin: 0px;
+}
+.pos-info-titel {
+    background: #F2F2F2;
+    border-radius: 10px;
+    padding: 17px 20px;
+}
+.timepicker_wrapper {
+    display: none;
+}
+/* Style for the timepicker input field */
+#timepicker {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  /* Style for the timepicker wrapper */
+  .timepicker_wrapper {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    z-index: 1;
+  }
+  
+  /* Style for the timepicker selects */
+  .timepicker_hour, .timepicker_minute, .timepicker_ampm {
+    margin-right: 8px;
+    font-size: 16px;
+    width: 60px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the timepicker buttons */
+  .timepicker_cancel, .timepicker_select {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style for the timepicker select button */
+  .timepicker_select {
+    background-color: #007bff;
+  }
+  .timepicker {
+    background: url(../img/clock-solid.svg);
+    background-repeat: no-repeat;
+    height: 46px;
+    border: 1px solid #AAAAAA;
+    width: 100%;
+    background-position: right;
+    border-radius: 5px;
+    background-position-x: 97%;
+    padding: 10px 15px;
+}  
+input:checked+.slider {
+    background-color: #05BE05;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 7px;
+    bottom: 5px;
+}
+.switch {
+    height: 30px;
+}
+.open-details p {
+    font-size: 20px;
+    color: #444444;
+}
+.open-details input {
+    background-repeat: no-repeat;
+    height: 46px;
+    border: 1px solid #AAAAAA;
+    width: 100%;
+    background-position: right;
+    border-radius: 5px;
+    background-position-x: 97%;
+    padding: 10px 15px;
+}
+.bg-light {
+    background: #fff !important;
+}
+button.green-btn {
+    background: #05BE05;
+    border: 0px !important;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+.pos-setting-btn .save-btn {
+    width: 114px;
+    margin-top: 20px;
+}
+.roud-quntity {
+    width: 32px;
+}
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;

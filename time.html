@@ -1,0 +1,124 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div class="timepickers-container">
+    <input type="text" class="timepicker" id="timepicker2" />
+  </div>
+  <div class="timepickers-container">
+    <input type="text" class="timepicker" id="timepicker2" />
+  </div>
+
+<style>/* Style for the timepicker input field */
+    #timepicker {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 200px;
+    }
+    
+    /* Style for the timepicker wrapper */
+    .timepicker_wrapper {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px;
+      z-index: 1;
+    }
+    
+    /* Style for the timepicker selects */
+    .timepicker_hour, .timepicker_minute, .timepicker_ampm {
+      margin-right: 8px;
+      font-size: 16px;
+      width: 60px;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    /* Style for the timepicker buttons */
+    .timepicker_cancel, .timepicker_select {
+      margin-top: 8px;
+      padding: 8px 16px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    /* Style for the timepicker select button */
+    .timepicker_select {
+      background-color: #007bff;
+    }
+    </style>
+  <script>
+
+    var c_t = "";
+
+    $(document).ready(function () {
+
+      // Get all timepicker elements
+      var timepickers = document.querySelectorAll(".timepicker");
+
+      // Loop through all timepicker elements
+      timepickers.forEach(function (timepicker) {
+        var timepickerWrapper = document.createElement("div");
+        timepickerWrapper.className = "timepicker_wrapper";
+
+        // Populate hour, minute, and am/pm options
+        var hourOptions = "";
+        for (var i = 1; i <= 12; i++) {
+          hourOptions += '<option value="' + i + '">' + i + '</option>';
+        }
+
+        var minuteOptions = "";
+        for (var i = 0; i <= 59; i++) {
+          minuteOptions += '<option value="' + i + '">' + (i < 10 ? "0" : "") + i + '</option>';
+        }
+
+        var timepickerHtml = '<select class="timepicker_hour" size="5">' + hourOptions + '</select>' +
+          '<span class="timepicker_separator">:</span>' +
+          '<select class="timepicker_minute" size="5">' + minuteOptions + '</select>' +
+          '<select class="timepicker_ampm" size="2"><option value="AM">AM</option><option value="PM">PM</option></select>' +
+          '<div class="timepicker_buttons"><button class="timepicker_cancel">Cancel</button><button class="timepicker_select">Select</button></div>';
+        timepickerWrapper.innerHTML = timepickerHtml;
+
+        timepicker.parentNode.insertBefore(timepickerWrapper, timepicker.nextSibling);
+
+        // Add event listeners to show/hide timepicker
+        timepicker.addEventListener("click", function () {
+          c_t = this;
+      
+          timepickerWrapper.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+          if (event.target !== timepicker && !timepickerWrapper.contains(event.target)) {
+            timepickerWrapper.style.display = "none";
+          }
+        });
+
+        // Add event listeners to timepicker buttons
+        timepickerWrapper.querySelector(".timepicker_cancel").addEventListener("click", function () {
+          timepickerWrapper.style.display = "none";
+        });
+
+        timepickerWrapper.querySelector(".timepicker_select").addEventListener("click", function () {
+          var hour = timepickerWrapper.querySelector(".timepicker_hour").value;
+          var minute = timepickerWrapper.querySelector(".timepicker_minute").value;
+          var ampm = timepickerWrapper.querySelector(".timepicker_ampm").value;
+
+          if (hour && minute && ampm) {
+            c_t.value = hour + ":" + minute + " " + ampm;
+            timepickerWrapper.style.display = "none";
+          }
+        });
+      });
+
+    });
+
+
+
+  </script>
