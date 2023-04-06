@@ -417,6 +417,7 @@
           var ampm = timepickerWrapper.querySelector(".timepicker_ampm").value;
 
           if (hour && minute && ampm) {
+            var minute =  minute < 10 ? '0'+minute : minute;
             c_t.value = hour + ":" + minute + " " + ampm;
             timepickerWrapper.style.display = "none";
           }
