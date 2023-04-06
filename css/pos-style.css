@@ -1220,6 +1220,20 @@ button.green-btn {
 .roud-quntity {
     width: 32px;
 }
+.btn-add-subcategory, .btn-add-dish, .btn-save-deliverydetail, .btn-add-timing {
+    font-size: 14px;
+}
+.pos-settings-meals-tabel tbody tr td {
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+}
+.pos-settings-meals-tabel label{
+    margin: 0px;
+}
+.meal-round-quntity-item {
+    font-size: 15px;
+}
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;
