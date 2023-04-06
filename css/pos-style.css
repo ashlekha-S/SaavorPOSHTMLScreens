@@ -1121,16 +1121,18 @@ a.aad-btn,.save-btn{
     border-radius: 4px;
     padding: 8px;
     z-index: 1;
+    width: 200px;
   }
   
   /* Style for the timepicker selects */
   .timepicker_hour, .timepicker_minute, .timepicker_ampm {
     margin-right: 8px;
     font-size: 16px;
-    width: 60px;
+    width: 50px;
     padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    text-align: center;
   }
   
   /* Style for the timepicker buttons */
@@ -1147,7 +1149,7 @@ a.aad-btn,.save-btn{
   
   /* Style for the timepicker select button */
   .timepicker_select {
-    background-color: #007bff;
+    background-color: #E32328;
   }
   .timepicker {
     background: url(../img/clock-solid.svg);
@@ -1160,8 +1162,21 @@ a.aad-btn,.save-btn{
     background-position-x: 97%;
     padding: 10px 15px;
 }  
+.timepicker_buttons {
+    display: flex;
+    justify-content: space-between;
+}
 input:checked+.slider {
     background-color: #05BE05;
+}
+select.timepicker_hour::-webkit-scrollbar {
+    display: none;
+}
+select.timepicker_minute::-webkit-scrollbar {
+    display: none;
+}
+select.timepicker_ampm::-webkit-scrollbar {
+    display: none;
 }
 .slider:before {
     position: absolute;
