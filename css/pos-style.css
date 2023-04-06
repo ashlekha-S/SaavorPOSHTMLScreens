@@ -89,6 +89,7 @@ body {
     width: 100%;
     min-height: 85px;
     border: 1px solid #707070;
+    padding: 8px;
 }
 
 .sub-btn-red {
@@ -1359,6 +1360,23 @@ div#pagingDiv {
     display: flex;
     align-items: center;
 }
+.end-shift .opening-input {
+    max-width: 220px !important;
+}
+.end-shift p {
+    font-size: 18px;
+    margin: 0px;
+}
+.shift-end-price {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    color: #168D88;
+}
+.end-shift .sub-btn-red {
+    padding: 10px 40px;
+}
+
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;
