@@ -58,8 +58,10 @@ body {
 .menu-type-btn:hover,
 .export-btn:hover,
 .meal-right .add-btn:hover,
-.meal-right .add-btn:hover,.meal-right .edit-btn:hover,
-.add-meal-form input[type="submit"]:hover,  #custom-button:hover {
+.meal-right .add-btn:hover,
+.meal-right .edit-btn:hover,
+.add-meal-form input[type="submit"]:hover,
+#custom-button:hover {
     color: #fff;
     text-decoration: none;
     background: #212529;
@@ -109,7 +111,7 @@ body {
     border-radius: 15px;
     text-align: center;
     padding: 33px 0px;
-    height: 459px;
+    height: 468px;
     box-shadow: 0px 3px 48px -37px;
 }
 
@@ -918,12 +920,14 @@ tbody tr td {
     width: 100%;
     border-radius: 15px;
 }
+
 .add-meal-form form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .add-meal-modal h2 {
     font-size: 33px;
     color: #444444;
@@ -948,6 +952,7 @@ tbody tr td {
 .add-meal-modal .modal-dialog {
     max-width: 635px;
 }
+
 .add-meal-form input[type="submit"] {
     background: #E32328;
     margin-top: 30px;
@@ -957,24 +962,29 @@ tbody tr td {
     padding: 8px 76px;
     color: #fff;
 }
+
 button.close {
     position: absolute;
     top: 15px;
     outline: none !important;
 }
-.pos-setting{
+
+.pos-setting {
     border-radius: 15px;
 }
+
 .pos-setting h2 {
     font-size: 26px;
     color: #444444;
 }
+
 ul.tab-menu {
     display: flex;
     list-style: none;
     padding: 0;
     gap: 15px;
 }
+
 .tab-menu-link {
     border: 1px solid #AAAAAA;
     padding: 5px 25px;
@@ -983,22 +993,26 @@ ul.tab-menu {
     font-size: 18px;
     display: inline-block;
 }
+
 .tab-menu-link:hover {
     background: #E32328;
     color: #fff;
     border-color: #E32328;
     text-decoration: none;
 }
+
 .tab-menu-link.active {
     background: #E32328;
     color: #fff;
     border-color: #E32328;
 }
+
 .pos-profile-section .card-header {
     background: #F2F2F2;
     border-radius: 10px !important;
     margin-top: 20px;
 }
+
 .card-header h5 {
     font-size: 20px;
     color: #E32328 !important;
@@ -1008,39 +1022,46 @@ ul.tab-menu {
     text-decoration: none !important;
     padding: 0px;
 }
+
 .operating-timing {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #EAE8E8;
-    width: 94% ;
+    width: 94%;
     margin: auto;
     font-size: 22px;
     color: #444444;
     padding: 15px 10px;
     align-items: center;
 }
-.operating-timing p{
+
+.operating-timing p {
     margin: 0px;
 }
+
 .operating-timing .open {
     color: #20CE26;
     font-size: 22px;
     text-decoration: none !important;
 }
+
 .operating-timing .close {
     font-size: 22px;
     color: #B0B4B0;
     font-weight: 400;
     display: inline-block;
 }
+
 .operating-timing .close:hover {
     color: #B0B4B0;
 }
+
 .email-section p {
     font-size: 22px;
     color: #444444;
     margin: 0px;
 }
+
 #collapseTwo .card-body {
     padding-bottom: 5px;
 }
@@ -1048,35 +1069,41 @@ ul.tab-menu {
 #custom-button {
     padding: 8px 25px;
     color: white;
-    background-color:#E32328;
+    background-color: #E32328;
     border: 0px solid #000;
     border-radius: 30px;
     cursor: pointer;
     font-size: 12px;
     outline: none;
-  }
-  #custom-text {
+}
+
+#custom-text {
     margin-left: 10px;
     font-family: sans-serif;
     color: #aaa;
-  }
-  .servic-type {
+}
+
+.servic-type {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #707070;
     padding: 9px 15px;
 }
+
 .servic-type p {
     margin-bottom: 0px;
     font-size: 14px;
     font-weight: 500;
     color: #444444;
 }
+
 .servic-type:last-child {
     border: none;
 }
-a.aad-btn,.save-btn{
+
+a.aad-btn,
+.save-btn {
     background: #E32328;
     border: 0px;
     color: #fff;
@@ -1089,20 +1116,24 @@ a.aad-btn,.save-btn{
     text-align: center;
     text-decoration: none !important;
 }
+
 .pos-info-titel h3 {
     font-size: 21px;
     color: #E32328;
     font-weight: 900;
     margin: 0px;
 }
+
 .pos-info-titel {
     background: #F2F2F2;
     border-radius: 10px;
     padding: 17px 20px;
 }
+
 .timepicker_wrapper {
     display: none;
 }
+
 /* Style for the timepicker input field */
 #timepicker {
     padding: 8px;
@@ -1110,10 +1141,10 @@ a.aad-btn,.save-btn{
     border-radius: 4px;
     font-size: 16px;
     width: 200px;
-  }
-  
-  /* Style for the timepicker wrapper */
-  .timepicker_wrapper {
+}
+
+/* Style for the timepicker wrapper */
+.timepicker_wrapper {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -1122,10 +1153,12 @@ a.aad-btn,.save-btn{
     padding: 8px;
     z-index: 1;
     width: 200px;
-  }
-  
-  /* Style for the timepicker selects */
-  .timepicker_hour, .timepicker_minute, .timepicker_ampm {
+}
+
+/* Style for the timepicker selects */
+.timepicker_hour,
+.timepicker_minute,
+.timepicker_ampm {
     margin-right: 8px;
     font-size: 16px;
     width: 50px;
@@ -1133,10 +1166,11 @@ a.aad-btn,.save-btn{
     border: 1px solid #ccc;
     border-radius: 4px;
     text-align: center;
-  }
-  
-  /* Style for the timepicker buttons */
-  .timepicker_cancel, .timepicker_select {
+}
+
+/* Style for the timepicker buttons */
+.timepicker_cancel,
+.timepicker_select {
     margin-top: 8px;
     padding: 8px 16px;
     background-color: #ccc;
@@ -1145,13 +1179,14 @@ a.aad-btn,.save-btn{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  /* Style for the timepicker select button */
-  .timepicker_select {
+}
+
+/* Style for the timepicker select button */
+.timepicker_select {
     background-color: #E32328;
-  }
-  .timepicker {
+}
+
+.timepicker {
     background: url(../img/clock-solid.svg);
     background-repeat: no-repeat;
     height: 46px;
@@ -1161,23 +1196,29 @@ a.aad-btn,.save-btn{
     border-radius: 5px;
     background-position-x: 97%;
     padding: 10px 15px;
-}  
+}
+
 .timepicker_buttons {
     display: flex;
     justify-content: space-between;
 }
+
 input:checked+.slider {
     background-color: #05BE05;
 }
+
 select.timepicker_hour::-webkit-scrollbar {
     display: none;
 }
+
 select.timepicker_minute::-webkit-scrollbar {
     display: none;
 }
+
 select.timepicker_ampm::-webkit-scrollbar {
     display: none;
 }
+
 .slider:before {
     position: absolute;
     content: "";
@@ -1186,13 +1227,16 @@ select.timepicker_ampm::-webkit-scrollbar {
     left: 7px;
     bottom: 5px;
 }
+
 .switch {
     height: 30px;
 }
+
 .open-details p {
     font-size: 20px;
     color: #444444;
 }
+
 .open-details input {
     background-repeat: no-repeat;
     height: 46px;
@@ -1203,9 +1247,11 @@ select.timepicker_ampm::-webkit-scrollbar {
     background-position-x: 97%;
     padding: 10px 15px;
 }
+
 .bg-light {
     background: #fff !important;
 }
+
 button.green-btn {
     background: #05BE05;
     border: 0px !important;
@@ -1213,26 +1259,105 @@ button.green-btn {
     padding: 8px 20px;
     border-radius: 8px;
 }
+
 .pos-setting-btn .save-btn {
     width: 114px;
     margin-top: 20px;
 }
+
 .roud-quntity {
     width: 32px;
 }
-.btn-add-subcategory, .btn-add-dish, .btn-save-deliverydetail, .btn-add-timing {
+
+.btn-add-subcategory,
+.btn-add-dish,
+.btn-save-deliverydetail,
+.btn-add-timing {
     font-size: 14px;
 }
+
 .pos-settings-meals-tabel tbody tr td {
     display: flex;
     align-items: center;
-    padding: 10px ;
+    padding: 10px;
 }
-.pos-settings-meals-tabel label{
+
+.pos-settings-meals-tabel label {
     margin: 0px;
 }
+
 .meal-round-quntity-item {
     font-size: 15px;
+}
+
+.row.settings-meal-add input,
+.row.settings-meal-add select {
+    height: 40px;
+    border: 1px solid #AAAAAA;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+}
+
+p.dishes-titel.mt-4 {
+    font-family: 'Roboto Regular';
+    font-size: 18px;
+    color: #444444;
+    font-weight: 600;
+}
+
+.settings-meal-table thead th {
+    color: #444444;
+    background: #F2F2F2;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.settings-meal-table tbody th {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.settings-meal-table tbody th,
+.settings-meal-table tbody td {
+    border-top: none;
+}
+
+.item-search-modal .modal-content {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.item-search-modal .modal-body {
+    padding: 40px 30px;
+
+}
+
+.item-search-modal .modal-dialog {
+    max-width: 813px;
+}
+
+.item-search-modal input[type="checkbox"] {
+    display: block;
+    width: 19px;
+    height: 19px;
+}
+
+.item-search-modal label.single-items {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    align-items: center;
+}
+.item-search-modal .search-bar {
+    height: 40px;
+}
+div#pagingDiv {
+    display: flex;
+    align-items: center;
 }
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
@@ -1253,15 +1378,19 @@ button.green-btn {
         gap: 15px;
         justify-content: end;
     }
+
     .right-menu {
         height: auto;
     }
+
     .table-cost .add-btn {
         padding: 8px 10px;
         width: 65px;
         margin: 0px;
     }
-    tbody tr th, tbody tr td{
+
+    tbody tr th,
+    tbody tr td {
         border: none;
     }
 
