@@ -102,6 +102,7 @@ body {
     border-radius: 25px;
     display: inline-block;
     border: 0;
+    outline: none !important;
 }
 
 .opening-balance-section textarea:focus-visible {
@@ -112,7 +113,7 @@ body {
     border-radius: 15px;
     text-align: center;
     padding: 33px 0px;
-    height: 468px;
+    height: 478px;
     box-shadow: 0px 3px 48px -37px;
 }
 
@@ -1376,7 +1377,41 @@ div#pagingDiv {
 .end-shift .sub-btn-red {
     padding: 10px 40px;
 }
-
+.end-day-section {
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+.end-day-section h2 {
+    font-size: 21px;
+    color: #444444;
+}
+.register-input {
+    font-size: 22px;
+    width: 150px;
+    color: #343A40;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #000;
+    outline: none;
+}
+.end-day-section {
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    width: 363px;
+}
+@media screen and (min-width: 1367px) {
+    .end-shift {
+        max-height: 482px;
+        min-height: 482px;
+    }
+    .end-shift .right-menu {
+        height:96%;
+    }
+}
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;
