@@ -186,7 +186,7 @@ a.right-nav-link:hover {
     height: 100%;
     pointer-events: none;
     font-family: 'Roboto';
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 1px;
     color: #AAAAAA;
 }
@@ -270,6 +270,7 @@ a.right-nav-link:hover {
 
 .customer-profile {
     padding: 25px;
+    border-radius: 15px;
 }
 
 .customer-profile-form {
@@ -334,11 +335,11 @@ a.right-nav-link:hover {
 .customer-profile-form input:focus+.label-name .content-name,
 .customer-profile-form input:valid+.label-name .content-name {
     transform: translateY(-100%);
-    font-size: 14px;
+    font-size: 11px;
     left: 12px;
     background: #fff;
-    top: 33px;
-    height: 22px;
+    top: 26px;
+    height: 11px;
 }
 
 .customer-profile-form input:focus+.label-name::after,
@@ -1402,6 +1403,35 @@ div#pagingDiv {
     margin: auto;
     margin-top: 60px;
     width: 363px;
+}
+.action-dropdown a{
+    color: #000;
+    text-align: center;
+}
+.action-dropdown a::after {
+display: none;
+}
+.action-dropdown .dropdown-menu.show {
+    min-width: auto;
+    padding: 0px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.action-dropdown a.dropdown-item {
+    font-size: 11px;
+    color: #444444;
+    border-bottom: 1px solid #707070;
+    background: #fff;
+}
+.action-dropdown  a.dropdown-item:last-child {
+    border-bottom: 0px;
+}
+.control-label {
+    font-size: 18px;
+}
+td.addons ul {
+    padding-left: 11px;
 }
 @media screen and (min-width: 1367px) {
     .end-shift {

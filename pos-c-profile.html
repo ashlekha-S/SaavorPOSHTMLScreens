@@ -26,10 +26,6 @@
   <link href="wwwroot//css/toastr.css" rel="stylesheet" />
   <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
   <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
-  <!-- datepicker styles -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
-
 </head>
 
 <body class="sb-nav-fixed">
@@ -55,12 +51,7 @@
         </a>
         <div id="notificationDropdownContainer" class="dropdown-menu dropdown-menu-right"
           aria-labelledby="notificationDropdown" style="
-              margin-top: -3px;
-              height: 500px;
-              overflow-x: hidden;
-              overflow-y: auto;
-              background: #fff;
-              padding: 0 20px 20px 20px;
+           margin-top: -3px; height: 500px; overflow-x: hidden; overflow-y: auto; background: #fff; padding: 0 20px 20px 20px;
             "></div>
 
         <div id="notificationsHtml" class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown"
@@ -198,84 +189,60 @@
         <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
           <div class="row mt-3 ml-0">
             <div class="col-12 col-md-9 ">
-              <div class="meal-plan bg-light mt-4">
-<div class="row mb-5">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                       <div class="datepicker date input-group">
-                  <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+              <div class=" mt-4 bg-light register-type-section d-flex align-items-center ">
+                <div class="col-md-5 p-0"><img src="./img/university.png" class="img-fluid" /></div>
+                <div class="col-md-7  ">
+                  <div class="register-type-inners">
+                    <div class="text-center">
+                      <img src="./img/concordia-logo.png">
+                    </div>
+                    <div class="pos-check-out">
+                      <form>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <select>
+                              <option value="">Customer Type</option>
+                              <option value="">Student</option>
+                              <option value="">Faculty/staff</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="floting-input">
+                              <input type="text" name="text" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  First Name (Optional)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="floting-input">
+                              <input type="text" name="text" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Last Name (Optional)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="floting-input">
+                              <input type="text" name="text" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  ID (Optional)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="submit" class="mt-5 sub-red-input" value="Submit">
+                      </form>
+                    </div>
                   </div>
-                </div> 
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                        <div class="datepicker date input-group ">
-                    <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                    </div>
-                  </div> 
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                        
-                    </div>
-                  
                 </div>
-                
-               
-                 
-               
-                <script>
-                  var date = new Date();
-                  var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                  $(function () {
-
-                    $('.datepicker').datepicker({
-                      language: "es",
-                      autoclose: true,
-                      format: "dd/mm/yyyy",
-                      todayHighlight: true
-                    });
-                    $('.datepicker').datepicker('setDate', today);
-                  });
-
-                </script>
-
-                <div class="meal-top-section">
-                  <h2>Meal Plans</h2>
-                  <div class="meal-right"><button class="edit-btn">Edit</button><button class="add-btn"
-                      data-toggle="modal" data-target="#exampleModal">Add</button></div>
-                </div>
-                <table class="table mt-4 pt-1 meal-plan-table">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">Breakfast</th>
-                      <th scope="col">Lunch</th>
-                      <th scope="col">Supper</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Students</th>
-                      <td>$10</td>
-                      <td>$12</td>
-                      <td>$10</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Faculty/staff</th>
-                      <td>$8</td>
-                      <td>$8</td>
-                      <td>$8</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Supper</th>
-                      <td>$12</td>
-                      <td>$12</td>
-                      <td>$12</td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
             </div>
             <div class="col-md-3 mt-4">
@@ -284,8 +251,8 @@
                 <ul>
                   <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
                   <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
-                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="#" class="right-nav-link active">Reports</a></li>
+                  <li><a href="./pos-c-profile.html" class="right-nav-link active">Customers Profile</a></li>
+                  <li><a href="#" class="right-nav-link">Reports</a></li>
                   <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
                   <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
                   <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
@@ -296,31 +263,6 @@
       </main>
     </div>
   </div>
-  <!--Add meal Modal -->
-  <div class="modal fade add-meal-modal" id="exampleModal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-          <h2>Add</h2>
-          <div class="add-meal-form">
-            <form>
-              <input type="text" placeholder="Add Title">
-              <input type="text" placeholder="Breakfast Price">
-              <input type="text" placeholder="Lunch Price">
-              <input type="text" placeholder="Supper Price">
-              <input type="submit" value="Save">
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Model end -->
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />
@@ -372,10 +314,6 @@
   <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
   <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
-  <!-- Datepicker -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
   <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
     <script src="wwwroot/js/toastr.min.js"></script>
     <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
