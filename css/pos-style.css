@@ -157,77 +157,6 @@ a.right-nav-link:hover {
     background: transparent;
 }
 
-.floting-input {
-    position: relative;
-    height: 60px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.floting-input input {
-    width: 100%;
-    color: #000;
-    border: none;
-    border-bottom: 1px solid #AAAAAA;
-    padding: 5px 5px;
-    font-family: 'Roboto';
-    font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    box-shadow: none !important;
-    background: transparent;
-}
-
-.floting-input label {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    font-family: 'Roboto';
-    font-size: 13px;
-    margin-bottom: 1px;
-    color: #AAAAAA;
-}
-
-.floting-input label::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px solid #f44336;
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
-}
-
-.floting-input .content-name {
-    position: absolute;
-    bottom: 0px;
-    left: 6px;
-    padding-bottom: 5px;
-    transition: all 0.3s ease;
-}
-
-.floting-input input:focus {
-    outline: none;
-}
-
-.floting-input input:focus+.label-name .content-name,
-.floting-input input:valid+.label-name .content-name {
-    transform: translateY(-100%);
-    font-size: 12px;
-    left: 0px;
-    color: #f44336;
-}
-
-.floting-input input:focus+.label-name::after,
-.floting-input input:valid+.label-name::after {
-    transform: translateX(0%);
-}
-
 .sub-red-input {
     width: 100%;
     background: #E32328;
@@ -1432,6 +1361,34 @@ display: none;
 }
 td.addons ul {
     padding-left: 11px;
+}
+.floting-input .form-control~.form-notch div {
+    border: 0px !important;
+    border-bottom: 1px solid #AAAAAA !important;
+
+}
+.floting-input .form-notch-leading,
+.floting-input .form-notch-trailing {
+    border-radius: 0px !important;
+}
+
+.form-outline.floting-input {
+    margin-top: 25px;
+}
+.floting-input .form-control:focus~.form-notch .form-notch-trailing,
+.floting-input .form-control:focus~.form-notch .form-notch-leading,
+.floting-input .form-control:focus~.form-notch .form-notch-middle {
+    border-color: red !important;
+    box-shadow: none !important;
+}
+.floting-input.form-outline .form-control~.form-label {
+    top: 5px;
+    color: #AAAAAA !important;
+    font-size: 13px;
+    left: 5px;
+}
+.floting-input .form-control.active~.form-label, .floting-input .form-control:focus~.form-label {
+    transform: translateY(-1.5rem) translateY(0rem) scale(1) !important;
 }
 @media screen and (min-width: 1367px) {
     .end-shift {
