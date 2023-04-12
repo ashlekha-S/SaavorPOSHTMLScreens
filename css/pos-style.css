@@ -61,7 +61,8 @@ body {
 .meal-right .add-btn:hover,
 .meal-right .edit-btn:hover,
 .add-meal-form input[type="submit"]:hover,
-#custom-button:hover {
+#custom-button:hover,
+.red-btn:hover {
     color: #fff;
     text-decoration: none;
     background: #212529;
@@ -1284,38 +1285,47 @@ p.dishes-titel.mt-4 {
     margin: 0;
     align-items: center;
 }
+
 .item-search-modal .search-bar {
     height: 40px;
 }
+
 div#pagingDiv {
     display: flex;
     align-items: center;
 }
+
 .end-shift .opening-input {
     max-width: 220px !important;
 }
+
 .end-shift p {
     font-size: 18px;
     margin: 0px;
 }
+
 .shift-end-price {
     font-size: 34px;
     font-weight: 600;
     text-align: center;
     color: #168D88;
 }
+
 .end-shift .sub-btn-red {
     padding: 10px 40px;
 }
+
 .end-day-section {
     text-align: center;
     margin: auto;
     margin-top: 60px;
 }
+
 .end-day-section h2 {
     font-size: 21px;
     color: #444444;
 }
+
 .register-input {
     font-size: 22px;
     width: 150px;
@@ -1327,19 +1337,23 @@ div#pagingDiv {
     border: 1px solid #000;
     outline: none;
 }
+
 .end-day-section {
     text-align: center;
     margin: auto;
     margin-top: 60px;
     width: 363px;
 }
-.action-dropdown a{
+
+.action-dropdown a {
     color: #000;
     text-align: center;
 }
+
 .action-dropdown a::after {
-display: none;
+    display: none;
 }
+
 .action-dropdown .dropdown-menu.show {
     min-width: auto;
     padding: 0px;
@@ -1347,26 +1361,32 @@ display: none;
     border-radius: 5px;
     overflow: hidden;
 }
+
 .action-dropdown a.dropdown-item {
     font-size: 11px;
     color: #444444;
     border-bottom: 1px solid #707070;
     background: #fff;
 }
-.action-dropdown  a.dropdown-item:last-child {
+
+.action-dropdown a.dropdown-item:last-child {
     border-bottom: 0px;
 }
+
 .control-label {
     font-size: 18px;
 }
+
 td.addons ul {
     padding-left: 11px;
 }
+
 .floting-input .form-control~.form-notch div {
     border: 0px !important;
     border-bottom: 1px solid #AAAAAA !important;
 
 }
+
 .floting-input .form-notch-leading,
 .floting-input .form-notch-trailing {
     border-radius: 0px !important;
@@ -1375,30 +1395,201 @@ td.addons ul {
 .form-outline.floting-input {
     margin-top: 25px;
 }
+
 .floting-input .form-control:focus~.form-notch .form-notch-trailing,
 .floting-input .form-control:focus~.form-notch .form-notch-leading,
 .floting-input .form-control:focus~.form-notch .form-notch-middle {
     border-color: red !important;
     box-shadow: none !important;
 }
+
 .floting-input.form-outline .form-control~.form-label {
     top: 5px;
     color: #AAAAAA !important;
     font-size: 13px;
     left: 5px;
 }
-.floting-input .form-control.active~.form-label, .floting-input .form-control:focus~.form-label {
+
+.floting-input .form-control.active~.form-label,
+.floting-input .form-control:focus~.form-label {
     transform: translateY(-1.5rem) translateY(0rem) scale(1) !important;
 }
+
+.pos-reports {
+    border-radius: 15px;
+    padding: 38px 20px 80px;
+}
+
+.pos-reports-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 23px;
+    padding-left: 32px;
+}
+
+.pos-reports-nav-link {
+    border: 1px solid #AAAAAA;
+    padding: 6px 31px;
+    border-radius: 5px;
+
+}
+
+.pos-reports-nav-link {
+    font-size: 18px;
+    color: #495057 !important;
+    text-decoration: none !important;
+}
+
+.pos-reports-nav .active {
+    background: #E32328;
+    border-color: #E32328;
+    color: #fff !important;
+}
+
+.search-filter-section select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    font-size: 11px;
+    outline: none;
+    color: #666666;
+}
+
+.search-filter-section input#fecha1 {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    font-size: 11px;
+    outline: none;
+    color: #666666;
+}
+
+.search-filter-section .input-group-append {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    overflow: overlay;
+}
+
+.search-filter-section span.input-group-text {
+    padding: 9px;
+    font-size: 12px;
+    height: 100%;
+    border: none;
+}
+
+.red-btn {
+    background: #E32328;
+    border: 0px;
+    color: #fff;
+    height: 29px;
+    border-radius: 30px;
+    font-size: 13px;
+    min-width: 93px;
+    outline: none !important;
+}
+
+.search-filter-section {
+    width: 95%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.export-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fromto-date {
+    font-size: 15px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.export-section button.export-btn {
+    border-radius: 30px;
+    padding: 6px 17px;
+    font-size: 13px;
+}
+
+.export-section.export-btn img {
+    margin-right: 5px;
+    height: 18px;
+}
+
+.pos-report-table thead tr th {
+    font-size: 13px;
+}
+
+.pos-report-table tbody tr td {
+    font-size: 13px;
+}
+
+.pos-report-table tbody tr td {
+    border: 0px;
+}
+
+.pos-report-table tbody tr {
+    border-bottom: 1px solid #707070;
+}
+
+.pos-report-table tbody tr:last-child {
+    border-bottom: 0px;
+}
+
+.table-box {
+    padding-bottom: 70px;
+    box-shadow: 0px 3px 48px -37px;
+}
+
+.datepicker-orient-bottom {
+    min-width: 10px;
+}
+
+.Customer-filter-section {
+    margin-top: 20px;
+}
+
+.large-data tbody tr td {
+    border: 0px;
+    padding: 5PX;
+}
+
+.search-input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #AAAAAA;
+    height: 33px;
+    font-size: 13px;
+    padding: 0px 15px;
+    outline: none;
+}
+
+.pos-report-table-customers .action {
+    width: 10%;
+}
+
+.pos-report-table-customers thead tr th {
+    font-size: 13px;
+    width: 30%;
+}
+
 @media screen and (min-width: 1367px) {
     .end-shift {
         max-height: 482px;
         min-height: 482px;
     }
+
     .end-shift .right-menu {
-        height:96%;
+        height: 96%;
     }
 }
+
 @media screen and (max-width: 1000px) {
     a.right-nav-link {
         font-size: 16px;

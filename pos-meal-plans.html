@@ -197,9 +197,10 @@
               <div class="meal-plan bg-light mt-4">
                 <div class="meal-top-section">
                   <h2>Meal Plans</h2>
-                  <div class="meal-right"><button class="edit-btn">Edit</button><button class="add-btn" data-toggle="modal" data-target="#exampleModal">Add</button></div>
+                  <div class="meal-right"><button class="edit-btn">Edit</button><button class="add-btn"
+                      data-toggle="modal" data-target="#exampleModal">Add</button></div>
                 </div>
-                <table class="table mt-4 pt-1 meal-plan-table" >
+                <table class="table mt-4 pt-1 meal-plan-table">
                   <thead>
                     <tr>
                       <th scope="col"></th>
@@ -250,28 +251,30 @@
     </div>
   </div>
   <!--Add meal Modal -->
-<div class="modal fade add-meal-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h2>Add</h2>
-        <div class="add-meal-form">
-        <form>
-          <input type="text" placeholder="Add Title">
-          <input type="text" placeholder="Breakfast Price">
-          <input type="text" placeholder="Lunch Price">
-          <input type="text" placeholder="Supper Price">
-          <input type="submit" value="Save">
-        </form>
+  <div class="modal fade add-meal-modal" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h2>Add</h2>
+          <div class="add-meal-form">
+            <form>
+              <input type="text" placeholder="Add Title">
+              <input type="text" placeholder="Breakfast Price">
+              <input type="text" placeholder="Lunch Price">
+              <input type="text" placeholder="Supper Price">
+              <input type="submit" value="Save">
+            </form>
+          </div>
         </div>
+
       </div>
-     
     </div>
   </div>
-</div>
-<!-- Model end -->
+  <!-- Model end -->
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />

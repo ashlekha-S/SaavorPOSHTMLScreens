@@ -203,21 +203,16 @@
                   <div>
                     <div class="pos-reports-nav">
                       <ul>
-                        <li><a class="pos-reports-nav-link active"
-                            href="./pos-report-transaction-orders.html">Transaction</a></li>
-                        <li><a class="pos-reports-nav-link " href="./pos-report-customers.html">Customers</a></li>
+                        <li><a class="pos-reports-nav-link " href="./pos-report-transaction-orders.html">Transaction</a></li>
+                        <li><a class="pos-reports-nav-link active" href="./pos-report-customers.html">Customers</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
-
-                <div class="row mb-4 justify-content-center search-filter-section">
+              
+                <div class="row mb-4 justify-content-center search-filter-section Customer-filter-section ">
                   <div class="col-12 col-md-6 col-lg-3 col-xl-3 pr-0">
-                    <select name="" id="">
-                      <option value="">Orders</option>
-                      <option value="">Shift Based Transactions</option>
-                      <option value="">End of Day Transactions</option>
-                    </select>
+                   
                   </div>
                   <div class="col-12 col-md-6 col-lg-3 col-xl-3 pr-0">
                     <div class="datepicker date input-group">
@@ -254,66 +249,92 @@
                   });
 
                 </script>
-                <div class="export-section">
-                  <div class="fromto-date">From 12-07-2022 to 02-24-2023</div>
-                  <div><button class="export-btn"><img src="./img/export-icon.png">Export</button></div>
-                </div>
-                <div class="table-box">
-                  <table class="table mt-4 pt-1 pos-report-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Order ID</th>
-                        <th scope="col">Order Date</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">User Email</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                      <tr>
-                        <td>9NOVJ4</td>
-                        <td>09-Mar-2023 07:33 PM</td>
-                        <td>Jon smith</td>
-                        <td>jon_smith5328@amda.edu </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div id="pagingDiv" class="float-right   mr-3"><span class="disableLink"><span
-                        class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a
-                      href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#"
-                      class="activeLink">4</a><a href="#" class="activeLink"><span
-                        class="material-icons">keyboard_arrow_right</span></a></div>
+                <div class="col-md-12">
+                  <input type="search" placeholder="Search by Name or ID" class="search-input mb-4 mt-1">
+                  <div>
+<div class="export-section"><div class="fromto-date">From 12-07-2022 to 02-24-2023</div>
+<div><button class="export-btn"><img src="./img/export-icon.png">Export</button></div></div>
+<div class="table-box">
+                <table class="table mt-4 pt-1 pos-report-table pos-report-table-customers">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Balance</th>
+                      <th scope="col">Date</th>
+                      <th scope="col" class="action">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="./img/no_user-img.png" class="mr-2">Nelly Lozano</td>
+                      <td>$130</td>
+                      <td>12-07-2022</td>
+                      <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="13.515" height="13.514" viewBox="0 0 13.515 13.514">
+                        <path id="icone" d="M14.757,8a6.757,6.757,0,1,0,6.757,6.757A6.758,6.758,0,0,0,14.757,8Zm0,3a1.144,1.144,0,1,1-1.144,1.144A1.144,1.144,0,0,1,14.757,11Zm1.526,6.921a.327.327,0,0,1-.327.327h-2.4a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327h.327V15.193h-.327a.327.327,0,0,1-.327-.327v-.654a.327.327,0,0,1,.327-.327H15.3a.327.327,0,0,1,.327.327v2.725h.327a.327.327,0,0,1,.327.327Z" transform="translate(-8 -8)"/>
+                      </svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div id="pagingDiv" class="float-right   mr-3"><span class="disableLink"><span class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#" class="activeLink">4</a><a href="#" class="activeLink"><span class="material-icons">keyboard_arrow_right</span></a></div>
                 </div>
               </div>
+            </div>
+            </div>
             </div>
             <div class="col-md-3 mt-4">
               <div class="right-menu bg-light">
