@@ -1578,7 +1578,23 @@ td.addons ul {
     font-size: 13px;
     width: 30%;
 }
-
+.info-user-img {
+    border: 1px solid #707070;
+    width: 188px;
+}
+.user-info {
+    width: 32%;
+}
+.customers-info h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+.customers-info p {
+    font-size: 14px;
+    text-align: left;
+    line-height: 25px;
+}
 @media screen and (min-width: 1367px) {
     .end-shift {
         max-height: 482px;
@@ -1653,5 +1669,11 @@ td.addons ul {
         padding: 0px 10px;
         font-size: 25px;
         margin-bottom: 13px;
+    }
+    .Customer-filter-section .col-12.col-md-6.col-lg-3:first-child {
+        display: none;
+    }
+    .pos-report-table-customers thead tr th {
+        width: auto;
     }
 }

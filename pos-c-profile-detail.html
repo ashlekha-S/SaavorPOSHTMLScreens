@@ -1,517 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard: Saavor</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <script src="wwwroot//js/sources/jquery-3.2.1.slim.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-    <link href="wwwroot/css/dashboard.css?v=V01.01245" rel="stylesheet" />
-    <link href="wwwroot/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
-    <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
-    <link href="./css/pos-style.css" rel="stylesheet" />
-   
-    <style>
-      #layoutSidenav_nav img {
-        padding: 10px;
-      }
-    </style>
-    <link href="wwwroot//css/toastr.css" rel="stylesheet" />
-    <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
-    <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
-  </head>
-  <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand bg-white" href="index.html"
-        ><img src="wwwroot/images/logo.png"
-      /></a>
-      <button
-        class="btn btn-link btn-sm order-1 order-lg-0"
-        id="sidebarToggle"
-        href="#"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="text-white ml-4 roboto-regular font-size-15 kitchen_name">
-        <span class="roboto-regular font-size-15"> Manik Kitchen</span>
-      </div>
-      <!-- Navbar Search-->
-      <div
-        class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
-      ></div>
-      <!-- Navbar-->
-      <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="badge_notification dropdown">
-          <a
-            class="notification"
-            id="notificationDropdown"
-            href="#"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span class="material-icons float-left color-black">
-              notifications
-            </span>
-            <span class="badge" id="pdOc">0</span>
-          </a>
-          <div
-            id="notificationDropdownContainer"
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="notificationDropdown"
-            style="
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard: Saavor</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <script src="wwwroot//js/sources/jquery-3.2.1.slim.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+  <link href="wwwroot/css/dashboard.css?v=V01.01245" rel="stylesheet" />
+  <link href="wwwroot/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+  <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
+  <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
+  <link href="./css/pos-style.css" rel="stylesheet" />
+
+  <style>
+    #layoutSidenav_nav img {
+      padding: 10px;
+    }
+  </style>
+  <link href="wwwroot//css/toastr.css" rel="stylesheet" />
+  <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
+  <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
+</head>
+
+<body class="sb-nav-fixed">
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand bg-white" href="index.html"><img src="wwwroot/images/logo.png" /></a>
+    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="text-white ml-4 roboto-regular font-size-15 kitchen_name">
+      <span class="roboto-regular font-size-15"> Manik Kitchen</span>
+    </div>
+    <!-- Navbar Search-->
+    <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></div>
+    <!-- Navbar-->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="badge_notification dropdown">
+        <a class="notification" id="notificationDropdown" href="#" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="material-icons float-left color-black">
+            notifications
+          </span>
+          <span class="badge" id="pdOc">0</span>
+        </a>
+        <div id="notificationDropdownContainer" class="dropdown-menu dropdown-menu-right"
+          aria-labelledby="notificationDropdown" style="
               margin-top: -3px;
               height: 500px;
               overflow-x: hidden;
               overflow-y: auto;
               background: #fff;
               padding: 0 20px 20px 20px;
-            "
-          ></div>
+            "></div>
 
-          <div
-            id="notificationsHtml"
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="notificationDropdown"
-            style="margin-top: -3px"
-          >
-            <div class="row">
-              <div class="col-12 p-2">
-                <span
-                  action="/orders/new"
-                  style="
+        <div id="notificationsHtml" class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown"
+          style="margin-top: -3px">
+          <div class="row">
+            <div class="col-12 p-2">
+              <span action="/orders/new" style="
                     word-break: break-word;
                     cursor: pointer;
                     width: 100%;
                     float: left;
-                  "
-                  class="p-orders"
-                  onclick="RedirectToOrders(this)"
-                >
-                  <span
-                    class="w-100 float-left roboto-bold font-size-14 color-black"
-                    >Order ID: $T.orderNumber -
-                    <span class="roboto-regular font-size-14 color-black"
-                      >New Order recieved from $T.userName</span
-                    ></span
-                  >
-                </span>
-              </div>
-            </div>
-            <div class="dropdown-divider"></div>
-          </div>
-        </li>
-        <li class="nav-item dropdown user-profile-dropdonw">
-          <a
-            class="nav-link"
-            id="userDropdown"
-            href="#"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span class="material-icons float-left color-black">
-              person_outline
-            </span>
-            <span class="float-left color-white mt-1 ml-3"> Maniks Lakhi </span>
-            <span class="material-icons bg-trans color-white">
-              expand_more
-            </span>
-          </a>
-          <div
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="userDropdown"
-          >
-            <div class="row">
-              <div class="col-12 text-center p-2">
-                <span class="dropdown_user-name float-left w-100"
-                  >Maniks Lakhi</span
-                >
-                <span
-                  class="dropdown_business-name float-left w-100 font-size-15"
-                >
-                  dil se foodies
-                </span>
-              </div>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="row">
-              <div class="col-12 text-center p-2">
-                <a class="dropdown_sign-out color-theme" href="/auth/signout"
-                  >Sign out</a
-                >
-              </div>
+                  " class="p-orders" onclick="RedirectToOrders(this)">
+                <span class="w-100 float-left roboto-bold font-size-14 color-black">Order ID: $T.orderNumber -
+                  <span class="roboto-regular font-size-14 color-black">New Order recieved from
+                    $T.userName</span></span>
+              </span>
             </div>
           </div>
-        </li>
-      </ul>
-    </nav>
-    <div id="layoutSidenav">
-      <div id="layoutSidenav_nav">
-        <img src="wwwroot/images/logo.png" />
-        <nav class="sb-sidenav accordion" id="sidenavAccordion">
-          <div class="sb-sidenav-menu">
-            <div class="nav">
-              <a
-                class="nav-link dashboard_"
-                href="#"
-                >Dashboard</a
-              >
-              <a
-              class="nav-link active"
-              href="#"
-              >POS</a>
-              <a
-                class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
-                href="#manageKitchen"
-                data-toggle="collapse"
-                data-target="#manageKitchen"
-              >
-                <span class="d-none_ d-sm-inline">Manage Kitchen</span>
-                <div class="sb-sidenav-collapse-arrow float-right">
-                  <span class="material-icons">expand_more</span>
-                </div>
-              </a>
-              <div class="collapse" id="manageKitchen" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action groupCode"
-                      href="/manage/groupcode"
-                      ><span>Group Code</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action kitchenConfiguration"
-                      href="/manage/kitchen"
-                      ><span>Kitchen Configuration</span></a
-                    >
-                  </li>
-                </ul>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown user-profile-dropdonw">
+        <a class="nav-link" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="material-icons float-left color-black">
+            person_outline
+          </span>
+          <span class="float-left color-white mt-1 ml-3"> Maniks Lakhi </span>
+          <span class="material-icons bg-trans color-white">
+            expand_more
+          </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <div class="row">
+            <div class="col-12 text-center p-2">
+              <span class="dropdown_user-name float-left w-100">Maniks Lakhi</span>
+              <span class="dropdown_business-name float-left w-100 font-size-15">
+                dil se foodies
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="row">
+            <div class="col-12 text-center p-2">
+              <a class="dropdown_sign-out color-theme" href="/auth/signout">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <img src="wwwroot/images/logo.png" />
+      <nav class="sb-sidenav accordion" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <a class="nav-link dashboard_" href="#">Dashboard</a>
+            <a class="nav-link active" href="#">POS</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
+              href="#manageKitchen" data-toggle="collapse" data-target="#manageKitchen">
+              <span class="d-none_ d-sm-inline">Manage Kitchen</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
               </div>
-              <a
-                class="nav-link manage_users"
-                href="/kitchendashboard/manageusers"
-                >Manage Users</a
-              >
-              <a class="nav-link manage_orders" href="/orders/new"
-                >Manage Orders</a
-              >
-              <a class="nav-link refunds" href="/refund">Manage Refunds</a>
-              <a class="nav-link messages" href="/messages">Messages</a>
-              <a
-                class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_reports"
-                href="#managereport"
-                data-toggle="collapse"
-                data-target="#managereport"
-              >
-                <span class="d-none_ d-sm-inline">Manage Reports</span>
-                <div class="sb-sidenav-collapse-arrow float-right">
-                  <span class="material-icons">expand_more</span>
-                </div>
-              </a>
-              <div class="collapse" id="managereport" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                  <li>
-                    <a
-                      class="list-group-item list-group-item-action collapsed text-truncate nav-link financial_reports"
-                      href="#financialreport"
-                      data-toggle="collapse"
-                      data-target="#financialreport"
-                    >
-                      <span class="d-none_ d-sm-inline">Financial Reports</span>
-                      <div class="sb-sidenav-collapse-arrow float-right">
-                        <span class="material-icons">expand_more</span>
-                      </div>
-                    </a>
-                    <div
-                      class="collapse"
-                      id="financialreport"
-                      aria-expanded="false"
-                    >
-                      <ul class="flex-column pl-2 nav">
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports_school"
-                            href="/report/financial/school"
-                            ><span>Meal Plan</span></a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports_saavor"
-                            href="/report/financial/saavor"
-                            ><span>Credit/ Debit</span></a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports"
-                            href="/report/financial"
-                            ><span>Summary</span></a
-                          >
-                        </li>
-                      </ul>
+            </a>
+            <div class="collapse" id="manageKitchen" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action groupCode" href="/manage/groupcode"><span>Group
+                      Code</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Kitchen Configuration</span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="nav-link manage_users" href="/kitchendashboard/manageusers">Manage Users</a>
+            <a class="nav-link manage_orders" href="/orders/new">Manage Orders</a>
+            <a class="nav-link refunds" href="/refund">Manage Refunds</a>
+            <a class="nav-link messages" href="/messages">Messages</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_reports"
+              href="#managereport" data-toggle="collapse" data-target="#managereport">
+              <span class="d-none_ d-sm-inline">Manage Reports</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </a>
+            <div class="collapse" id="managereport" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li>
+                  <a class="list-group-item list-group-item-action collapsed text-truncate nav-link financial_reports"
+                    href="#financialreport" data-toggle="collapse" data-target="#financialreport">
+                    <span class="d-none_ d-sm-inline">Financial Reports</span>
+                    <div class="sb-sidenav-collapse-arrow float-right">
+                      <span class="material-icons">expand_more</span>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action managereports"
-                      href="/report/order"
-                      ><span>Order Reports</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action manage_users_data"
-                      href="/report/userdata"
-                      >User's Report</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <a
-                class="nav-link reviewfeedbacks"
-                href="/kitchendashboard/reviewfeedbacks"
-                >Review</a
-              >
-              <a class="nav-link left-side--signout" href="/auth/signout"
-                >Sign out</a
-              >
+                  </a>
+                  <div class="collapse" id="financialreport" aria-expanded="false">
+                    <ul class="flex-column pl-2 nav">
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports_school"
+                          href="/report/financial/school"><span>Meal Plan</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports_saavor"
+                          href="/report/financial/saavor"><span>Credit/ Debit</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports"
+                          href="/report/financial"><span>Summary</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action managereports" href="/report/order"><span>Order
+                      Reports</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action manage_users_data" href="/report/userdata">User's
+                    Report</a>
+                </li>
+              </ul>
             </div>
+            <a class="nav-link reviewfeedbacks" href="/kitchendashboard/reviewfeedbacks">Review</a>
+            <a class="nav-link left-side--signout" href="/auth/signout">Sign out</a>
           </div>
-        </nav>
-      </div>
-      <div id="layoutSidenav_content">
-        <main>
-          <div class="container-fluid mb-5 pl-xl-2 pl-sm-0 ">
-            <div class="row mt-3 ml-0">
+        </div>
+      </nav>
+    </div>
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0 ">
+          <div class="row mt-3 ml-0">
             <div class="col-12 col-md-9 ">
-            <div class=" mt-4  align-items-center ">
-             <div class="customer-profile bg-light">
-              <div class="customer-profile-top">
-                <a class="back-btn"><img src="./img/arrow-left-solid.png"></a>
-              <h2>Customer Profile</h2>
-              </div>
-              <div class="row">
-                <div class="col-md-7">
-                  <form>
-                    <div class="row">
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="Student" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Customer Type
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="jon" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            First Name
-                          </span>
-                        </label>
-                      </div>
-                    </div>  
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="smith" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Last Name
-                          </span>
-                        </label>
-                      </div>
-                    </div>  
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="************1548" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Card Details
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="4545451548" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Student ID
-                          </span>
-                        </label>
-                      </div>
-                    </div> 
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="Summer-2023" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Term
-                          </span>
-                        </label>
-                      </div>
-                    </div> 
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="1612514845" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            PH.No:
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mt-3">
-                      <div class="meal-plan-section">
-                        <h3>Meal Plan :</h3>
+              <div class=" mt-4  align-items-center ">
+                <div class="customer-profile bg-light">
+                  <div class="customer-profile-top">
+                    <a class="back-btn"><img src="./img/arrow-left-solid.png"></a>
+                    <h2>Customer Profile</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7">
+                      <form>
                         <div class="row">
-                          
-                          <div class="col-md-6">
-                            <p><b>Amount:</b> $1200</p>
-                            <p><b>Used: </b> $700</p>
-                            <p><b>Available:</b> $500</p>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="Student" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Customer Type
+                                </span>
+                              </label>
+                            </div>
                           </div>
-                          <div class="col-md-6 mt-4">
-                            <p><b>Start: </b> Feb 02, 2023</p>
-                            <p><b>End:</b> May 25, 2023</p>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="jon" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  First Name
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="smith" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Last Name
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="************1548" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Card Details
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="4545451548" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Student ID
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="Summer-2023" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Term
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="1612514845" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  PH.No:
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mt-3">
+                            <div class="meal-plan-section">
+                              <h3>Meal Plan :</h3>
+                              <div class="row">
+
+                                <div class="col-md-6">
+                                  <p><b>Amount:</b> $1200</p>
+                                  <p><b>Used: </b> $700</p>
+                                  <p><b>Available:</b> $500</p>
+                                </div>
+                                <div class="col-md-6 mt-4">
+                                  <p><b>Start: </b> Feb 02, 2023</p>
+                                  <p><b>End:</b> May 25, 2023</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                      </form>
+                    </div>
+                    <div class="col-md-5 mt-4">
+                      <div class="Profile-img-section">
+                        <img class="Profile-img" src="./img/profile-img.png">
+
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 oder-history mt-5">
+
+                      <h2>Order History</h2>
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">User Email</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>9NOVJ4</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4BT1U0</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>FMQNKM</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>U1VR34</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1VS7PP</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>OI4IIY</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td>
+                              <div class="dropdown action-dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                    onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                    data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderRefunds">Refund</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#orderInvoice">Invoice</a>
+                                </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                  </form>
-                </div>
-                <div class="col-md-5 mt-4">
-                  <div class="Profile-img-section">
-                  <img class="Profile-img" src="./img/profile-img.png">
-                  
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 oder-history mt-5">
-
-<h2>Order History</h2>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Order ID</th>
-      <th scope="col">Order Date</th>
-      <th scope="col">User Name</th>
-      <th scope="col">User Email</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>9NOVJ4</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-    <tr>
-      <td>4BT1U0</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-    <tr>
-      <td>FMQNKM</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-    <tr>
-      <td>U1VR34</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-    <tr>
-      <td>1VS7PP</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-    <tr>
-      <td>OI4IIY</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><div class="dropdown action-dropdown">
-        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#orderRefunds" >Refund</a>
-          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#orderInvoice">Invoice</a>
-      </div></td>
-    </tr>
-  </tbody>
-</table>
-                </div>
-              </div>
-             </div>
-           </div>
             </div>
             <div class="col-md-3 mt-4">
               <div class="right-menu bg-light">
@@ -520,479 +487,481 @@
                   <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
                   <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
                   <li><a href="./pos-c-profile.html" class="right-nav-link active">Customers Profile</a></li>
-                  <li><a href="#" class="right-nav-link">Reports</a></li>
+                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
                   <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
                   <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
                   <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
                 </ul>
               </div>
-              </div>
+            </div>
           </div>
-        </main>
-      </div>
+      </main>
     </div>
+  </div>
 
   <!--Invoice Modal  -->
-  <div id="orderInvoice" class="modal" >
+  <div id="orderInvoice" class="modal">
     <div class="modal-content animate " style=" border-radius: 10px;">
-        <div class="container invoice--info">
-<div>
-<div class="row">
-    <div class="col-6">
-        <span id="exporttoPdf"> <img src="/img/PDF_file_icon.svg" style="width:30px;height:30px; cursor:pointer" title="pdf" alt="pdf"></span>
-        <span class="pl-2" >
-            <img src="/img/printer-icon.png" style="width:30px;height:30px; cursor:pointer" title="print" alt="print">
-        </span>
-    </div>
-    <div class="col-6">
-        <span class="float-left roboto-bold font-size-20"></span>
-        <span  class="close" title="close"  data-dismiss="modal" aria-label="Close">×</span>
-    </div>
-</div>
-
-<div class="invoice--export">
-    <div class="row mt-4 mb-4">
-        <div class="col-6">
-            <span class="float-left roboto-medium font-size-20">Invoice</span>
-        </div>
-        <div class="col-6">
-            <span class="float-right roboto-regular font-size-16">Order #9NOVJ4</span>
-            
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-6 invoice--from">
-            <span><b>From:</b></span>
-            <span>University Cafe</span>
-            <span>36-46 37th ave 11101</span>
-            <span>Ph:+1-9174784989</span>
-        </div>
-        <div class="col-6 invoice--to">
-            <span><b>To:</b></span>
-            <span>jon smith</span>
-            <span>626 10023</span>
-            <span><b>Contact Person: </b>jon smith</span>
-            <span><b>Contact Number: </b>+1-2064131623</span>
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-6 invoice--from">
-            <span><b>Delivery By:</b></span>
-            <span>Kitchen</span>
-        </div>
-        <div class="col-6 invoice--to">
-            <span><b>Order Date:</b></span>
-            <span>09-Mar-2023</span>
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-6 invoice--from">
-            <span><b>Delivery Date:</b></span>
-            <span>09-Mar-2023</span>
-            <span><b>Delivery Slot:</b></span>
-            <span>04:00 PM - 8:00 PM</span>
-        </div>
-        <div class="col-6 invoice--to">
-            <span><b>Payment Method:</b></span>
-            <span></span>
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-12 invoice--from">
-            <span><b>Message to Kitchen:</b></span>
-            <span></span>
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-12 invoice--from">
-            <span><b>Order Type:</b></span>
-            <span>Delivery</span>
-        </div>
-    </div>
-    <div class="row mt-4 mb-3">
-        <div class="col-xl-12">
-            <div class="card mb-4" style="border: 1px solid #ccc;">
-                <div class="card-header">
-                    Bill summary
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive bg-white">
-                        <table class="table table-bordered invoive-item--table" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Sub Category</th>
-                                    <th>Item</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Add on</th>
-                                    <th class="text-right" style=" padding: .75rem 0;">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                        <tr>
-                                            <td>Wraps</td>
-                                            <td>HAM AND CHEESE WRAP</td>
-                                            <td>5.50</td>
-                                            <td>1</td>
-                                            <td></td>
-                                            <td class="text-right" style=" padding: .75rem 0;">
-                                              5.50
-                                            </td>
-                                        </tr>
-                                      
-                                    <tr><td colspan="6" style="border-bottom: 1px solid #fff !important; padding: 0 !important;"></td></tr>
-                                    <tr>
-                                        <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;" class="text-right">
-                                            <span>Sub total</span> <b>$5.50</b>
-                                        </td>
-                                    </tr>
-                                        <tr>
-                                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;" class="text-right">
-                                                <span>Sale Tax</span> <b>$0.49</b>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;" class="text-right">
-                                                <span>Delivery Fee </span> <b>$2.00</b>
-                                            </td>
-                                        </tr>
-                                    <tr>
-                                        <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;" class="text-right">
-                                            <span>Total</span> <b>$7.99 </b>
-                                        </td>
-                                    </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
+      <div class="container invoice--info">
+        <div>
+          <div class="row">
+            <div class="col-6">
+              <span id="exporttoPdf"> <img src="/img/PDF_file_icon.svg" style="width:30px;height:30px; cursor:pointer"
+                  title="pdf" alt="pdf"></span>
+              <span class="pl-2">
+                <img src="/img/printer-icon.png" style="width:30px;height:30px; cursor:pointer" title="print"
+                  alt="print">
+              </span>
             </div>
-        </div>
-    </div>
-</div>
- 
-</div>
-<div id="receipt-container" style="display:none">
-
-<div class="ticket">
-    <div class="row">
-        <div class="col-12">
-            <span class="customer_name">j test j</span>
-        </div>
-    </div>
-    <div class="row pt-2">
-        <div class="col-12">
-            <span class="company_N_o">Saavor #Q46O1O</span>
-        </div>
-    </div>
-    <div class="row brd_top pb-2">
-        <div class="col-6">
-            <span class="cust_phone">+1-2467849756</span>
-        </div>
-        <div class="col-6">
-            <span class="cust_pin">Pin: </span>
-        </div>
-    </div>
-    <div class="row pb-2">
-        <div class="col-6">
-            <span class="delivery_name">Delivery note:</span>
-        </div>
-        <div class="col-6">
-            <span class="cust_pin"></span>
-        </div>
-    </div>
-
-    <div class="row brd_top pt-2">
-        <div class="col-12">
-            <span class="vegan_seeds">Manik Kitchen</span>
-        </div>
-    </div>
-
-    <div class="row pt-2 pb-4">
-        <div class="col-6">
-            <span class="ord_items">
-                        <span>2 items</span>
-            </span>
-        </div>
-        <div class="col-6">
-            <span class="ord_item_status">Delivery</span>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-12">
-            <div class="order_note_container">
-                <span class="order_note_heading">ORDER NOTE</span>
-                <span class="order_note"></span>
+            <div class="col-6">
+              <span class="float-left roboto-bold font-size-20"></span>
+              <span class="close" title="close" data-dismiss="modal" aria-label="Close">×</span>
             </div>
-        </div>
-    </div>
-    <div class="row pt-2 pb-3">
-        <div class="col-12">
-            <table>
-                <tbody>
-                            <tr>
-                                <td class="description">3<span>x</span> Preorder Meals: Strawberry</td>
-                                <td class="price">$15.00</td>
-                            </tr>
-                            <tr>
-                                <td class="addon" colspan="2">
+          </div>
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="description">3<span>x</span> Preorder Meals: Pizza</td>
-                                <td class="price">$108.00</td>
-                            </tr>
-                            <tr>
-                                <td class="addon" colspan="2">
-                                    <span style="padding-left:0px !important;">Add on: large</span>
+          <div class="invoice--export">
+            <div class="row mt-4 mb-4">
+              <div class="col-6">
+                <span class="float-left roboto-medium font-size-20">Invoice</span>
+              </div>
+              <div class="col-6">
+                <span class="float-right roboto-regular font-size-16">Order #9NOVJ4</span>
 
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row brd_top pt-1 pb-3">
-        <div class="col-12">
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="pos_subtotal">Subtotal:</td>
-                        <td class="pos_subtotal_price">$123.00</td>
-                    </tr>
-                    <tr>
-                        <td class="pos_discount">Promo Code/Discount:</td>
-                        <td class="pos_discount_price">($0.00)</td>
-                    </tr>
-                    <tr>
-                        <td class="pos_tax">Taxes &amp; Charges:</td>
-                        <td class="pos_tax_price">$12.30</td>
-                    </tr>
-                    <tr>
-                        <td class="pos_tax">Total:</td>
-                        <td class="pos_tax_price">$135.30</td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row brd_top pt-1 pb-2">
-        <div class="col-12">
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="pos_subtotal">Manik Kitchen</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row brd_top pt-1 pb-2">
-        <div class="col-12">
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="pos_subtotal">Thank you, we hope you enjoy your meal.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="row pb-3">
-        <div class="col-12">
-            <div class="order_note_container">                    
-                <span class="order_note receipt_current_date">Received: Mon Apr 23 at 08:23 AM</span>
+              </div>
             </div>
-        </div>
-    </div>
-</div>     
-</div></div>
-    </div>
-</div>
-  <!--Invoice Modal end -->
-  <!-- Issue Refund Modal -->
-  <div id="orderRefunds" class="modal" >
-    <div class="modal-content animate">
-        <div class="container item_refund--info">
-    <div>
-        <div class="row">
-            <div class="col-12">
-                <span class="float-left roboto-bold font-size-20">Issue Refund</span>
-                <span class="close"  title="close"  data-dismiss="modal" aria-label="Close">×</span>
+            <div class="row mt-4 mb-3">
+              <div class="col-6 invoice--from">
+                <span><b>From:</b></span>
+                <span>University Cafe</span>
+                <span>36-46 37th ave 11101</span>
+                <span>Ph:+1-9174784989</span>
+              </div>
+              <div class="col-6 invoice--to">
+                <span><b>To:</b></span>
+                <span>jon smith</span>
+                <span>626 10023</span>
+                <span><b>Contact Person: </b>jon smith</span>
+                <span><b>Contact Number: </b>+1-2064131623</span>
+              </div>
             </div>
-        </div>
-        <div class="row mt-2   mb-4">
-            <div class="col-12">
-                <span class="float-left roboto-medium font-size-15">Select Items to Refund</span>
+            <div class="row mt-4 mb-3">
+              <div class="col-6 invoice--from">
+                <span><b>Delivery By:</b></span>
+                <span>Kitchen</span>
+              </div>
+              <div class="col-6 invoice--to">
+                <span><b>Order Date:</b></span>
+                <span>09-Mar-2023</span>
+              </div>
             </div>
-        </div>
-
-        <div class="row mt-4 mb-3">
-            <div class="col-xl-12">
+            <div class="row mt-4 mb-3">
+              <div class="col-6 invoice--from">
+                <span><b>Delivery Date:</b></span>
+                <span>09-Mar-2023</span>
+                <span><b>Delivery Slot:</b></span>
+                <span>04:00 PM - 8:00 PM</span>
+              </div>
+              <div class="col-6 invoice--to">
+                <span><b>Payment Method:</b></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="row mt-4 mb-3">
+              <div class="col-12 invoice--from">
+                <span><b>Message to Kitchen:</b></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="row mt-4 mb-3">
+              <div class="col-12 invoice--from">
+                <span><b>Order Type:</b></span>
+                <span>Delivery</span>
+              </div>
+            </div>
+            <div class="row mt-4 mb-3">
+              <div class="col-xl-12">
                 <div class="card mb-4" style="border: 1px solid #ccc;">
-                    <div class="card-body">
-                        <div class="table-responsive bg-white">
-                            <table class="table table-bordered invoive-item--table" id="dataTable_" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Items</th>
-                                        <th>Add On</th>
-                                        <th>Qty</th>
-                                        <th>Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                            <tr class="">
-                                                <td>
-                                                        <input type="checkbox" class="refund-item" id="1" data="5.00">
-                                                        <label class="grid-checl_label" for="1"></label>
-                                                    <input type="hidden" id="hdnFD" value="175350">
-                                                    <input type="hidden" id="hdnLI" value="">
-                                                    <input type="hidden" id="hdnQt" value="2">
-                                                </td>
-                                                <td>2 WATER BOTTLES</td>
-                                                <td class="addons">
-                                                <ul><li>ORIGINAL - $0.00</li></ul>
-                                                </td>
-                                                <td>
-                                                        <select class="item-qty">
-                                                                <option value="-1"> Select </option>
-                                                                    <option value="1"> 1 </option>
-                                                                    <option value="2"> 2 </option>
+                  <div class="card-header">
+                    Bill summary
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive bg-white">
+                      <table class="table table-bordered invoive-item--table" id="dataTable" width="100%"
+                        cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Sub Category</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Add on</th>
+                            <th class="text-right" style=" padding: .75rem 0;">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Wraps</td>
+                            <td>HAM AND CHEESE WRAP</td>
+                            <td>5.50</td>
+                            <td>1</td>
+                            <td></td>
+                            <td class="text-right" style=" padding: .75rem 0;">
+                              5.50
+                            </td>
+                          </tr>
 
-                                                        </select>
-                                                </td>
-                                                <td>$2.50</td>
-                                            </tr>
-                                        <tr><td colspan="5" style="border-bottom: 1px solid #fff !important; padding: 0 !important;"></td></tr>
-                                </tbody>
-                            </table>
-                        </div>
+                          <tr>
+                            <td colspan="6" style="border-bottom: 1px solid #fff !important; padding: 0 !important;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;"
+                              class="text-right">
+                              <span>Sub total</span> <b>$5.50</b>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;"
+                              class="text-right">
+                              <span>Sale Tax</span> <b>$0.49</b>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;"
+                              class="text-right">
+                              <span>Delivery Fee </span> <b>$2.00</b>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="6" style="border-bottom: 1px solid #fff !important;padding: .1rem !important;"
+                              class="text-right">
+                              <span>Total</span> <b>$7.99 </b>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                        <div class="input-group">
-                            <div class="form-group w-50">
-                                <label class="control-label w-100">Reason for Refund</label>
-                                <select class="order-refund--reason w-100">
-                                    <option value="-1">Select a reason</option>
-                                    <option value="Out of Stock">Out of Stock</option>
-                                    <option value="Accidental charge">Accidental charge</option>
-                                    <option value="Cancelled order">Cancelled order</option>
-                                    <option value="Fraudulent charge">Fraudulent charge</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <div class="other_reason--container hide">
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="text" id="inputOrderRefundReason" maxlength="200" autocomplete="off" spellcheck="false" autocapitalize="none" class="form-control">
-                                        </div>
-                                        <div class="col-2">
-                                            <span class="delivered cursor-pointer close-order--reason">x</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="form-group w-50">
-                                <label class="control-label w-100">Refund to</label>
-                                <span class="refund-to_gateway"> </span>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="form-group w-50">
-                                <label class="control-label w-100">Amount</label>
-                                <input type="text"  class="form-control">
-                                <span class="order-amount_maximum">$37.98 Maximum</span>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <input type="submit" class="refund-items" name="next" value="Refund">
-                        </div>
                     </div>
+
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
         </div>
-        <input type="hidden" id="hndF" value="Su2Ic1CYH7HlI51lMC7kiU27o0x2PRLBiwTbwhzID6A=">
-        <input type="hidden" id="hdnA" value="0">
-    </div>
-</div>
-    </div>
-</div>
-  <!-- Issue Refund end -->
-    <div id="notificationsOverlay" class="overlay"></div>
-    <input type="hidden" id="hdnSystemTime" />
-    <input type="hidden" id="hdnPO" value="0" />
-    <input type="hidden" id="hdnEncryptedSystemTime" />
+        <div id="receipt-container" style="display:none">
 
-    <!-- Loader Start -->
-    <div class="loading_container_overlay hide"></div>
-    <div class="loader_container hide">
-      <div class="rainbow">
-        <img src="wwwroot/images/logo.png" alt="" />
-      </div>
-    </div>
-    <!-- Loader End -->
-    <!-- Off Campus Start -->
-
-    <div id="offCampusIds" class="modal">
-      <div class="modal-content animate">
-        <div class="container">
-          <div>
+          <div class="ticket">
             <div class="row">
               <div class="col-12">
-                <span
-                  onclick="document.getElementById('offCampusIds').style.display='none'"
-                  class="close"
-                  title="close"
-                  >×</span
-                >
+                <span class="customer_name">j test j</span>
               </div>
             </div>
-            <div class="row mt-4 mb-3">
-              <div class="col-12 text-center">
-                <span
-                  id="offCampusTitle"
-                  style="font-family: Roboto Medium !important"
-                ></span>
+            <div class="row pt-2">
+              <div class="col-12">
+                <span class="company_N_o">Saavor #Q46O1O</span>
               </div>
             </div>
-            <div class="row mt-4 mb-3">
-              <div class="col-12 text-center">
-                <img
-                  id="offCampusImg"
-                  style="width: auto !important; height: 350px"
-                />
+            <div class="row brd_top pb-2">
+              <div class="col-6">
+                <span class="cust_phone">+1-2467849756</span>
+              </div>
+              <div class="col-6">
+                <span class="cust_pin">Pin: </span>
+              </div>
+            </div>
+            <div class="row pb-2">
+              <div class="col-6">
+                <span class="delivery_name">Delivery note:</span>
+              </div>
+              <div class="col-6">
+                <span class="cust_pin"></span>
+              </div>
+            </div>
+
+            <div class="row brd_top pt-2">
+              <div class="col-12">
+                <span class="vegan_seeds">Manik Kitchen</span>
+              </div>
+            </div>
+
+            <div class="row pt-2 pb-4">
+              <div class="col-6">
+                <span class="ord_items">
+                  <span>2 items</span>
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="ord_item_status">Delivery</span>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-12">
+                <div class="order_note_container">
+                  <span class="order_note_heading">ORDER NOTE</span>
+                  <span class="order_note"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-2 pb-3">
+              <div class="col-12">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="description">3<span>x</span> Preorder Meals: Strawberry</td>
+                      <td class="price">$15.00</td>
+                    </tr>
+                    <tr>
+                      <td class="addon" colspan="2">
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="description">3<span>x</span> Preorder Meals: Pizza</td>
+                      <td class="price">$108.00</td>
+                    </tr>
+                    <tr>
+                      <td class="addon" colspan="2">
+                        <span style="padding-left:0px !important;">Add on: large</span>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row brd_top pt-1 pb-3">
+              <div class="col-12">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="pos_subtotal">Subtotal:</td>
+                      <td class="pos_subtotal_price">$123.00</td>
+                    </tr>
+                    <tr>
+                      <td class="pos_discount">Promo Code/Discount:</td>
+                      <td class="pos_discount_price">($0.00)</td>
+                    </tr>
+                    <tr>
+                      <td class="pos_tax">Taxes &amp; Charges:</td>
+                      <td class="pos_tax_price">$12.30</td>
+                    </tr>
+                    <tr>
+                      <td class="pos_tax">Total:</td>
+                      <td class="pos_tax_price">$135.30</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row brd_top pt-1 pb-2">
+              <div class="col-12">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="pos_subtotal">Manik Kitchen</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row brd_top pt-1 pb-2">
+              <div class="col-12">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="pos_subtotal">Thank you, we hope you enjoy your meal.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col-12">
+                <div class="order_note_container">
+                  <span class="order_note receipt_current_date">Received: Mon Apr 23 at 08:23 AM</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!--Invoice Modal end -->
+  <!-- Issue Refund Modal -->
+  <div id="orderRefunds" class="modal">
+    <div class="modal-content animate">
+      <div class="container item_refund--info">
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <span class="float-left roboto-bold font-size-20">Issue Refund</span>
+              <span class="close" title="close" data-dismiss="modal" aria-label="Close">×</span>
+            </div>
+          </div>
+          <div class="row mt-2   mb-4">
+            <div class="col-12">
+              <span class="float-left roboto-medium font-size-15">Select Items to Refund</span>
+            </div>
+          </div>
 
-    <!-- Order Invoice Start -->
-    <div id="orderInvoice" class="modal">
-      <div class="modal-content animate">
-        <div class="container invoice--info"></div>
+          <div class="row mt-4 mb-3">
+            <div class="col-xl-12">
+              <div class="card mb-4" style="border: 1px solid #ccc;">
+                <div class="card-body">
+                  <div class="table-responsive bg-white">
+                    <table class="table table-bordered invoive-item--table" id="dataTable_" width="100%"
+                      cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Items</th>
+                          <th>Add On</th>
+                          <th>Qty</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <td>
+                            <input type="checkbox" class="refund-item" id="1" data="5.00">
+                            <label class="grid-checl_label" for="1"></label>
+                            <input type="hidden" id="hdnFD" value="175350">
+                            <input type="hidden" id="hdnLI" value="">
+                            <input type="hidden" id="hdnQt" value="2">
+                          </td>
+                          <td>2 WATER BOTTLES</td>
+                          <td class="addons">
+                            <ul>
+                              <li>ORIGINAL - $0.00</li>
+                            </ul>
+                          </td>
+                          <td>
+                            <select class="item-qty">
+                              <option value="-1"> Select </option>
+                              <option value="1"> 1 </option>
+                              <option value="2"> 2 </option>
+
+                            </select>
+                          </td>
+                          <td>$2.50</td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" style="border-bottom: 1px solid #fff !important; padding: 0 !important;"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="input-group">
+                    <div class="form-group w-50">
+                      <label class="control-label w-100">Reason for Refund</label>
+                      <select class="order-refund--reason w-100">
+                        <option value="-1">Select a reason</option>
+                        <option value="Out of Stock">Out of Stock</option>
+                        <option value="Accidental charge">Accidental charge</option>
+                        <option value="Cancelled order">Cancelled order</option>
+                        <option value="Fraudulent charge">Fraudulent charge</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <div class="other_reason--container hide">
+                        <div class="row">
+                          <div class="col-10">
+                            <input type="text" id="inputOrderRefundReason" maxlength="200" autocomplete="off"
+                              spellcheck="false" autocapitalize="none" class="form-control">
+                          </div>
+                          <div class="col-2">
+                            <span class="delivered cursor-pointer close-order--reason">x</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="form-group w-50">
+                      <label class="control-label w-100">Refund to</label>
+                      <span class="refund-to_gateway"> </span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="form-group w-50">
+                      <label class="control-label w-100">Amount</label>
+                      <input type="text" class="form-control">
+                      <span class="order-amount_maximum">$37.98 Maximum</span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <input type="submit" class="refund-items" name="next" value="Refund">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" id="hndF" value="Su2Ic1CYH7HlI51lMC7kiU27o0x2PRLBiwTbwhzID6A=">
+          <input type="hidden" id="hdnA" value="0">
+        </div>
       </div>
     </div>
-    <!-- Order Invoice End -->
-    <!-- Off Campus End -->
-    <audio
-      id="pendingOrderTone"
-      src="/css/saavor_new_order_tone.mp3"
-      hidden
-      controls
-    ></audio>
-    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
-    <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
+  </div>
+  <!-- Issue Refund end -->
+  <div id="notificationsOverlay" class="overlay"></div>
+  <input type="hidden" id="hdnSystemTime" />
+  <input type="hidden" id="hdnPO" value="0" />
+  <input type="hidden" id="hdnEncryptedSystemTime" />
+
+  <!-- Loader Start -->
+  <div class="loading_container_overlay hide"></div>
+  <div class="loader_container hide">
+    <div class="rainbow">
+      <img src="wwwroot/images/logo.png" alt="" />
+    </div>
+  </div>
+  <!-- Loader End -->
+  <!-- Off Campus Start -->
+
+  <div id="offCampusIds" class="modal">
+    <div class="modal-content animate">
+      <div class="container">
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <span onclick="document.getElementById('offCampusIds').style.display='none'" class="close"
+                title="close">×</span>
+            </div>
+          </div>
+          <div class="row mt-4 mb-3">
+            <div class="col-12 text-center">
+              <span id="offCampusTitle" style="font-family: Roboto Medium !important"></span>
+            </div>
+          </div>
+          <div class="row mt-4 mb-3">
+            <div class="col-12 text-center">
+              <img id="offCampusImg" style="width: auto !important; height: 350px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Invoice Start -->
+  <div id="orderInvoice" class="modal">
+    <div class="modal-content animate">
+      <div class="container invoice--info"></div>
+    </div>
+  </div>
+  <!-- Order Invoice End -->
+  <!-- Off Campus End -->
+  <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
+  <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
+  <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
     <script src="wwwroot/js/toastr.min.js"></script>
     <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
     <script src="wwwroot/js/application/jquery.notification.js?v=V01.01245"></script>
@@ -1007,5 +976,6 @@
     <link href="wwwroot/css/jquery-ui.css" rel="stylesheet" />
     <script src="wwwroot/js/jquery-ui-1.11.4.js"></script>
     <script src="wwwroot/js/kitchen-dashboard.js"></script> -->
-  </body>
+</body>
+
 </html>
