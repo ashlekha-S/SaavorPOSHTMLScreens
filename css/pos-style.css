@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
     font-family: 'roboto';
 }
@@ -454,7 +456,7 @@ img.Profile-img {
     color: #fff;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background: red;
+    background: #E32328;
     border: none;
     outline: none;
     width: 43px;
@@ -699,9 +701,9 @@ img.Profile-img {
 .menu-card-wraper {
     display: flex;
     margin-top: 50px;
-    justify-content: space-between;
-}
-
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 .menu-card.bg-light {
     width: 32%;
     padding: 15px;
@@ -1595,6 +1597,118 @@ td.addons ul {
     text-align: left;
     line-height: 25px;
 }
+/* inventory-css */
+.inventory-top-section .add-btn {
+    background-color: #E32328;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.inventory-top-section .add-btn span {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 17px;
+    position: relative;
+    top: 2px;
+}
+.inventory-top-section h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+.inventory-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.filter-section-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 36%;
+}
+
+.inventory-tabel-outer .search-bar {
+    width: 100%;
+}
+.inventory-tabel input[type="checkbox"] {
+    display: block !important;
+    width: 19px;
+    height: 19px;
+    border-color: #AAAAAA !important;
+}
+.inventory-tabel thead th {
+    font-size: 14px;
+    line-height: 17px;
+}
+.inventory-tabel-outer .table thead th{
+    background-color: #CCCCCC !important;
+}
+.inventory-tabel-outer {
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px ;
+    box-shadow: 0px 3px 48px -37px;
+    padding-bottom: 121px !important;
+    height: 100%;
+}
+.inventory-tabel-outer  tbody tr td{
+    border: none;
+}
+.inventory-tabel-outer  tbody tr{
+    border-bottom:1px solid #707070 ;
+}
+.inventory-tabel-outer tbody td {
+    font-size: 16px;
+    color: #444444;
+    line-height: 30px;
+}
+.inventory-tabel-outer .product-name span {
+    gap: 7px;
+}
+.inventory-tabel-outer .product-name img {
+    width: 35px;
+}
+.inventory-tabel-outer .action {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.inventory-tabel-outer tbody tr:last-child {
+    border: none;
+}
+.inventory-tabel .table {
+    margin-bottom: 20px;
+}
+.inventory-tabel {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 14px, rgb(0 0 0 / 7%) 0px 3px 6px;
+    padding-bottom: 65px;
+}
+.inventory-top-section p {
+    color: #848282;
+    font-size: 18px;
+    font-weight: 500;
+}
+.add-inventory {
+    border-radius: 15px;
+}
+.add-inventory input[type="text"],.add-inventory select,
+.add-inventory textarea {
+    width: 100%;
+}
+.add-inventory  select:invalid {
+    color: gray !important;
+  }
+  option {
+    color: black;
+  }
+/* invenntory-css end */
 @media screen and (min-width: 1367px) {
     .end-shift {
         max-height: 482px;
