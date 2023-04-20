@@ -42,6 +42,7 @@ body {
     padding: 10px 29px;
     border-radius: 25px;
     display: inline-block;
+    border: none;
 }
 
 .register-card .com-btn-red {
