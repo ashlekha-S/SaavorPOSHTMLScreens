@@ -132,10 +132,9 @@ a.right-nav-link {
     font-weight: 700;
     font-family: 'Roboto';
     display: inline-block;
-
     width: 100%;
     padding: 10px;
-    text-decoration: none;
+    text-decoration:  none !important;
     font-family: 'Roboto';
 }
 
