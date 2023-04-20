@@ -1705,9 +1705,24 @@ td.addons ul {
 .add-inventory  select:invalid {
     color: gray !important;
   }
+
   option {
     color: black;
   }
+
+.outline-input {
+    box-shadow: none !important;
+    margin-top: 25px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #AAAAAA;
+    padding: 5px 2px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    outline: none;
+    border-radius: 0px;
+    background: transparent;
+}
 /* invenntory-css end */
 @media screen and (min-width: 1367px) {
     .end-shift {
