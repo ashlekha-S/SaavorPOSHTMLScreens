@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-md-4">
                   <label>Category</label>
-                  <select  required>
+                  <select required>
                     <option value="" disabled selected hidden>Category</option>
                     <option>option 2</option>
                     <option>option 3</option>
@@ -234,7 +234,7 @@
                 </div>
                 <div class="col-md-4">
                   <label>Sub Category</label>
-                  <select  required>
+                  <select required>
                     <option value="" disabled selected hidden>Please choose one</option>
                     <option>option 2</option>
                     <option>option 3</option>
@@ -256,7 +256,7 @@
                     <option>option 3</option>
                   </select>
                 </div>
-               
+
                 <div class="col-md-4">
                   <label>UPC</label>
                   <input type="text" placeholder="027000480601">
@@ -268,23 +268,23 @@
                 <div class="col-md-4">
                   <label>Quantity</label>
                   <input type="text" placeholder="12">
-                </div> 
+                </div>
                 <div class="col-md-12">
                   <label>Description</label>
                   <textarea placeholder="Description"></textarea>
-                </div> 
+                </div>
                 <div class="col-md-3">
                   <label>Tax</label>
                   <input type="text" placeholder="0.08">
-                </div> 
+                </div>
                 <div class="col-md-3">
                   <label>Sale Discount</label>
                   <input type="text" placeholder="0.01">
-                </div> 
+                </div>
                 <div class="col-md-3">
                   <label>Price</label>
                   <input type="text" placeholder="0.99">
-                </div> 
+                </div>
                 <div class="col-md-3">
                   <label>Status</label>
                   <select required>
@@ -292,7 +292,88 @@
                     <option>option 2</option>
                     <option>option 3</option>
                   </select>
-                </div> 
+                </div>
+                <div class="col-md-12"> <label>Extra Discounts</label></div>
+                <div class="col-md-4">
+                  <div class="card-discounts">
+                    <span>Unit :5</span> <span class="ml-2">Discount :10%</span>
+
+                    <div class="remove">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12.84" height="11.214"
+                        viewBox="0 0 12.84 11.214">
+                        <path id="X"
+                          d="M7.3,11.5l2.787-3.866h3.522L9.283,13.19l4.44,5.654H10.159L7.3,14.915,4.445,18.843H.883L5.324,13.19,1,7.629H4.517Z"
+                          transform="translate(-0.883 -7.629)" fill="#e32328" />
+                      </svg> <span class="ml-2">Remove<span></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-discounts">
+                    <span>Unit :5</span> <span class="ml-2">Discount :10%</span>
+
+                    <div class="remove">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12.84" height="11.214"
+                        viewBox="0 0 12.84 11.214">
+                        <path id="X"
+                          d="M7.3,11.5l2.787-3.866h3.522L9.283,13.19l4.44,5.654H10.159L7.3,14.915,4.445,18.843H.883L5.324,13.19,1,7.629H4.517Z"
+                          transform="translate(-0.883 -7.629)" fill="#e32328" />
+                      </svg> <span class="ml-2">Remove<span></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-discounts">
+                    <span>Unit :5</span> <span class="ml-2">Discount :10%</span>
+
+                    <div class="remove">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12.84" height="11.214"
+                        viewBox="0 0 12.84 11.214">
+                        <path id="X"
+                          d="M7.3,11.5l2.787-3.866h3.522L9.283,13.19l4.44,5.654H10.159L7.3,14.915,4.445,18.843H.883L5.324,13.19,1,7.629H4.517Z"
+                          transform="translate(-0.883 -7.629)" fill="#e32328" />
+                      </svg> <span class="ml-2">Remove<span></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label>Discount Units</label>
+                  <input type="text" placeholder="30">
+                </div>
+                <div class="col-md-6">
+                  <label>Discount Amount</label>
+                  <input type="text" placeholder="25">
+                </div>
+                <div class="col-md-12"><button><span>+</span>Add discount</button></div>
+                <div class="col-md-12">
+                  <div id="upload-section">
+                    <label for="file-upload">Drag and Drop files for Upload</label>
+                    <input type="file" id="file-upload" multiple>
+                  </div>
+                  <div id="preview"></div>
+                </div>
+                <div class="col-md-12" ><button>Update</button> <a>Cancel</a></div>
+                                  <script>
+                    const fileUpload = $('#file-upload');
+const preview = $('#preview');
+
+fileUpload.on('change', () => previewImages(fileUpload[0]));
+$('#upload-section').on({
+  dragover: e => $('#upload-section').toggleClass('dragover', true) && e.preventDefault(),
+  dragleave: e => $('#upload-section').toggleClass('dragover', false) && e.preventDefault(),
+  drop: e => (fileUpload[0].files = e.originalEvent.dataTransfer.files) && previewImages(fileUpload[0]) && e.preventDefault()
+});
+preview.on('click', '.remove-btn', e => $(e.currentTarget).closest('.preview-img').remove());
+
+function previewImages(input) {
+  preview.empty();
+  if (input.files) {
+    for (const file of input.files) {
+      const reader = new FileReader();
+      reader.onload = e => preview.append(`<div class="preview-img"><img src="${e.target.result}"><button class="remove-btn"><i class="fa fa-times"></i></button></div>`);
+      reader.readAsDataURL(file);
+    }
+  }
+}
+                  </script>
+                </div>
               </div>
             </form>
           </div>

@@ -1723,6 +1723,72 @@ td.addons ul {
     border-radius: 0px;
     background: transparent;
 }
+
+
+
+
+#upload-section {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius:10px;
+    position: relative;
+  }
+  
+  #upload-section label {
+    font-size: 18px;
+    cursor: pointer;
+   
+  }
+  
+  #upload-section input[type="file"] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+  
+  #preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .preview-img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .preview-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .preview-img .remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .preview-img .remove-btn:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #fff;
+  }
 /* invenntory-css end */
 @media screen and (min-width: 1367px) {
     .end-shift {
