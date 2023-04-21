@@ -253,13 +253,12 @@ a.right-nav-link:hover {
 
 .customer-profile-form .content-name {
     position: absolute;
-    bottom: 0px;
+    bottom: 3px;
     left: 12px;
     padding-bottom: 5px;
     transition: all 0.3s ease;
     font-weight: 900;
 }
-
 .customer-profile-form input:focus {
     outline: none;
 }
@@ -299,6 +298,7 @@ a.right-nav-link:hover {
     font-family: 'Roboto';
     font-size: 15px;
     font-weight: 800;
+    color: #444444;
 }
 
 .meal-plan-section p {
@@ -306,6 +306,7 @@ a.right-nav-link:hover {
     font-size: 15px;
     margin-bottom: 0px;
     line-height: 27px;
+    color: #444444;
 }
 
 .Profile-img-section {
@@ -1605,6 +1606,7 @@ td.addons ul {
     font-size: 16px;
     border-radius: 20px;
     padding: 5px 15px;
+    text-decoration: none;
 }
 .inventory-top-section .add-btn span {
     font-weight: 500;
@@ -1672,8 +1674,12 @@ td.addons ul {
 .inventory-tabel-outer .product-name span {
     gap: 7px;
 }
-.inventory-tabel-outer .product-name img {
-    width: 35px;
+.product-name .img-box {
+    max-width: 50px;
+    max-height: 50px;
+}
+.product-name .img-box img {
+    object-fit: contain;
 }
 .inventory-tabel-outer .action {
     display: flex;
@@ -1698,9 +1704,33 @@ td.addons ul {
 .add-inventory {
     border-radius: 15px;
 }
-.add-inventory input[type="text"],.add-inventory select,
+th.action-th {
+    width: 9%;
+}
+
+.add-inventory input[type="text"], .add-inventory select {
+    width: 100%;
+    border: 1px solid #AAAAAA;
+    outline: none;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.add-inventory label{
+    margin-top:20px ;
+}
+.card-discounts {
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding: 15px;
+}
 .add-inventory textarea {
     width: 100%;
+    border: 1px solid #AAAAAA;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    height: 140px;
 }
 .add-inventory  select:invalid {
     color: gray !important;
@@ -1709,7 +1739,12 @@ td.addons ul {
   option {
     color: black;
   }
-
+  .remove {
+    color: #E32328;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
 .outline-input {
     box-shadow: none !important;
     margin-top: 25px;
@@ -1724,12 +1759,64 @@ td.addons ul {
     background: transparent;
 }
 
-
-
+.add-inventory .discount-btn {
+    width: 100%;
+    border-radius: 20px;
+    background: #E32328;
+    outline: none !important;
+    border: none;
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 16px;
+    padding: 10px;
+    margin: 23px 0px;
+    font-weight: 600;
+    display: inline-block;
+}
+.add-inventory .update-btn {
+    border-radius: 20px;
+    background: #E32328;
+    outline: none !important;
+    border: none;
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 16px;
+    padding: 6px 29px;
+    margin: 23px 0px;
+    display: inline-block;
+}
+.add-inventory  .cancel-btn {
+    color: #444444 !important;
+    text-decoration: none !important;
+}
+.add-inventory .discount-btn span {
+    font-size: 27px;
+    line-height: 0;
+    position: relative;
+    bottom: -3px;
+    left: -7px;
+}
+.add-inventory .preview-img .remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -9px;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #E32328 !important;
+    border: 0px !important;
+    outline: none;
+}
 
 #upload-section {
-    border: 2px solid #ccc;
-    padding: 10px;
+    border: 1px solid #aaaaaa;
+    padding: 20px;
     text-align: center;
     border-radius:10px;
     position: relative;
@@ -1758,11 +1845,13 @@ td.addons ul {
   
   .preview-img {
     position: relative;
+    margin-top: 30px;
     width: 150px;
     height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 14px, rgb(0 0 0 / 7%) 0px 3px 6px;
     margin-right: 10px;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 25px;
+}
   
   .preview-img img {
     width: 100%;
@@ -1789,6 +1878,9 @@ td.addons ul {
     background-color: rgba(255, 0, 0, 0.8);
     color: #fff;
   }
+  .collapse .list-group-item.active {
+    background: transparent;
+}
 /* invenntory-css end */
 @media screen and (min-width: 1367px) {
     .end-shift {

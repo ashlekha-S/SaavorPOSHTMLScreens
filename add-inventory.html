@@ -126,11 +126,39 @@
             <div class="collapse" id="inventory-management" aria-expanded="false">
               <ul class="flex-column pl-2 nav">
                 <li class="nav-item">
-                  <a class="list-group-item list-group-item-action groupCode" href="#"><span>Inventory List</span></a>
+                  <a class="list-group-item list-group-item-action groupCode " href="./inventory-management-list.html"><span>Inventory List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration active"
+                    href="./add-inventory.html"><span>Add Inventory</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="list-group-item list-group-item-action kitchenConfiguration"
-                    href="/manage/kitchen"><span>Kitchen Configuration</span></a>
+                    href="./category-list.html"><span>Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Sub Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Sub Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Brand List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Brands</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Print Barcode</span></a>
                 </li>
               </ul>
             </div>
@@ -216,7 +244,7 @@
               <p>Create new inventory</p>
             </div>
           </div>
-          <div class="bg-light p-3 add-inventory">
+          <div class="bg-light p-4 pb-3 mb-5 add-inventory">
             <form>
               <div class="row">
 
@@ -228,32 +256,32 @@
                   <label>Category</label>
                   <select required>
                     <option value="" disabled selected hidden>Category</option>
+                    <option>option 1</option>
                     <option>option 2</option>
-                    <option>option 3</option>
                   </select>
                 </div>
                 <div class="col-md-4">
                   <label>Sub Category</label>
                   <select required>
                     <option value="" disabled selected hidden>Please choose one</option>
+                    <option>option 1</option>
                     <option>option 2</option>
-                    <option>option 3</option>
                   </select>
                 </div>
                 <div class="col-md-4">
                   <label>Brand</label>
                   <select required>
                     <option value="" disabled selected hidden>Please choose one</option>
+                    <option>option 1</option>
                     <option>option 2</option>
-                    <option>option 3</option>
                   </select>
                 </div>
                 <div class="col-md-4">
                   <label>Unit</label>
                   <select required>
                     <option value="" disabled selected hidden>Please choose one</option>
+                    <option>option 1</option>
                     <option>option 2</option>
-                    <option>option 3</option>
                   </select>
                 </div>
 
@@ -289,8 +317,8 @@
                   <label>Status</label>
                   <select required>
                     <option value="" disabled selected hidden>Active</option>
+                    <option>option 1</option>
                     <option>option 2</option>
-                    <option>option 3</option>
                   </select>
                 </div>
                 <div class="col-md-12"> <label>Extra Discounts</label></div>
@@ -341,15 +369,23 @@
                   <label>Discount Amount</label>
                   <input type="text" placeholder="25">
                 </div>
-                <div class="col-md-12"><button><span>+</span>Add discount</button></div>
+                <div class="col-md-12"><button class="discount-btn"><span>+</span>Add discount</button></div>
                 <div class="col-md-12">
+                  <label>Product Image</label>
                   <div id="upload-section">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="43.33" height="30.331" viewBox="0 0 43.33 30.331">
+                      <g id="upload" transform="translate(-3.399 -9.211)">
+                        <path id="Path_3302" data-name="Path 3302" d="M21.732,32.545V25.878h5l-6.667-8.333L13.4,25.878h5v6.667Z" transform="translate(4.998 6.998)" fill="#e32328"/>
+                        <path id="Path_3303" data-name="Path 3303" d="M14.231,39.542h4.333V35.209H14.231a6.507,6.507,0,0,1-6.5-6.5,7.049,7.049,0,0,1,5.791-6.532l1.259-.221.416-1.209a10.254,10.254,0,0,1,9.866-7.2A10.845,10.845,0,0,1,35.9,24.377v2.167h2.167a4.333,4.333,0,0,1,0,8.666h-6.5v4.333h6.5a8.668,8.668,0,0,0,2.045-17.089A15.186,15.186,0,0,0,25.064,9.211,14.6,14.6,0,0,0,11.538,18.2,11.367,11.367,0,0,0,3.4,28.71,10.845,10.845,0,0,0,14.231,39.542Z" transform="translate(0 0)" fill="#e32328"/>
+                      </g>
+                    </svg>
+                    </div>
                     <label for="file-upload">Drag and Drop files for Upload</label>
                     <input type="file" id="file-upload" multiple>
                   </div>
                   <div id="preview"></div>
                 </div>
-                <div class="col-md-12" ><button>Update</button> <a>Cancel</a></div>
+                <div class="col-md-12" ><button class="update-btn">Update</button> <a href="#" class="ml-4 cancel-btn">Cancel</a></div>
                                   <script>
                     const fileUpload = $('#file-upload');
 const preview = $('#preview');

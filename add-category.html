@@ -17,8 +17,7 @@
   <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
   <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
   <link href="./css/pos-style.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
   <style>
     #layoutSidenav_nav img {
       padding: 10px;
@@ -52,7 +51,12 @@
         </a>
         <div id="notificationDropdownContainer" class="dropdown-menu dropdown-menu-right"
           aria-labelledby="notificationDropdown" style="
-           margin-top: -3px; height: 500px; overflow-x: hidden; overflow-y: auto; background: #fff; padding: 0 20px 20px 20px;
+              margin-top: -3px;
+              height: 500px;
+              overflow-x: hidden;
+              overflow-y: auto;
+              background: #fff;
+              padding: 0 20px 20px 20px;
             "></div>
 
         <div id="notificationsHtml" class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown"
@@ -111,7 +115,53 @@
         <div class="sb-sidenav-menu">
           <div class="nav">
             <a class="nav-link dashboard_" href="#">Dashboard</a>
-            <a class="nav-link active" href="#">POS</a>
+            <a class="nav-link " href="#">POS</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link  active" href="#"
+              data-toggle="collapse" data-target="#inventory-management">
+              <span class="d-none_ d-sm-inline">Inventory Management</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </a>
+            <div class="collapse" id="inventory-management" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action groupCode " href="./inventory-management-list.html"><span>Inventory List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration active"
+                    href="./add-inventory.html"><span>Add Inventory</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="./category-list.html"><span>Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Sub Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Sub Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Brand List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Brands</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Print Barcode</span></a>
+                </li>
+              </ul>
+            </div>
             <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
               href="#manageKitchen" data-toggle="collapse" data-target="#manageKitchen">
               <span class="d-none_ d-sm-inline">Manage Kitchen</span>
@@ -187,60 +237,73 @@
     </div>
     <div id="layoutSidenav_content">
       <main>
-        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
-          <div class="row mt-3 ml-0">
-            <div class="col-12 col-md-9 ">
-              <div class=" mt-4 bg-light register-type-section d-flex align-items-center ">
-                <div class="col-md-5 p-0"><img src="./img/university.png" class="img-fluid" /></div>
-                <div class="col-md-7  ">
-                  <div class="register-type-inners">
-                    <div class="text-center">
-                      <img src="./img/concordia-logo.png">
-                    </div>
-                    <div class="pos-check-out">
-                      <form>
-
-                        <div class="row">
-                          <div class="col-md-12">
-                            <select>
-                              <option value="" disabled selected hidden>Customer Type</option>
-                              <option value="">Student</option>
-                              <option value="">Faculty/staff</option>
-                            </select>
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" class="outline-input" placeholder="First Name (Optional)">
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" class="outline-input" placeholder="Last Name (Optional)">
-                          </div>
-                          <div class="col-md-12">
-                            
-                            <input type="text" class="outline-input" placeholder="ID (Optional)">
-                          </div>
-                        </div>
-                        <input type="submit" class="mt-5 sub-red-input" value="Submit">
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 mt-4">
-              <div class="right-menu bg-light">
-                <img src="./img/creat-western-dining.png">
-                <ul>
-                  <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
-                  <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
-                  <li><a href="./pos-c-profile.html" class="right-nav-link active">Customers Profile</a></li>
-                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
-                  <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
-                  <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
-                  <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
-                </ul>
-              </div>
+        <div class="container-fluid  ">
+          <div class="inventory-top-section">
+            <div>
+              <h2>Add Category</h2>
+              <p>Create new category</p>
             </div>
           </div>
+          <div class="bg-light p-4 pb-3 mb-5 add-inventory">
+            <form>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label>Category Name</label>
+                  <input type="text" placeholder="Category Name">
+                </div>
+                <div class="col-md-6">
+                  <label>Category Code </label>
+                  <input type="text" placeholder="Category Code">
+                </div>
+                <div class="col-md-12">
+                  <label>Description</label>
+                  <textarea placeholder="Description"></textarea>
+                </div>
+                <div class="col-md-12 ">
+                  <label>Product Image</label>
+                  <div id="upload-section">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="43.33" height="30.331" viewBox="0 0 43.33 30.331">
+                      <g id="upload" transform="translate(-3.399 -9.211)">
+                        <path id="Path_3302" data-name="Path 3302" d="M21.732,32.545V25.878h5l-6.667-8.333L13.4,25.878h5v6.667Z" transform="translate(4.998 6.998)" fill="#e32328"/>
+                        <path id="Path_3303" data-name="Path 3303" d="M14.231,39.542h4.333V35.209H14.231a6.507,6.507,0,0,1-6.5-6.5,7.049,7.049,0,0,1,5.791-6.532l1.259-.221.416-1.209a10.254,10.254,0,0,1,9.866-7.2A10.845,10.845,0,0,1,35.9,24.377v2.167h2.167a4.333,4.333,0,0,1,0,8.666h-6.5v4.333h6.5a8.668,8.668,0,0,0,2.045-17.089A15.186,15.186,0,0,0,25.064,9.211,14.6,14.6,0,0,0,11.538,18.2,11.367,11.367,0,0,0,3.4,28.71,10.845,10.845,0,0,0,14.231,39.542Z" transform="translate(0 0)" fill="#e32328"/>
+                      </g>
+                    </svg>
+                    </div>
+                    <label for="file-upload">Drag and Drop files for Upload</label>
+                    <input type="file" id="file-upload" multiple>
+                  </div>
+                  <div id="preview"></div>
+                </div>
+                <div class="col-md-12" ><button class="update-btn">Update</button> <a href="#" class="ml-4 cancel-btn">Cancel</a></div>
+                                  <script>
+                    const fileUpload = $('#file-upload');
+const preview = $('#preview');
+
+fileUpload.on('change', () => previewImages(fileUpload[0]));
+$('#upload-section').on({
+  dragover: e => $('#upload-section').toggleClass('dragover', true) && e.preventDefault(),
+  dragleave: e => $('#upload-section').toggleClass('dragover', false) && e.preventDefault(),
+  drop: e => (fileUpload[0].files = e.originalEvent.dataTransfer.files) && previewImages(fileUpload[0]) && e.preventDefault()
+});
+preview.on('click', '.remove-btn', e => $(e.currentTarget).closest('.preview-img').remove());
+
+function previewImages(input) {
+  preview.empty();
+  if (input.files) {
+    for (const file of input.files) {
+      const reader = new FileReader();
+      reader.onload = e => preview.append(`<div class="preview-img"><img src="${e.target.result}"><button class="remove-btn"><i class="fa fa-times"></i></button></div>`);
+      reader.readAsDataURL(file);
+    }
+  }
+}
+                  </script>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   </div>
@@ -295,6 +358,21 @@
   <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
   <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
+  <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
+    <script src="wwwroot/js/toastr.min.js"></script>
+    <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
+    <script src="wwwroot/js/application/jquery.notification.js?v=V01.01245"></script>
+    <script src="wwwroot/js/application/jquery.receipt-print.js?v=V01.01245"></script>
+    <script src="wwwroot/js/application/jquery.managekitchen.js?v=V01.01245"></script>
+    
+    <script src="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="wwwroot/chart/jquery.simple-bar-graph.js"></script>
+    <script src="wwwroot/chart/jquery.circlechart.js"></script>
+    <script src="wwwroot/js/jquery-migrate-3.0.0.min.js"></script>
+    <link href="wwwroot/css/jquery-ui.css" rel="stylesheet" />
+    <script src="wwwroot/js/jquery-ui-1.11.4.js"></script>
+    <script src="wwwroot/js/kitchen-dashboard.js"></script> -->
 </body>
 
 </html>

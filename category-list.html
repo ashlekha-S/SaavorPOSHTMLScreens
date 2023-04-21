@@ -126,14 +126,14 @@
           <div class="collapse" id="inventory-management" aria-expanded="false">
             <ul class="flex-column pl-2 nav">
               <li class="nav-item">
-                <a class="list-group-item list-group-item-action groupCode active" href="#"><span>Inventory List</span></a>
+                <a class="list-group-item list-group-item-action groupCode " href="./inventory-management-list.html"><span>Inventory List</span></a>
               </li>
               <li class="nav-item">
                 <a class="list-group-item list-group-item-action kitchenConfiguration"
                   href="./add-inventory.html"><span>Add Inventory</span></a>
               </li>
               <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
+                <a class="list-group-item list-group-item-action kitchenConfiguration active"
                   href="./category-list.html"><span>Category List</span></a>
               </li>
               <li class="nav-item">
@@ -239,7 +239,7 @@
       <main>
         <div class="container-fluid  ">
           <div class="inventory-top-section">
-          <h2>Inventory Management List</h2><a href="./add-inventory.html" class="add-btn"><span>+</span> Add</a>
+          <h2>Category List</h2><a href="./add-inventory.html" class="add-btn"><span>+</span> Add</a>
         </div>
         <div class="bg-light mt-3 p-3 inventory-tabel-outer">
 <div class="filter-section">
@@ -268,42 +268,26 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col" class="pr-0"><span class="d-flex align-items-center"><input type="checkbox" class="mr-2"> Product Name </span></th>
-      <th scope="col">UPC</th>
-      <th scope="col">Category</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Price</th>
-      <th scope="col">Unit</th>
-      <th scope="col">Qty</th>
+      <th scope="col"><span class="d-flex align-items-center"><input type="checkbox" class="mr-2"> Product Name </span></th>
+      <th scope="col">Category Code</th>
+      <th scope="col">Description</th>
       <th scope="col">Created By</th>
-      <th scope="col" class="action-th">Action</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <span class="img-box"><img src="./img/lays-img.png" alt="item-img"></span> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -314,29 +298,17 @@
     </td>
     </tr> 
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <img src="./img/lays-img.png" alt="item-img"> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -347,29 +319,17 @@
     </td>
     </tr> 
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <img src="./img/lays-img.png" alt="item-img"> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -380,29 +340,17 @@
     </td>
     </tr> 
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <img src="./img/lays-img.png" alt="item-img"> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -413,29 +361,17 @@
     </td>
     </tr> 
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <img src="./img/lays-img.png" alt="item-img"> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -446,29 +382,17 @@
     </td>
     </tr> 
     <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" > <img src="./img/lays-img.png" alt="item-img"> Lays<span></td>
-      <td>PT001</td>
-      <td>Chips</td>
-      <td>N/D</td>
-      <td>10.00</td>
-      <td>Pc</td>
-      <td>100.00</td>
+      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
+      <td>CT001</td>
+      <td>Lorem Ipsum is simply dummy text.</td>
       <td>Admin</td>
-      <td class="action">
-        <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16.11" height="11.216" viewBox="0 0 16.11 11.216">
-        <g id="eye" transform="translate(-1.946 -5)">
-          <path id="Path_3294" data-name="Path 3294" d="M12,9a3.23,3.23,0,0,0-2.116.782A2.525,2.525,0,0,0,9,11.652,2.86,2.86,0,0,0,12,14.3a2.861,2.861,0,0,0,3-2.652A2.862,2.862,0,0,0,12,9Z" transform="translate(-1.999 -1.044)" fill="#444"/>
-          <path id="Path_3295" data-name="Path 3295" d="M10,5a8.4,8.4,0,0,0-7.97,5.355l-.085.253.084.253A8.4,8.4,0,0,0,10,16.216a8.4,8.4,0,0,0,7.97-5.355l.085-.253-.084-.253A8.4,8.4,0,0,0,10,5Zm0,9.614a6.688,6.688,0,0,1-6.35-4.006A6.688,6.688,0,0,1,10,6.6a6.688,6.688,0,0,1,6.35,4.006A6.688,6.688,0,0,1,10,14.614Z" fill="#444"/>
-        </g>
-      </svg>
-      </a>
+      <td class="">
       <a href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
         <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
       </svg>
     </a>
-      <a href="#">
+      <a href="#" class="ml-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
         <g id="delete" transform="translate(-3 -2)">
           <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
@@ -478,7 +402,7 @@
     </a>
     </td>
     </tr> 
-   
+
   </tbody>
 </table>
 <div id="pagingDiv" class="float-right   mr-3"><span class="disableLink"><span class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#" class="activeLink">4</a><a href="#" class="activeLink"><span class="material-icons">keyboard_arrow_right</span></a></div>
