@@ -145,7 +145,7 @@
                     href="./sub-category-list.html"><span>Sub Category List</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="list-group-item list-group-item-action kitchenConfiguration active"
+                  <a class="list-group-item list-group-item-action kitchenConfiguration "
                     href="./add-sub-category.html"><span>Add Sub Category</span></a>
                 </li>
                 <li class="nav-item">
@@ -157,7 +157,7 @@
                     href="./add-brand.html"><span>Add Brands</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                  <a class="list-group-item list-group-item-action kitchenConfiguration active"
                     href="./print-barcode.html"><span>Print Barcode</span></a>
                 </li>
               </ul>
@@ -239,41 +239,178 @@
       <main>
         <div class="container-fluid  ">
           <div class="inventory-top-section">
-            <div>
-              <h2>Add Sub Category</h2>
-              <p>Create new sub Category</p>
+            <h2>Print Barcode</h2>
+          </div>
+          <div class="bg-light mt-3 p-3 inventory-tabel-outer">
+            <div class="filter-section">
+
+              <div class="search-bar mt-4 mb-2"><input type="search" placeholder="Product Name">
+                <button><svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                    data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor"
+                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                    </path>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="inventory-tabel mt-4">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">UPC</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col" class="Barcode-action">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple</td>
+                    <td>CT001 </td>
+                    <td>100.00</td>
+                    <td>
+                      <a href="#" class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.222" viewBox="0 0 20 22.222">
+                          <g id="delete" transform="translate(-3 -2)">
+                            <path id="Path_3296" data-name="Path 3296"
+                              d="M5.222,22a2.222,2.222,0,0,0,2.222,2.222H18.556A2.222,2.222,0,0,0,20.778,22V8.667H23V6.444H18.556V4.222A2.222,2.222,0,0,0,16.333,2H9.667A2.222,2.222,0,0,0,7.444,4.222V6.444H3V8.667H5.222ZM9.667,4.222h6.667V6.444H9.667ZM8.556,8.667h10V22H7.444V8.667Z"
+                              transform="translate(0 0)" fill="#ea5455" />
+                            <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z"
+                              transform="translate(1 5.449)" fill="#ea5455" />
+                          </g>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="print-barcode-bottom mt-5">
+              <div class="row">
+                <div class="col-md-3">
+              <label>Paper Size</label>
+              <select>
+                <option>36mm (1.4 inch)</option>
+                <option>36mm (1.4 inch)</option>
+              </select>
+            </div>
+              </div>
+            <div class="d-flex align-items-center mt-4">
+              <button class="update-btn">Update</button> <a href="#" class="ml-4 cancel-btn">Cancel</a>
             </div>
           </div>
-          <div class="bg-light p-4 pb-3 mb-5 add-inventory">
-            <form>
-              <div class="row">
-                <div class="col-md-4">
-                  <label>Parent Category</label>
-                  <select required="">
-                    <option value="" disabled="" selected="" hidden="">Parent Category</option>
-                    <option>option 1</option>
-                    <option>option 2</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label>Category Name</label>
-                  <input type="text" placeholder="Category Name">
-                </div>
-                <div class="col-md-4">
-                  <label>Category Code</label>
-                  <input type="text" placeholder="Category Code">
-                </div>
-                <div class="col-md-12">
-                  <label>Description</label>
-                  <textarea placeholder="Description"></textarea>
-                </div>
-                <div class="col-md-12" ><button class="update-btn">Update</button> <a href="#" class="ml-4 cancel-btn">Cancel</a></div>
-                                  
-                </div>
-              </div>
-            </form>
           </div>
-        </div>
       </main>
     </div>
   </div>
