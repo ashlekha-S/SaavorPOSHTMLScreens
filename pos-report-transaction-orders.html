@@ -198,33 +198,47 @@
         <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
           <div class="row mt-3 ml-0">
             <div class="col-12 col-md-9 ">
-              <div class="meal-plan bg-light mt-4">
-<div class="row mb-5">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                       <div class="datepicker date input-group">
-                  <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+              <div class="pos-reports bg-light mt-4">
+                <div class="row">
+                  <div>
+                    <div class="pos-reports-nav">
+                      <ul>
+                        <li><a class="pos-reports-nav-link active"
+                            href="./pos-report-transaction-orders.html">Transaction</a></li>
+                        <li><a class="pos-reports-nav-link " href="./pos-report-customers.html">Customers</a></li>
+                      </ul>
+                    </div>
                   </div>
-                </div> 
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                        <div class="datepicker date input-group ">
-                    <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                    </div>
-                  </div> 
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                        
-                    </div>
-                  
                 </div>
-                
-               
-                 
-               
+
+                <div class="row mb-4 justify-content-center search-filter-section">
+                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
+                    <select name="" id="">
+                      <option value="">Orders</option>
+                      <option value="">Shift Based Transactions</option>
+                      <option value="">End of Day Transactions</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
+                    <div class="datepicker date input-group">
+                      <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
+                      <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
+                    <div class="datepicker date input-group ">
+                      <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
+                      <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ml-4 text-right">
+                    <button class="red-btn">Search</button>
+                  </div>
+                </div>
                 <script>
                   var date = new Date();
                   var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -240,42 +254,65 @@
                   });
 
                 </script>
-
-                <div class="meal-top-section">
-                  <h2>Meal Plans</h2>
-                  <div class="meal-right"><button class="edit-btn">Edit</button><button class="add-btn"
-                      data-toggle="modal" data-target="#exampleModal">Add</button></div>
+                <div class="export-section">
+                  <div class="fromto-date">From 12-07-2022 to 02-24-2023</div>
+                  <div><button class="export-btn"><img src="./img/export-icon.png">Export</button></div>
                 </div>
-                <table class="table mt-4 pt-1 meal-plan-table">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">Breakfast</th>
-                      <th scope="col">Lunch</th>
-                      <th scope="col">Supper</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Students</th>
-                      <td>$10</td>
-                      <td>$12</td>
-                      <td>$10</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Faculty/staff</th>
-                      <td>$8</td>
-                      <td>$8</td>
-                      <td>$8</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Supper</th>
-                      <td>$12</td>
-                      <td>$12</td>
-                      <td>$12</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-box">
+                  <table class="table mt-4 pt-1 pos-report-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">User Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                      <tr>
+                        <td>9NOVJ4</td>
+                        <td>09-Mar-2023 07:33 PM</td>
+                        <td>Jon smith</td>
+                        <td>jon_smith5328@amda.edu </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div id="pagingDiv" class="float-right   mr-3"><span class="disableLink"><span
+                        class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a
+                      href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#"
+                      class="activeLink">4</a><a href="#" class="activeLink"><span
+                        class="material-icons">keyboard_arrow_right</span></a></div>
+                </div>
               </div>
             </div>
             <div class="col-md-3 mt-4">
@@ -283,12 +320,12 @@
                 <img src="./img/creat-western-dining.png">
                 <ul>
                   <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
-                  <li><a href="./pos-meal-plans.html" class="right-nav-link ">Meal Plans</a></li>
-                  <li><a href="#" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="#" class="right-nav-link active" >Reports</a></li>
-                  <li><a href="#" class="right-nav-link">End Shift</a></li>
-                  <li><a href="#" class="right-nav-link">End Day</a></li>
-                  <li><a href="#" class="right-nav-link">POS Settings</a></li>
+                  <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
+                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
+                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link active">Reports</a></li>
+                  <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
+                  <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
+                  <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
                 </ul>
               </div>
             </div>

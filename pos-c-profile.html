@@ -17,7 +17,8 @@
   <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
   <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
   <link href="./css/pos-style.css" rel="stylesheet" />
-
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <style>
     #layoutSidenav_nav img {
       padding: 10px;
@@ -51,12 +52,7 @@
         </a>
         <div id="notificationDropdownContainer" class="dropdown-menu dropdown-menu-right"
           aria-labelledby="notificationDropdown" style="
-              margin-top: -3px;
-              height: 500px;
-              overflow-x: hidden;
-              overflow-y: auto;
-              background: #fff;
-              padding: 0 20px 20px 20px;
+           margin-top: -3px; height: 500px; overflow-x: hidden; overflow-y: auto; background: #fff; padding: 0 20px 20px 20px;
             "></div>
 
         <div id="notificationsHtml" class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown"
@@ -194,56 +190,39 @@
         <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
           <div class="row mt-3 ml-0">
             <div class="col-12 col-md-9 ">
-              <div class="today-menu-section mt-4">
-                <div class="d-flex justify-content-between">
-                  <h2>Today’s Menu</h2> <button class="export-btn"><img src="./img/export-icon.png">Export</button>
-                </div>
-                <div class="menu-card-wraper">
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Breakfast</button>
-                    <div class="menu-img">
-                    <img src="./img/concordia-logo-2.png" />
+              <div class=" mt-4 bg-light register-type-section d-flex align-items-center ">
+                <div class="col-md-5 p-0"><img src="./img/university.png" class="img-fluid" /></div>
+                <div class="col-md-7  ">
+                  <div class="register-type-inners">
+                    <div class="text-center">
+                      <img src="./img/concordia-logo.png">
                     </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Avocado Toast</li>
-                      <li><span class="veg"><span></span></span> Home Fries</li>
-                      <li><span class="veg"><span></span></span>Cereal</li>
-                      <li><span class="non-veg"><span ></span></span>Breakfast Wrap</li>
-                      <li><span class="non-veg"><span ></span></span>Breakfast Sandwich</li>
-                    </ul>
-                    <p class="menu-price">$10.00</p>
-                  </div>
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Lunch</button>
-                    <div class="menu-img">
-                      <img src="./img/concordia-logo-2.png" />
-                    </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Burger</li>
-                      <li><span class="veg"><span></span></span>Classic hot dog</li>
-                      <li><span class="veg"><span></span></span>Cheeseburger</li>
-                      <li><span class="non-veg"><span ></span></span>Reuben sandwich</li>
-                      <li><span class="non-veg"><span ></span></span>Barbecue ribs</li>
-                    </ul>
-                    <p class="menu-price">$12.00</p>
-                  </div>
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Supper</button>
-                    <div class="menu-img">
-                      <img src="./img/concordia-logo-2.png" />
-                    </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Fajitas</li>
-                      <li><span class="veg"><span></span></span>Jerky </li>
-                      <li><span class="veg"><span></span></span>Twinkies</li>
-                      <li><span class="non-veg"><span ></span></span>Pot roast</li>
-                      <li><span class="non-veg"><span ></span></span>Cobb salad</li>
-                    </ul>
-                    <p class="menu-price">$10.00</p>
-                  </div>
-                  
-                  
+                    <div class="pos-check-out">
+                      <form>
 
+                        <div class="row">
+                          <div class="col-md-12">
+                            <select>
+                              <option value="" disabled selected hidden>Customer Type</option>
+                              <option value="">Student</option>
+                              <option value="">Faculty/staff</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="outline-input" placeholder="First Name (Optional)">
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="outline-input" placeholder="Last Name (Optional)">
+                          </div>
+                          <div class="col-md-12">
+                            
+                            <input type="text" class="outline-input" placeholder="ID (Optional)">
+                          </div>
+                        </div>
+                        <input type="submit" class="mt-5 sub-red-input" value="Submit">
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -251,9 +230,9 @@
               <div class="right-menu bg-light">
                 <img src="./img/creat-western-dining.png">
                 <ul>
-                  <li><a href="./pos-today-menu.html" class="right-nav-link active">Today’s Menu</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
                   <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
-                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
+                  <li><a href="./pos-c-profile.html" class="right-nav-link active">Customers Profile</a></li>
                   <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
                   <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
                   <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
@@ -265,8 +244,6 @@
       </main>
     </div>
   </div>
-
-
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />
@@ -318,21 +295,6 @@
   <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
   <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
-  <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
-    <script src="wwwroot/js/toastr.min.js"></script>
-    <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
-    <script src="wwwroot/js/application/jquery.notification.js?v=V01.01245"></script>
-    <script src="wwwroot/js/application/jquery.receipt-print.js?v=V01.01245"></script>
-    <script src="wwwroot/js/application/jquery.managekitchen.js?v=V01.01245"></script>
-    
-    <script src="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="wwwroot/chart/jquery.simple-bar-graph.js"></script>
-    <script src="wwwroot/chart/jquery.circlechart.js"></script>
-    <script src="wwwroot/js/jquery-migrate-3.0.0.min.js"></script>
-    <link href="wwwroot/css/jquery-ui.css" rel="stylesheet" />
-    <script src="wwwroot/js/jquery-ui-1.11.4.js"></script>
-    <script src="wwwroot/js/kitchen-dashboard.js"></script> -->
 </body>
 
 </html>

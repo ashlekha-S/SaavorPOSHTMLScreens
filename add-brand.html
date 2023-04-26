@@ -115,7 +115,53 @@
         <div class="sb-sidenav-menu">
           <div class="nav">
             <a class="nav-link dashboard_" href="#">Dashboard</a>
-            <a class="nav-link active" href="#">POS</a>
+            <a class="nav-link " href="#">POS</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link  active" href="#"
+              data-toggle="collapse" data-target="#inventory-management">
+              <span class="d-none_ d-sm-inline">Inventory Management</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </a>
+            <div class="collapse" id="inventory-management" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action groupCode " href="./inventory-management-list.html"><span>Inventory List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration "
+                    href="./add-inventory.html"><span>Add Inventory</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="./category-list.html"><span>Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Add Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration "
+                    href="./sub-category-list.html"><span>Sub Category List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration "
+                    href="./add-sub-category.html"><span>Add Sub Category</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="./brand-list.html"><span>Brand List</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration active"
+                    href="./add-brand.html"><span>Add Brands</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="./print-barcode.html"><span>Print Barcode</span></a>
+                </li>
+              </ul>
+            </div>
             <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
               href="#manageKitchen" data-toggle="collapse" data-target="#manageKitchen">
               <span class="d-none_ d-sm-inline">Manage Kitchen</span>
@@ -191,82 +237,72 @@
     </div>
     <div id="layoutSidenav_content">
       <main>
-        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
-          <div class="row mt-3 ml-0">
-            <div class="col-12 col-md-9 ">
-              <div class="today-menu-section mt-4">
-                <div class="d-flex justify-content-between">
-                  <h2>Today’s Menu</h2> <button class="export-btn"><img src="./img/export-icon.png">Export</button>
-                </div>
-                <div class="menu-card-wraper">
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Breakfast</button>
-                    <div class="menu-img">
-                    <img src="./img/concordia-logo-2.png" />
-                    </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Avocado Toast</li>
-                      <li><span class="veg"><span></span></span> Home Fries</li>
-                      <li><span class="veg"><span></span></span>Cereal</li>
-                      <li><span class="non-veg"><span ></span></span>Breakfast Wrap</li>
-                      <li><span class="non-veg"><span ></span></span>Breakfast Sandwich</li>
-                    </ul>
-                    <p class="menu-price">$10.00</p>
-                  </div>
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Lunch</button>
-                    <div class="menu-img">
-                      <img src="./img/concordia-logo-2.png" />
-                    </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Burger</li>
-                      <li><span class="veg"><span></span></span>Classic hot dog</li>
-                      <li><span class="veg"><span></span></span>Cheeseburger</li>
-                      <li><span class="non-veg"><span ></span></span>Reuben sandwich</li>
-                      <li><span class="non-veg"><span ></span></span>Barbecue ribs</li>
-                    </ul>
-                    <p class="menu-price">$12.00</p>
-                  </div>
-                  <div class="menu-card bg-light">
-                    <button class="menu-type-btn">Supper</button>
-                    <div class="menu-img">
-                      <img src="./img/concordia-logo-2.png" />
-                    </div>
-                    <ul class="menu-list">
-                      <li><span class="veg"><span></span></span>Fajitas</li>
-                      <li><span class="veg"><span></span></span>Jerky </li>
-                      <li><span class="veg"><span></span></span>Twinkies</li>
-                      <li><span class="non-veg"><span ></span></span>Pot roast</li>
-                      <li><span class="non-veg"><span ></span></span>Cobb salad</li>
-                    </ul>
-                    <p class="menu-price">$10.00</p>
-                  </div>
-                  
-                  
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 mt-4">
-              <div class="right-menu bg-light">
-                <img src="./img/creat-western-dining.png">
-                <ul>
-                  <li><a href="./pos-today-menu.html" class="right-nav-link active">Today’s Menu</a></li>
-                  <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
-                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
-                  <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
-                  <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
-                  <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
-                </ul>
-              </div>
+        <div class="container-fluid  ">
+          <div class="inventory-top-section">
+            <div>
+              <h2>Add Brand</h2>
+              <p>Create new brands</p>
             </div>
           </div>
+          <div class="bg-light p-4 pb-3 mb-5 add-inventory">
+            <form>
+              <div class="row">
+
+                <div class="col-md-12">
+                  <label>Brand Name</label>
+                  <input type="text" placeholder="Category Name">
+                </div>
+                <div class="col-md-12">
+                  <label>Description</label>
+                  <textarea placeholder="Description"></textarea>
+                </div>
+                <div class="col-md-12 ">
+                  <label>Product Image</label>
+                  <div id="upload-section">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="43.33" height="30.331" viewBox="0 0 43.33 30.331">
+                      <g id="upload" transform="translate(-3.399 -9.211)">
+                        <path id="Path_3302" data-name="Path 3302" d="M21.732,32.545V25.878h5l-6.667-8.333L13.4,25.878h5v6.667Z" transform="translate(4.998 6.998)" fill="#e32328"/>
+                        <path id="Path_3303" data-name="Path 3303" d="M14.231,39.542h4.333V35.209H14.231a6.507,6.507,0,0,1-6.5-6.5,7.049,7.049,0,0,1,5.791-6.532l1.259-.221.416-1.209a10.254,10.254,0,0,1,9.866-7.2A10.845,10.845,0,0,1,35.9,24.377v2.167h2.167a4.333,4.333,0,0,1,0,8.666h-6.5v4.333h6.5a8.668,8.668,0,0,0,2.045-17.089A15.186,15.186,0,0,0,25.064,9.211,14.6,14.6,0,0,0,11.538,18.2,11.367,11.367,0,0,0,3.4,28.71,10.845,10.845,0,0,0,14.231,39.542Z" transform="translate(0 0)" fill="#e32328"/>
+                      </g>
+                    </svg>
+                    </div>
+                    <label for="file-upload">Drag and Drop files for Upload</label>
+                    <input type="file" id="file-upload" multiple>
+                  </div>
+                  <div id="preview"></div>
+                </div>
+                <div class="col-md-12" ><button class="update-btn">Update</button> <a href="#" class="ml-4 cancel-btn">Cancel</a></div>
+                                  <script>
+                    const fileUpload = $('#file-upload');
+const preview = $('#preview');
+
+fileUpload.on('change', () => previewImages(fileUpload[0]));
+$('#upload-section').on({
+  dragover: e => $('#upload-section').toggleClass('dragover', true) && e.preventDefault(),
+  dragleave: e => $('#upload-section').toggleClass('dragover', false) && e.preventDefault(),
+  drop: e => (fileUpload[0].files = e.originalEvent.dataTransfer.files) && previewImages(fileUpload[0]) && e.preventDefault()
+});
+preview.on('click', '.remove-btn', e => $(e.currentTarget).closest('.preview-img').remove());
+
+function previewImages(input) {
+  preview.empty();
+  if (input.files) {
+    for (const file of input.files) {
+      const reader = new FileReader();
+      reader.onload = e => preview.append(`<div class="preview-img"><img src="${e.target.result}"><button class="remove-btn"><i class="fa fa-times"></i></button></div>`);
+      reader.readAsDataURL(file);
+    }
+  }
+}
+                  </script>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   </div>
-
-
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />

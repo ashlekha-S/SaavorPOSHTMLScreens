@@ -1,561 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard: Saavor</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <script src="wwwroot//js/sources/jquery-3.2.1.slim.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-    <link href="wwwroot/css/dashboard.css?v=V01.01245" rel="stylesheet" />
-    <link href="wwwroot/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
-    <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
-    <link href="./css/pos-style.css" rel="stylesheet" />
-   
-    <style>
-      #layoutSidenav_nav img {
-        padding: 10px;
-      }
-    </style>
-    <link href="wwwroot//css/toastr.css" rel="stylesheet" />
-    <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
-    <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
-  </head>
-  <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand bg-white" href="index.html"
-        ><img src="wwwroot/images/logo.png"
-      /></a>
-      <button
-        class="btn btn-link btn-sm order-1 order-lg-0"
-        id="sidebarToggle"
-        href="#"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="text-white ml-4 roboto-regular font-size-15 kitchen_name">
-        <span class="roboto-regular font-size-15"> Manik Kitchen</span>
-      </div>
-      <!-- Navbar Search-->
-      <div
-        class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
-      ></div>
-      <!-- Navbar-->
-      <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="badge_notification dropdown">
-          <a
-            class="notification"
-            id="notificationDropdown"
-            href="#"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span class="material-icons float-left color-black">
-              notifications
-            </span>
-            <span class="badge" id="pdOc">0</span>
-          </a>
-          <div
-            id="notificationDropdownContainer"
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="notificationDropdown"
-            style="
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard: Saavor</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <script src="wwwroot//js/sources/jquery-3.2.1.slim.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+  <link href="wwwroot/css/dashboard.css?v=V01.01245" rel="stylesheet" />
+  <link href="wwwroot/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+  <script src="wwwroot/js/sources/font-awesome_5.15.1.min.js"></script>
+  <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
+  <link href="./css/pos-style.css" rel="stylesheet" />
+
+  <style>
+    #layoutSidenav_nav img {
+      padding: 10px;
+    }
+  </style>
+  <link href="wwwroot//css/toastr.css" rel="stylesheet" />
+  <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
+  <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
+</head>
+
+<body class="sb-nav-fixed">
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand bg-white" href="index.html"><img src="wwwroot/images/logo.png" /></a>
+    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="text-white ml-4 roboto-regular font-size-15 kitchen_name">
+      <span class="roboto-regular font-size-15"> Manik Kitchen</span>
+    </div>
+    <!-- Navbar Search-->
+    <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></div>
+    <!-- Navbar-->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="badge_notification dropdown">
+        <a class="notification" id="notificationDropdown" href="#" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="material-icons float-left color-black">
+            notifications
+          </span>
+          <span class="badge" id="pdOc">0</span>
+        </a>
+        <div id="notificationDropdownContainer" class="dropdown-menu dropdown-menu-right"
+          aria-labelledby="notificationDropdown" style="
               margin-top: -3px;
               height: 500px;
               overflow-x: hidden;
               overflow-y: auto;
               background: #fff;
               padding: 0 20px 20px 20px;
-            "
-          ></div>
+            "></div>
 
-          <div
-            id="notificationsHtml"
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="notificationDropdown"
-            style="margin-top: -3px"
-          >
-            <div class="row">
-              <div class="col-12 p-2">
-                <span
-                  action="/orders/new"
-                  style="
+        <div id="notificationsHtml" class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown"
+          style="margin-top: -3px">
+          <div class="row">
+            <div class="col-12 p-2">
+              <span action="/orders/new" style="
                     word-break: break-word;
                     cursor: pointer;
                     width: 100%;
                     float: left;
-                  "
-                  class="p-orders"
-                  onclick="RedirectToOrders(this)"
-                >
-                  <span
-                    class="w-100 float-left roboto-bold font-size-14 color-black"
-                    >Order ID: $T.orderNumber -
-                    <span class="roboto-regular font-size-14 color-black"
-                      >New Order recieved from $T.userName</span
-                    ></span
-                  >
-                </span>
-              </div>
-            </div>
-            <div class="dropdown-divider"></div>
-          </div>
-        </li>
-        <li class="nav-item dropdown user-profile-dropdonw">
-          <a
-            class="nav-link"
-            id="userDropdown"
-            href="#"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span class="material-icons float-left color-black">
-              person_outline
-            </span>
-            <span class="float-left color-white mt-1 ml-3"> Maniks Lakhi </span>
-            <span class="material-icons bg-trans color-white">
-              expand_more
-            </span>
-          </a>
-          <div
-            class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="userDropdown"
-          >
-            <div class="row">
-              <div class="col-12 text-center p-2">
-                <span class="dropdown_user-name float-left w-100"
-                  >Maniks Lakhi</span
-                >
-                <span
-                  class="dropdown_business-name float-left w-100 font-size-15"
-                >
-                  dil se foodies
-                </span>
-              </div>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="row">
-              <div class="col-12 text-center p-2">
-                <a class="dropdown_sign-out color-theme" href="/auth/signout"
-                  >Sign out</a
-                >
-              </div>
+                  " class="p-orders" onclick="RedirectToOrders(this)">
+                <span class="w-100 float-left roboto-bold font-size-14 color-black">Order ID: $T.orderNumber -
+                  <span class="roboto-regular font-size-14 color-black">New Order recieved from
+                    $T.userName</span></span>
+              </span>
             </div>
           </div>
-        </li>
-      </ul>
-    </nav>
-    <div id="layoutSidenav">
-      <div id="layoutSidenav_nav">
-        <img src="wwwroot/images/logo.png" />
-        <nav class="sb-sidenav accordion" id="sidenavAccordion">
-          <div class="sb-sidenav-menu">
-            <div class="nav">
-              <a
-                class="nav-link dashboard_"
-                href="#"
-                >Dashboard</a
-              >
-              <a
-              class="nav-link active"
-              href="#"
-              >POS</a>
-              <a
-                class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
-                href="#manageKitchen"
-                data-toggle="collapse"
-                data-target="#manageKitchen"
-              >
-                <span class="d-none_ d-sm-inline">Manage Kitchen</span>
-                <div class="sb-sidenav-collapse-arrow float-right">
-                  <span class="material-icons">expand_more</span>
-                </div>
-              </a>
-              <div class="collapse" id="manageKitchen" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action groupCode"
-                      href="/manage/groupcode"
-                      ><span>Group Code</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action kitchenConfiguration"
-                      href="/manage/kitchen"
-                      ><span>Kitchen Configuration</span></a
-                    >
-                  </li>
-                </ul>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown user-profile-dropdonw">
+        <a class="nav-link" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="material-icons float-left color-black">
+            person_outline
+          </span>
+          <span class="float-left color-white mt-1 ml-3"> Maniks Lakhi </span>
+          <span class="material-icons bg-trans color-white">
+            expand_more
+          </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <div class="row">
+            <div class="col-12 text-center p-2">
+              <span class="dropdown_user-name float-left w-100">Maniks Lakhi</span>
+              <span class="dropdown_business-name float-left w-100 font-size-15">
+                dil se foodies
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="row">
+            <div class="col-12 text-center p-2">
+              <a class="dropdown_sign-out color-theme" href="/auth/signout">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <img src="wwwroot/images/logo.png" />
+      <nav class="sb-sidenav accordion" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <a class="nav-link dashboard_" href="#">Dashboard</a>
+            <a class="nav-link active" href="#">POS</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
+              href="#manageKitchen" data-toggle="collapse" data-target="#manageKitchen">
+              <span class="d-none_ d-sm-inline">Manage Kitchen</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
               </div>
-              <a
-                class="nav-link manage_users"
-                href="/kitchendashboard/manageusers"
-                >Manage Users</a
-              >
-              <a class="nav-link manage_orders" href="/orders/new"
-                >Manage Orders</a
-              >
-              <a class="nav-link refunds" href="/refund">Manage Refunds</a>
-              <a class="nav-link messages" href="/messages">Messages</a>
-              <a
-                class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_reports"
-                href="#managereport"
-                data-toggle="collapse"
-                data-target="#managereport"
-              >
-                <span class="d-none_ d-sm-inline">Manage Reports</span>
-                <div class="sb-sidenav-collapse-arrow float-right">
-                  <span class="material-icons">expand_more</span>
-                </div>
-              </a>
-              <div class="collapse" id="managereport" aria-expanded="false">
-                <ul class="flex-column pl-2 nav">
-                  <li>
-                    <a
-                      class="list-group-item list-group-item-action collapsed text-truncate nav-link financial_reports"
-                      href="#financialreport"
-                      data-toggle="collapse"
-                      data-target="#financialreport"
-                    >
-                      <span class="d-none_ d-sm-inline">Financial Reports</span>
-                      <div class="sb-sidenav-collapse-arrow float-right">
-                        <span class="material-icons">expand_more</span>
-                      </div>
-                    </a>
-                    <div
-                      class="collapse"
-                      id="financialreport"
-                      aria-expanded="false"
-                    >
-                      <ul class="flex-column pl-2 nav">
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports_school"
-                            href="/report/financial/school"
-                            ><span>Meal Plan</span></a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports_saavor"
-                            href="/report/financial/saavor"
-                            ><span>Credit/ Debit</span></a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="list-group-item list-group-item-action financialreports"
-                            href="/report/financial"
-                            ><span>Summary</span></a
-                          >
-                        </li>
-                      </ul>
+            </a>
+            <div class="collapse" id="manageKitchen" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action groupCode" href="/manage/groupcode"><span>Group
+                      Code</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action kitchenConfiguration"
+                    href="/manage/kitchen"><span>Kitchen Configuration</span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="nav-link manage_users" href="/kitchendashboard/manageusers">Manage Users</a>
+            <a class="nav-link manage_orders" href="/orders/new">Manage Orders</a>
+            <a class="nav-link refunds" href="/refund">Manage Refunds</a>
+            <a class="nav-link messages" href="/messages">Messages</a>
+            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_reports"
+              href="#managereport" data-toggle="collapse" data-target="#managereport">
+              <span class="d-none_ d-sm-inline">Manage Reports</span>
+              <div class="sb-sidenav-collapse-arrow float-right">
+                <span class="material-icons">expand_more</span>
+              </div>
+            </a>
+            <div class="collapse" id="managereport" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li>
+                  <a class="list-group-item list-group-item-action collapsed text-truncate nav-link financial_reports"
+                    href="#financialreport" data-toggle="collapse" data-target="#financialreport">
+                    <span class="d-none_ d-sm-inline">Financial Reports</span>
+                    <div class="sb-sidenav-collapse-arrow float-right">
+                      <span class="material-icons">expand_more</span>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action managereports"
-                      href="/report/order"
-                      ><span>Order Reports</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="list-group-item list-group-item-action manage_users_data"
-                      href="/report/userdata"
-                      >User's Report</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <a
-                class="nav-link reviewfeedbacks"
-                href="/kitchendashboard/reviewfeedbacks"
-                >Review</a
-              >
-              <a class="nav-link left-side--signout" href="/auth/signout"
-                >Sign out</a
-              >
+                  </a>
+                  <div class="collapse" id="financialreport" aria-expanded="false">
+                    <ul class="flex-column pl-2 nav">
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports_school"
+                          href="/report/financial/school"><span>Meal Plan</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports_saavor"
+                          href="/report/financial/saavor"><span>Credit/ Debit</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="list-group-item list-group-item-action financialreports"
+                          href="/report/financial"><span>Summary</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action managereports" href="/report/order"><span>Order
+                      Reports</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="list-group-item list-group-item-action manage_users_data" href="/report/userdata">User's
+                    Report</a>
+                </li>
+              </ul>
             </div>
+            <a class="nav-link reviewfeedbacks" href="/kitchendashboard/reviewfeedbacks">Review</a>
+            <a class="nav-link left-side--signout" href="/auth/signout">Sign out</a>
           </div>
-        </nav>
-      </div>
-      <div id="layoutSidenav_content">
-        <main>
-          <div class="container-fluid mb-5 pl-xl-2 pl-sm-0 ">
-            <div class="row mt-3 ml-0">
+        </div>
+      </nav>
+    </div>
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0 ">
+          <div class="row mt-3 ml-0">
             <div class="col-12 col-md-9 ">
-            <div class=" mt-4 bg-light register-type-section  align-items-center ">
-             <div class="customer-profile">
-              <div class="customer-profile-top">
-                <a class="back-btn"><img src="./img/arrow-left-solid.png"></a>
-              <h2>Customer Profile</h2>
-              </div>
-              <div class="row">
-                <div class="col-md-7">
-                  <form>
-                    <div class="row">
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="Student" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Customer Type
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="jon" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            First Name
-                          </span>
-                        </label>
-                      </div>
-                    </div>  
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="smith" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Last Name
-                          </span>
-                        </label>
-                      </div>
-                    </div>  
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="************1548" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Card Details
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="4545451548" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Student ID
-                          </span>
-                        </label>
-                      </div>
-                    </div> 
-                    <div class="col-md-6">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="Summer-2023" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            Term
-                          </span>
-                        </label>
-                      </div>
-                    </div> 
-                    <div class="col-md-12">
-                      <div class="customer-profile-form">
-                        <input type="text" name="text" value="1612514845" autocomplete="off"  required />
-                        <label for="text" class="label-name">
-                          <span class="content-name" >
-                            PH.No:
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mt-3">
-                      <div class="meal-plan-section">
-                        <h3>Meal Plan :</h3>
+              <div class=" mt-4    align-items-center ">
+                <div class="customer-profile bg-light">
+                  <div class="customer-profile-top">
+                    <a class="back-btn"><img src="./img/arrow-left-solid.png"></a>
+                    <h2>Customer Profile</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7">
+                      <form>
                         <div class="row">
-                          
-                          <div class="col-md-6">
-                            <p><b>Amount:</b> $1200</p>
-                            <p><b>Used: </b> $700</p>
-                            <p><b>Available:</b> $500</p>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="Student" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Customer Type
+                                </span>
+                              </label>
+                            </div>
                           </div>
-                          <div class="col-md-6 mt-4">
-                            <p><b>Start: </b> Feb 02, 2023</p>
-                            <p><b>End:</b> May 25, 2023</p>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="jon" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  First Name
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="smith" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Last Name
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="************1548" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Card Details
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="4545451548" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Student ID
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="Summer-2023" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  Term
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="customer-profile-form">
+                              <input type="text" name="text" value="1612514845" autocomplete="off" required />
+                              <label for="text" class="label-name">
+                                <span class="content-name">
+                                  PH.No:
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mt-3">
+                            <div class="meal-plan-section">
+                              <h3>Meal Plan :</h3>
+                              <div class="row">
+
+                                <div class="col-md-6">
+                                  <p><b>Amount:</b> $1200</p>
+                                  <p><b>Used: </b> $700</p>
+                                  <p><b>Available:</b> $500</p>
+                                </div>
+                                <div class="col-md-6 mt-4">
+                                  <p><b>Start: </b> Feb 02, 2023</p>
+                                  <p><b>End:</b> May 25, 2023</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                      </form>
+                    </div>
+                    <div class="col-md-5 mt-4">
+                      <div class="Profile-img-section">
+                        <img class="Profile-img" src="./img/profile-img.png">
+                        <button class="sub-red-input">Check Out</button>
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 oder-history mt-5">
+
+                      <h2>Order History</h2>
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">User Email</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>9NOVJ4</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                            <td>4BT1U0</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                            <td>FMQNKM</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                            <td>U1VR34</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                            <td>1VS7PP</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                            <td>OI4IIY</td>
+                            <td>16-Feb-2023 12:00 AM</td>
+                            <td>Camila Gonzalez </td>
+                            <td>camila_gonzalez5328@amda.edu </td>
+                            <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true"
+                                onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa"
+                                data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                </path>
+                              </svg></td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                  </form>
-                </div>
-                <div class="col-md-5 mt-4">
-                  <div class="Profile-img-section">
-                  <img class="Profile-img" src="./img/profile-img.png">
-                  <button class="sub-red-input">Check Out</button>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 oder-history mt-5">
-
-<h2>Order History</h2>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Order ID</th>
-      <th scope="col">Order Date</th>
-      <th scope="col">User Name</th>
-      <th scope="col">User Email</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>9NOVJ4</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-    <tr>
-      <td>4BT1U0</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-    <tr>
-      <td>FMQNKM</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-    <tr>
-      <td>U1VR34</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-    <tr>
-      <td>1VS7PP</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-    <tr>
-      <td>OI4IIY</td>
-      <td>16-Feb-2023 12:00 AM</td>
-      <td>Camila Gonzalez	</td>
-      <td>camila_gonzalez5328@amda.edu	</td>
-      <td><svg class="svg-inline--fa fa-info-circle fa-w-16 cursor-pointer" aria-hidden="true" onclick="onLoadKitchenUserInformation(808)" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></td>
-    </tr>
-  </tbody>
-</table>
-                </div>
-              </div>
-             </div>
-           </div>
             </div>
             <div class="col-md-3 mt-4">
               <div class="right-menu bg-light">
                 <img src="./img/creat-western-dining.png">
                 <ul>
-                  <li><a href="#" class="right-nav-link">Today’s Menu</a></li>
-                  <li><a href="#" class="right-nav-link">Meal Plans</a></li>
-                  <li><a href="#" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="#" class="right-nav-link">Reports</a></li>
-                  <li><a href="#" class="right-nav-link">End Shift</a></li>
-                  <li><a href="#" class="right-nav-link">End Day</a></li>
-                  <li><a href="#" class="right-nav-link">POS Settings</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
+                  <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
+                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
+                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
+                  <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
+                  <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
+                  <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
                 </ul>
               </div>
-              </div>
+            </div>
           </div>
-        </main>
-      </div>
+      </main>
     </div>
-    <div id="notificationsOverlay" class="overlay"></div>
-    <input type="hidden" id="hdnSystemTime" />
-    <input type="hidden" id="hdnPO" value="0" />
-    <input type="hidden" id="hdnEncryptedSystemTime" />
+  </div>
+  <div id="notificationsOverlay" class="overlay"></div>
+  <input type="hidden" id="hdnSystemTime" />
+  <input type="hidden" id="hdnPO" value="0" />
+  <input type="hidden" id="hdnEncryptedSystemTime" />
 
-    <!-- Loader Start -->
-    <div class="loading_container_overlay hide"></div>
-    <div class="loader_container hide">
-      <div class="rainbow">
-        <img src="wwwroot/images/logo.png" alt="" />
-      </div>
+  <!-- Loader Start -->
+  <div class="loading_container_overlay hide"></div>
+  <div class="loader_container hide">
+    <div class="rainbow">
+      <img src="wwwroot/images/logo.png" alt="" />
     </div>
-    <!-- Loader End -->
-    <!-- Off Campus Start -->
+  </div>
+  <!-- Loader End -->
+  <!-- Off Campus Start -->
 
-    <div id="offCampusIds" class="modal">
-      <div class="modal-content animate">
-        <div class="container">
-          <div>
-            <div class="row">
-              <div class="col-12">
-                <span
-                  onclick="document.getElementById('offCampusIds').style.display='none'"
-                  class="close"
-                  title="close"
-                  >×</span
-                >
-              </div>
+  <div id="offCampusIds" class="modal">
+    <div class="modal-content animate">
+      <div class="container">
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <span onclick="document.getElementById('offCampusIds').style.display='none'" class="close"
+                title="close">×</span>
             </div>
-            <div class="row mt-4 mb-3">
-              <div class="col-12 text-center">
-                <span
-                  id="offCampusTitle"
-                  style="font-family: Roboto Medium !important"
-                ></span>
-              </div>
+          </div>
+          <div class="row mt-4 mb-3">
+            <div class="col-12 text-center">
+              <span id="offCampusTitle" style="font-family: Roboto Medium !important"></span>
             </div>
-            <div class="row mt-4 mb-3">
-              <div class="col-12 text-center">
-                <img
-                  id="offCampusImg"
-                  style="width: auto !important; height: 350px"
-                />
-              </div>
+          </div>
+          <div class="row mt-4 mb-3">
+            <div class="col-12 text-center">
+              <img id="offCampusImg" style="width: auto !important; height: 350px" />
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Order Invoice Start -->
-    <div id="orderInvoice" class="modal">
-      <div class="modal-content animate">
-        <div class="container invoice--info"></div>
-      </div>
+  <!-- Order Invoice Start -->
+  <div id="orderInvoice" class="modal">
+    <div class="modal-content animate">
+      <div class="container invoice--info"></div>
     </div>
-    <!-- Order Invoice End -->
-    <!-- Off Campus End -->
-    <audio
-      id="pendingOrderTone"
-      src="/css/saavor_new_order_tone.mp3"
-      hidden
-      controls
-    ></audio>
-    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
-    <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
+  </div>
+  <!-- Order Invoice End -->
+  <!-- Off Campus End -->
+  <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
+  <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
+  <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
     <script src="wwwroot/js/toastr.min.js"></script>
     <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
     <script src="wwwroot/js/application/jquery.notification.js?v=V01.01245"></script>
@@ -570,5 +492,6 @@
     <link href="wwwroot/css/jquery-ui.css" rel="stylesheet" />
     <script src="wwwroot/js/jquery-ui-1.11.4.js"></script>
     <script src="wwwroot/js/kitchen-dashboard.js"></script> -->
-  </body>
+</body>
+
 </html>
