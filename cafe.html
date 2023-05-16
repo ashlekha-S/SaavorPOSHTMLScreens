@@ -18,6 +18,8 @@
   <link href="wwwroot/css/materialicons.css" rel="stylesheet" />
   <link href="./css/pos-style.css" rel="stylesheet" />
 
+
+
   <style>
     #layoutSidenav_nav img {
       padding: 10px;
@@ -115,53 +117,7 @@
         <div class="sb-sidenav-menu">
           <div class="nav">
             <a class="nav-link dashboard_" href="#">Dashboard</a>
-            <a class="nav-link " href="#">POS</a>
-            <a class="list-group-item list-group-item-action collapsed text-truncate nav-link  active"
-            href="#" data-toggle="collapse" data-target="#inventory-management">
-            <span class="d-none_ d-sm-inline">Inventory Management</span>
-            <div class="sb-sidenav-collapse-arrow float-right">
-              <span class="material-icons">expand_more</span>
-            </div>
-          </a>
-          <div class="collapse" id="inventory-management" aria-expanded="false">
-            <ul class="flex-column pl-2 nav">
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action groupCode " href="./inventory-management-list.html"><span>Inventory List</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./add-inventory.html"><span>Add Inventory</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration active"
-                  href="./category-list.html"><span>Category List</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./add-category.html"><span>Add Category</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./sub-category-list.html"><span>Sub Category List</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./add-sub-category.html"><span>Add Sub Category</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./brand-list.html"><span>Brand List</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./add-brand.html"><span>Add Brands</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="list-group-item list-group-item-action kitchenConfiguration"
-                  href="./print-barcode.html"><span>Print Barcode</span></a>
-              </li>
-            </ul>
-          </div>
+            <a class="nav-link active" href="#">POS</a>
             <a class="list-group-item list-group-item-action collapsed text-truncate nav-link manage_kitchen"
               href="#manageKitchen" data-toggle="collapse" data-target="#manageKitchen">
               <span class="d-none_ d-sm-inline">Manage Kitchen</span>
@@ -237,112 +193,55 @@
     </div>
     <div id="layoutSidenav_content">
       <main>
-        <div class="container-fluid  ">
-          <div class="inventory-top-section">
-          <h2>Category List</h2><a href="./add-category.html" class="add-btn"><span>+</span> Add</a>
-        </div>
-        <div class="bg-light mt-3 p-3 inventory-tabel-outer">
-<div class="filter-section">
-  <div class="filter-section-left">
-    <div class="filter-icone">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-    <g id="Group_1185" data-name="Group 1185" transform="translate(-312 -199)">
-      <rect id="Rectangle_553" data-name="Rectangle 553" width="35" height="35" rx="5" transform="translate(312 199)" fill="#e32328"/>
-      <path id="filter-solid" d="M.128,32.724A1.26,1.26,0,0,1,1.27,32H14.934a1.266,1.266,0,0,1,.977,2.069l-5.785,7.069v4.02a1.013,1.013,0,0,1-1.619.81L6.483,44.449a1,1,0,0,1-.4-.81v-2.5L.29,34.065A1.262,1.262,0,0,1,.128,32.724Z" transform="translate(322.929 178.263)" fill="#fff"/>
-    </g>
-  </svg>
-  </div>
-  <div class="search-bar my-2"><input type="search" placeholder="Search item">
-    <button><svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-            </path>
-        </svg></button>
-</div>
-  </div>
-  <div class="filter-section-right"><svg xmlns="http://www.w3.org/2000/svg" width="24.45" height="24.45" viewBox="0 0 24.45 24.45">
-    <path id="print-solid" d="M6.113,0A3.059,3.059,0,0,0,3.056,3.056V7.641H6.113V3.056H16.938l1.4,1.4V7.641h3.056V4.455A3.057,3.057,0,0,0,20.5,2.292L19.1.893A3.057,3.057,0,0,0,16.938,0ZM18.337,16.809v4.584H6.113V16.809Zm3.056,1.528h1.528a1.526,1.526,0,0,0,1.528-1.528V12.225a3.059,3.059,0,0,0-3.056-3.056H3.056A3.059,3.059,0,0,0,0,12.225v4.584a1.526,1.526,0,0,0,1.528,1.528H3.056v3.056A3.059,3.059,0,0,0,6.113,24.45H18.337a3.059,3.059,0,0,0,3.056-3.056Zm-.764-6.495a1.146,1.146,0,1,1-1.146,1.146A1.146,1.146,0,0,1,20.63,11.843Z" fill="#444"/>
-  </svg>
-  </div>
-</div>  
-<div class="inventory-tabel mt-4">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col"><span class="d-flex align-items-center"><input type="checkbox" class="mr-2">Category Name</span></th>
-      <th scope="col">Category Code</th>
-      <th scope="col">Description</th>
-      <th scope="col">Created By</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
-      <td>CT001</td>
-      <td>Lorem Ipsum is simply dummy text.</td>
-      <td>Admin</td>
-      <td class="">
-      <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
-        <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
-      </svg>
-    </a>
-      <a href="#" class="ml-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
-        <g id="delete" transform="translate(-3 -2)">
-          <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
-          <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z" transform="translate(-2.5 -2.329)" fill="#ea5455"/>
-        </g>
-      </svg>
-    </a>
-    </td>
-    </tr> 
-   
-    <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
-      <td>CT001</td>
-      <td>Lorem Ipsum is simply dummy text.</td>
-      <td>Admin</td>
-      <td class="">
-      <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
-        <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
-      </svg>
-    </a>
-      <a href="#" class="ml-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
-        <g id="delete" transform="translate(-3 -2)">
-          <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
-          <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z" transform="translate(-2.5 -2.329)" fill="#ea5455"/>
-        </g>
-      </svg>
-    </a>
-    </td>
-    </tr> 
-    <tr>
-      <td  class="product-name"><span class="d-flex align-items-center"><input type="checkbox" ><span class="img-box"> <img src="./img/7d42.jpg" alt="item-img"></span> Fruits<span></td>
-      <td>CT001</td>
-      <td>Lorem Ipsum is simply dummy text.</td>
-      <td>Admin</td>
-      <td class="">
-      <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13.474" viewBox="0 0 11 13.474">
-        <path id="edit" d="M10.343,3.839a1.374,1.374,0,0,0,0-1.944L9.253.8A1.374,1.374,0,0,0,7.31.8L0,8.09v3.035H3.034ZM8.281,1.776l1.091,1.09L8.279,3.955l-1.09-1.09ZM1.375,9.75V8.661l4.84-4.825,1.09,1.09L2.466,9.75ZM0,12.5H11v1.375H0Z" transform="translate(0 -0.401)" fill="#444"/>
-      </svg>
-    </a>
-      <a href="#" class="ml-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14.444" viewBox="0 0 13 14.444">
-        <g id="delete" transform="translate(-3 -2)">
-          <path id="Path_3296" data-name="Path 3296" d="M4.444,15a1.444,1.444,0,0,0,1.444,1.444h7.222A1.444,1.444,0,0,0,14.556,15V6.333H16V4.889H13.111V3.444A1.444,1.444,0,0,0,11.667,2H7.333A1.444,1.444,0,0,0,5.889,3.444V4.889H3V6.333H4.444ZM7.333,3.444h4.333V4.889H7.333ZM6.611,6.333h6.5V15H5.889V6.333Z" transform="translate(0)" fill="#ea5455"/>
-          <path id="Path_3297" data-name="Path 3297" d="M9,10h2v6.625H9Zm4,0h2v6.625H13Z" transform="translate(-2.5 -2.329)" fill="#ea5455"/>
-        </g>
-      </svg>
-    </a>
-    </td>
-    </tr> 
-  </tbody>
-</table>
-        </div>
+        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
+          <div class="row mt-3 ml-0">
+            <div class="col-12 col-md-9 ">
+              <div class=" mt-4 bg-light register-type-section d-flex align-items-center ">
+                <div class="col-md-5 p-0"><img src="./img/university.png" class="img-fluid" /></div>
+                <div class="col-md-7  ">
+                  <div class="register-type-inners">
+                    <div class="text-center">
+                      <img src="./img/concordia-logo.png">
+                    </div>
+                    <div class="pos-check-out">
+                      <form>
+                        
+                        <select>
+                          <option value="">Spring-2023</option>
+                          <option value="">Spring-2023</option>
+                          <option value="">Spring-2023</option>
+                        </select>
+
+                        <select class="outline-input">
+                          <option value="" disabled="" selected="" hidden="">Customer Type</option>
+                          <option value="">Student</option>
+                          <option value="">Faculty/staff</option>
+                        </select>
+
+<input type="text" class="outline-input" placeholder="Campus ID">
+                        <input type="submit" class="mt-5 sub-red-input" value="Proceed">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="right-menu bg-light">
+                <img src="./img/creat-western-dining.png">
+                <ul>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link active">Cafe</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Market Side</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
+                  <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
+                  <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
+                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
+                  <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
+                  <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
+                  <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
       </main>
     </div>

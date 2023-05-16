@@ -16,8 +16,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 65px;
     gap: 34px;
+    flex-wrap: wrap;
+    max-height: 338px;
+    overflow: auto;
 }
 
 .register-card h3 {
@@ -26,7 +29,21 @@ body {
     color: #444444;
     line-height: 25px;
 }
+.register-card-wrap ::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.register-card-wrap::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
 
+.register-card-wrap::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #E32328; 
+}
 .register-card {
     padding: 29px 25px;
     border: 1px solid #707070;
@@ -65,7 +82,7 @@ body {
 .meal-right .edit-btn:hover,
 .add-meal-form input[type="submit"]:hover,
 #custom-button:hover,
-.red-btn:hover {
+.red-btn:hover,.checkout-btn:hover {
     color: #fff;
     text-decoration: none;
     background: #212529;
@@ -116,8 +133,7 @@ body {
 .right-menu {
     border-radius: 15px;
     text-align: center;
-    padding: 33px 0px;
-    height: 478px;
+    padding: 33px 0px 10px;
     box-shadow: 0px 3px 48px -37px;
 }
 
@@ -403,6 +419,7 @@ img.Profile-img {
 .meal-plan-upper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .meal-plan-upper .user-info img {
@@ -511,15 +528,25 @@ img.Profile-img {
     position: relative;
     width: 45%;
     padding: 25px;
-    padding-top: 70px !important;
+    padding-top: 86px !important;
     padding-right: 16px;
+    border-left: 1px solid #F2F2F2;
 }
-
 .price {
     color: #168D88 !important;
     font-weight: 700;
 }
-
+.checkout-btn {
+    width: 95%;
+    display: inline-block;
+    text-align: center;
+    background: #E32328;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 5px;
+    text-decoration: none;
+}
 .right-cart p {
     font-size: 12px;
     color: #383E45;
@@ -549,10 +576,7 @@ img.Profile-img {
     opacity: 0;
 }
 
-.box {
-    display: none;
-    margin-top: 20px;
-}
+
 
 .pament-btn label {
     border: 1px solid;
@@ -647,13 +671,15 @@ img.Profile-img {
     top: 25px;
 }
 
-.cart-amount p {
-    font-size: 14px;
+.cart-amount .left-side p {
+    font-size: 17px;
     color: #444444;
     margin: 0px;
     line-height: 35px;
 }
-
+.cart-amount .right-side P {
+    font-size: 14px;
+}
 .complete-modal .modal-content {
 
     width: 100%;
@@ -673,6 +699,7 @@ img.Profile-img {
     border-radius: 30px;
     color: #fff;
     outline: none;
+    height: auto;
 }
 
 .complete-modal .red-btn:hover {
@@ -817,7 +844,7 @@ p.menu-price {
     outline: none !important;
 }
 
-.meal-right .add-btn {
+.meal-right .add-btn ,.register-add-btn{
     background: #E32328;
     border: 0px;
     color: #fff;
@@ -1624,6 +1651,169 @@ td.addons ul {
 .timepicker {
     border-radius: 5px !important;
 }
+.pos-profile-section .switch {
+    position: relative;
+    display: inline-block;
+    width: 63px;
+    height: 29px;
+}
+.Cafe h4 {
+    font-size: 18px;
+    color: #444444;
+    font-weight: 500;
+}
+.accepted-radio-btn {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: start;
+}
+.accepted-radio-btn label {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    color: #444444;
+}
+.Cafe input[type="checkbox"] {
+    display: block;
+    width: 25px;
+}
+.cart-discount-section h2 {
+    margin-top: 20px;
+    font-size: 15px;
+}
+.cart-discount-section input {
+    width: 100%;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    outline: none;
+    padding: 1px 3px 1px 19px;
+    font-size: 13px;
+    height: 30px;
+}
+.cart-discount-section a {
+    font-size: 12px;
+    display: block;
+    font-weight: 800;
+    color: #E32328;
+}
+.cart-discount-section input.percentag {
+    background: url(../img/percentag.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 7px;
+}
+.cart-discount-section input.discount-price {
+    background: url(../img/dollar-sign.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 7px;
+}
+.com-height {
+    min-height: 580px;
+}
+.checkout-top-right .price {
+    font-size: 25px;
+    margin-left: 10px;
+}
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    border: none;
+}.nav-tabs {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+.checkout-tabs .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+   
+}
+.checkout-tabs .nav-item {
+    width: 24.8%;
+    background: #EFEFEF;
+    text-align: center;
+    color: #808080;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    border-radius: 0px;
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    background: #343A40;
+    color: #fff !important;
+}
+.green-input {
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding: 2px 7px;
+    color: #168D88;
+    width:100%;
+}
+.other-card-sections h4 {
+    font-size: 17px;
+    color: #383E45;
+    font-weight: 900;
+}
+
+.other-card-sections input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #AAAAAA;
+    font-size: 12px;
+    padding: 7px;
+}
+.other-card-sections .add-btn {
+    display: inline-block;
+    background: #343A40;
+    color: #fff;
+    padding: 7px 20px 7px 35px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 900;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+.other-card-sections .add-btn svg {
+    position: absolute;
+    left: 15px;
+    top: 9px;
+}
+.other-card-sections .delete {
+    display: inline-block;
+    background: #E32328;
+    color: #fff;
+    padding: 7px 10px 7px 30px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 900;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+.other-card-sections .delete svg {
+    position: absolute;
+    left: 12px;
+    top: 9px;
+}
+.available-text p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444444;
+}
+.available-text span {
+    color: #168D88;
+}
+.pos-setting-register .register-add-btn {
+    width: 100px !important;
+    margin-top: 15px;
+} 
 /* inventory-css */
 .inventory-top-section .add-btn {
     background-color: #E32328;

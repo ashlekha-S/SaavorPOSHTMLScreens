@@ -26,10 +26,6 @@
   <link href="wwwroot//css/toastr.css" rel="stylesheet" />
   <script src="wwwroot//lib/jquery/dist/jquery.min.js"></script>
   <link href="wwwroot//css/modal-popup.css" rel="stylesheet" />
-  <!-- datepicker styles -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
-
 </head>
 
 <body class="sb-nav-fixed">
@@ -195,169 +191,177 @@
     </div>
     <div id="layoutSidenav_content">
       <main>
-        <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
+        <div class="container-fluid mb-5 pl-xl-2 ">
           <div class="row mt-3 ml-0">
-            <div class="col-12 col-md-9 ">
-              <div class="pos-reports bg-light mt-4">
-                <div class="row">
-                  <div>
-                    <div class="pos-reports-nav">
-                      <ul>
-                        <li><a class="pos-reports-nav-link active"
-                            href="./pos-report-transaction-orders.html">Transaction</a></li>
-                        <li><a class="pos-reports-nav-link " href="./pos-report-customers.html">Customers</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-12 col-md-9 pl-0 ">
+              <div class=" mt-4 bg-light register-type-section d-flex com-height ">
+                <div class="meal-plan-service">
 
-                <div class="row mb-4 justify-content-center search-filter-section">
-                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
-                    <select name="" id="">
-                      <option value="">Orders</option>
-                      <option value="">Shift Based Transactions</option>
-                      <option value="" selected>End of Day Transactions</option>
-                    </select>
+                  <div class="meal-plan-upper mb-4 align-items-center">
+                    <div class="back-arrow d-flex"><img src="./img/arrow-left-solid.png">
+                      <h2 class="my-1 ml-3">Check Out</h2>
+                    </div>
+                    <div class="checkout-top-right">Total - <span class="price">$16.60</span> </div>
+
                   </div>
-                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
-                    <div class="datepicker date input-group">
-                      <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                      <div class="input-group-append">
-                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                  <div class="checkout-tabs">
+                    <nav>
+                      <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="cash-tab" data-toggle="tab" href="#cash" role="tab"
+                          aria-controls="nav-home" aria-selected="true">Cash</a>
+                        <a class="nav-item nav-link" id="card-tab" data-toggle="tab" href="#card" role="tab"
+                          aria-controls="nav-profile" aria-selected="false">Debit/Credit</a>
+                        <a class="nav-item nav-link" id="meal-plan-tab" data-toggle="tab" href="#meal-plan" role="tab"
+                          aria-controls="nav-contact" aria-selected="false">Meal Plan</a>
+                        <a class="nav-item nav-link" id="split-tab" data-toggle="tab" href="#split" role="tab"
+                          aria-controls="nav-contact" aria-selected="false">Split</a>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active p-3 pt-4" id="cash" role="tabpanel"
+                        aria-labelledby="nav-home-tab">
+                        <div class=" row align-items-center">
+                          <div class="col-md-2"> <label class="m-0">Cash<label></div>
+                          <div class="col-md-4 "> <input class="green-input" type="text"></div>
+                        </div>
+                        <div class=" row mt-3 ">
+                          <div class="col-md-2"> <label class="m-0">Change<label></div>
+                          <div class="col-md-4">
+                            <p>33.40</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mt-2 p-0">
+                          <button class="sub-red-input mt-4" data-toggle="modal"
+                            data-target="#exampleModal">Complete</button>
+                        </div>
+
+                      </div>
+                      <div class="tab-pane fade p-3 " id="card" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                        <div class="card-payment mt-3">
+                          <div class="d-flex align-items-center">
+                            <img src="./img/011-visa.png">
+                            <p class="ml-1">XXXX XXXX XXXX 9876<br>Visa</p>
+                          </div>
+                        </div>
+                        <div class="other-card-sections col-md-12 pl-0">
+                            <h4 class="mt-4 mb-3">Other Card</h4>
+                            <div class="row mb-4">
+                              <div class="col-md-4"><input type="text" placeholder="Transaction ID"></div>
+                              <div class="col-md-2"><input type="number" placeholder="Amount"></div>
+                              <div class="col-md-2"><a class="delete"><svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="11.903" height="15.304" viewBox="0 0 11.903 15.304">
+                                <path id="Path_15" data-name="Path 15" d="M6,17.2a1.705,1.705,0,0,0,1.7,1.7h6.8a1.705,1.705,0,0,0,1.7-1.7V7H6Z" transform="translate(-5.15 -3.599)" fill="#fff"></path>
+                                <path id="Path_16" data-name="Path 16" d="M16.9,3.85H13.928L13.077,3H8.826l-.85.85H5v1.7H16.9Z" transform="translate(-5 -3)" fill="#fff"></path>
+                              </svg>
+                              Delete</a>  </div>
+                            </div>
+                            <div class="row mb-4">
+                              <div class="col-md-4"><input type="text" placeholder="Transaction ID"></div>
+                              <div class="col-md-2"><input type="number" placeholder="Amount"></div>
+                              <div class="col-md-2"><a class="add-btn"><svg xmlns="http://www.w3.org/2000/svg" width="13.999" height="14" viewBox="0 0 13.999 14">
+                                <path id="addition-color-outline-icon" d="M71.76,63.567v2.38a1.031,1.031,0,0,1-1.026,1.027H66.977v3.757a1.03,1.03,0,0,1-1.026,1.026H63.57a1.029,1.029,0,0,1-1.026-1.026V66.974H58.787a1.03,1.03,0,0,1-1.026-1.027v-2.38a1.029,1.029,0,0,1,1.026-1.026h3.757V58.783a1.029,1.029,0,0,1,1.026-1.026h2.381a1.029,1.029,0,0,1,1.026,1.026v3.758h3.757A1.031,1.031,0,0,1,71.76,63.567Z" transform="translate(-57.761 -57.757)" fill="#fff"/>
+                              </svg>
+                              Add</a> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2 p-0">
+                          <button class="sub-red-input mt-4" data-toggle="modal"
+                            data-target="#exampleModal">Complete</button>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="meal-plan" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="box-2 box col-md-7 mt-4">
+                          <div class="cart-amount">
+                            <p><b>Amount:</b> $1200</p>
+                            <div class="d-flex justify-content-between">
+                              <div class="left-side">
+                                <p><b>Used:</b> $700</p>
+                                <p class="available"><b>Available:</b><span class="price"> $500</span></p>
+                              </div>
+                              <div class="right-side">
+                                <p><b>Start:</b> Feb 02, </p>
+                                <p><b>End:</b> May 25, </p>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                        <div class="col-md-4 mt-2 p-0">
+                          <button class="sub-red-input mt-4" data-toggle="modal"
+                            data-target="#exampleModal">Complete</button>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade p-3 pt-4" id="split" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class=" row align-items-center">
+                          <div class="col-md-2"> <label class="m-0">Cash<label></div>
+                          <div class="col-md-5 pr-4"> <input class="green-input" type="text"></div>
+                        </div>
+                        <div class=" row align-items-center mt-4">
+                          <div class="col-md-2"> <label class="m-0">Debit/Credit<label></div>
+                          <div class="col-md-5 pr-4"> <input class="green-input" type="text"></div>
+                        </div>
+                        <div class=" row align-items-center mt-2">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-5">
+                            <div class="card-payment mt-3">
+                              <div class="d-flex align-items-center">
+                                <img src="./img/011-visa.png">
+                                <p class="ml-1">XXXX XXXX XXXX 9876<br>Visa</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" row  mt-2 mt-4 other-card-sections">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-2"><h4 class="">Other Card</h4></div>
+                          <div class="col-md-7">
+                            <div class=" col-md-12 pl-0">
+                              <div class="row mb-4">
+                                <div class="col-md-6"><input type="text" placeholder="Transaction ID"></div>
+                                <div class="col-md-3"><input type="number" placeholder="Amount"></div>
+                                <div class="col-md-3"><a class="delete"><svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="11.903" height="15.304" viewBox="0 0 11.903 15.304">
+                                  <path id="Path_15" data-name="Path 15" d="M6,17.2a1.705,1.705,0,0,0,1.7,1.7h6.8a1.705,1.705,0,0,0,1.7-1.7V7H6Z" transform="translate(-5.15 -3.599)" fill="#fff"></path>
+                                  <path id="Path_16" data-name="Path 16" d="M16.9,3.85H13.928L13.077,3H8.826l-.85.85H5v1.7H16.9Z" transform="translate(-5 -3)" fill="#fff"></path>
+                                </svg>
+                                Delete</a>  </div>
+                              </div>
+                              <div class="row mb-4">
+                                <div class="col-md-6"><input type="text" placeholder="Transaction ID"></div>
+                                <div class="col-md-3"><input type="number" placeholder="Amount"></div>
+                                <div class="col-md-3"><a class="add-btn"><svg xmlns="http://www.w3.org/2000/svg" width="13.999" height="14" viewBox="0 0 13.999 14">
+                                  <path id="addition-color-outline-icon" d="M71.76,63.567v2.38a1.031,1.031,0,0,1-1.026,1.027H66.977v3.757a1.03,1.03,0,0,1-1.026,1.026H63.57a1.029,1.029,0,0,1-1.026-1.026V66.974H58.787a1.03,1.03,0,0,1-1.026-1.027v-2.38a1.029,1.029,0,0,1,1.026-1.026h3.757V58.783a1.029,1.029,0,0,1,1.026-1.026h2.381a1.029,1.029,0,0,1,1.026,1.026v3.758h3.757A1.031,1.031,0,0,1,71.76,63.567Z" transform="translate(-57.761 -57.757)" fill="#fff"/>
+                                </svg>
+                                Add</a> </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class=" row align-items-center">
+                          <div class="col-md-2"> <label class="m-0">Meal Plan<label></label></label></div>
+                          <div class="col-md-4 "> <input class="green-input" type="text"></div> <div class="available-text"><p class="m-2">Available: <span>$500</span></p></div>
+                        </div>
+                        <div class="col-md-4 mt-2 p-0">
+                          <button class="sub-red-input mt-4" data-toggle="modal" data-target="#exampleModal">Complete</button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-3 col-lg-3 col-xl-3 pr-0">
-                    <div class="datepicker date input-group ">
-                      <input type="text" placeholder="Choose Date" class="form-control" id="fecha1">
-                      <div class="input-group-append">
-                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ml-4 text-right">
-                    <button class="red-btn">Search</button>
-                  </div>
                 </div>
-                <script>
-                  var date = new Date();
-                  var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                  $(function () {
 
-                    $('.datepicker').datepicker({
-                      language: "es",
-                      autoclose: true,
-                      format: "dd/mm/yyyy",
-                      todayHighlight: true
-                    });
-                    $('.datepicker').datepicker('setDate', today);
-                  });
-
-                </script>
-                <div class="export-section">
-                  <div class="fromto-date">From 12-07-2022 to 02-24-2023</div>
-                  <div><button class="export-btn"><img src="./img/export-icon.png">Export</button></div>
-                </div>
-                <div class="table-box">
-                  <table class="table mt-4 pt-1 pos-report-table ">
-                    <thead>
-                      <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Start Time</th>
-                        <th scope="col">End Time</th>
-                        <th scope="col">Cash</th>
-                        <th scope="col">Credit/Debit</th>
-                        <th scope="col">Meal Plan</th>
-                        <th scope="col">Sub Total</th>
-                        <th scope="col">Tax</th>
-                        <th scope="col">Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                      <tr>
-                        <td>09-Mar-2023</td>
-                        <td>8:00 AM</td>
-                        <td>12:00 PM</td>
-                        <td>$12.00</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$12.00</td>
-                        <td>$1.00</td>
-                        <td>$13.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div id="pagingDiv" class="float-right   mr-3"><span class="disableLink"><span
-                        class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a
-                      href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#"
-                      class="activeLink">4</a><a href="#" class="activeLink"><span
-                        class="material-icons">keyboard_arrow_right</span></a></div>
-                </div>
               </div>
+
             </div>
             <div class="col-md-3 mt-4">
               <div class="right-menu bg-light">
                 <img src="./img/creat-western-dining.png">
                 <ul>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link active">Cafe</a></li>
+                  <li><a href="./pos-today-menu.html" class="right-nav-link">Market Side</a></li>
                   <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
                   <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
                   <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
-                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link active">Reports</a></li>
+                  <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
                   <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
                   <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
                   <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
@@ -368,31 +372,22 @@
       </main>
     </div>
   </div>
-  <!--Add meal Modal -->
-  <div class="modal fade add-meal-modal" id="exampleModal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-          <h2>Add</h2>
-          <div class="add-meal-form">
-            <form>
-              <input type="text" placeholder="Add Title">
-              <input type="text" placeholder="Breakfast Price">
-              <input type="text" placeholder="Lunch Price">
-              <input type="text" placeholder="Supper Price">
-              <input type="submit" value="Save">
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Model end -->
+ <!-- Modal -->
+ <div class="modal fade complete-modal" id="exampleModal" tabindex="-1" role="dialog"
+ aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-body ">
+       <img src="./img/icon_thankyou.png">
+       <p class=" my-4 py-2">The purchase has been successfully completed.</p>
+       <button type="button" class="red-btn " data-toggle="modal" data-target="#exampleModal">
+         Ok
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- Modal end -->
   <div id="notificationsOverlay" class="overlay"></div>
   <input type="hidden" id="hdnSystemTime" />
   <input type="hidden" id="hdnPO" value="0" />
@@ -444,10 +439,6 @@
   <audio id="pendingOrderTone" src="/css/saavor_new_order_tone.mp3" hidden controls></audio>
   <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://saavorconnect.com/assets/js/mdb.min.js"></script>
-  <!-- Datepicker -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
   <!-- <script src="wwwroot/js/site.js?v=V01.01245&amp;v=sh3r0vhMyBQNIZIMX6EmXmVMLRV5ieCSTHuBF77bnI8"></script>
     <script src="wwwroot/js/toastr.min.js"></script>
     <script src="wwwroot/js/jquery.common.js?v=V01.01245"></script>
