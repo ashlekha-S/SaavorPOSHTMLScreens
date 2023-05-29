@@ -193,37 +193,42 @@
                 <div class="container-fluid mb-5 pl-xl-2 pl-sm-0">
                     <div class="row mt-3 ml-0">
                         <div class="col-12 col-md-9 ">
-                            <div class="pos-setting pos-setting-register com-height p-4 pb-5 bg-light mt-4">
-                                <h2>POS Setting</h2>
-                                <ul class="tab-menu mt-4 ">
-                                    <li><a class="tab-menu-link" href="./pos-settings-profile.html">Settings</a></li>
-                                    <li><a class="tab-menu-link " href="./pos-settings-meal-plans.html">Meal Plans</a></li>
-                                    <li><a class="tab-menu-link active" href="./pos-settings-register.html">Register</a></li>
-                                </ul>                           
-                                  <table class="table settings-meal-table">
-                               
-                                    <tbody>
-                                      <tr>
-                                        <th scope="row">Register 1</th>
-                                        <td class="text-right"><span><svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="11.903" height="15.304" viewBox="0 0 11.903 15.304">
-                                            <path id="Path_15" data-name="Path 15" d="M6,17.2a1.705,1.705,0,0,0,1.7,1.7h6.8a1.705,1.705,0,0,0,1.7-1.7V7H6Z" transform="translate(-5.15 -3.599)" fill="#e32328"/>
-                                            <path id="Path_16" data-name="Path 16" d="M16.9,3.85H13.928L13.077,3H8.826l-.85.85H5v1.7H16.9Z" transform="translate(-5 -3)" fill="#e32328"/>
-                                          </svg>
-                                          </span></td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Register 2</th>
-                                        <td class="text-right"><span><svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="11.903" height="15.304" viewBox="0 0 11.903 15.304">
-                                            <path id="Path_15" data-name="Path 15" d="M6,17.2a1.705,1.705,0,0,0,1.7,1.7h6.8a1.705,1.705,0,0,0,1.7-1.7V7H6Z" transform="translate(-5.15 -3.599)" fill="#e32328"/>
-                                            <path id="Path_16" data-name="Path 16" d="M16.9,3.85H13.928L13.077,3H8.826l-.85.85H5v1.7H16.9Z" transform="translate(-5 -3)" fill="#e32328"/>
-                                          </svg>
-                                          </span></td>
-                                      </tr>
-                                 
-                                
-                                    </tbody>
-                                  </table>
-                                 <div class="d-flex justify-content-end"> <button class="register-add-btn w-100 p-2" data-toggle="modal" data-target="#exampleModal">Add</button></div>
+                            <div class=" mt-4 bg-light register-type-section d-flex align-items-center end-shift ">
+                                <div class="col-md-5 p-0"><img src="./img/university.png" class="img-fluid"></div>
+                                <div class="col-md-7  ">
+                                    <div class="register-type-inners">
+                                        <div class="text-center">
+                                            <img src="./img/concordia-logo.png">
+                                        </div>
+                                        <div class="end-day-section">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h2>Register 1</h2>
+                                                    <input type="text" class="register-input" value="$1,230.34"
+                                                        disabled="">
+                                                </div>
+                                                <div>
+                                                    <h2>Register 2</h2>
+                                                    <input type="text" class="register-input" value="$2,006.23"
+                                                        disabled="">
+                                                </div>
+                                                <div>
+                                                    <h2>Register 3</h2>
+                                                    <input type="text" class="register-input" value="$2,006.23"
+                                                        disabled="">
+                                                </div>
+                                                <div>
+                                                    <h2>Register 4</h2>
+                                                    <input type="text" class="register-input" value="$2,006.23"
+                                                        disabled="">
+                                                </div>
+                                            </div>
+                                            <p class=" mb-2 mt-5">Your end of day balance is</p>
+                                            <h3 class="shift-end-price ">$3,236.57</h3>
+                                            <button class="sub-btn-red mt-4">Accept</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3 mt-4">
@@ -231,82 +236,99 @@
                                 <img src="./img/creat-western-dining.png">
                                 <ul>
                                     <li><a href="./pos-today-menu.html" class="right-nav-link">Today’s Menu</a></li>
-                                    <li><a href="./pos-meal-plans.html" class="right-nav-link ">Meal Plans</a></li>
+                                    <li><a href="./pos-meal-plans.html" class="right-nav-link">Meal Plans</a></li>
                                     <li><a href="./pos-c-profile.html" class="right-nav-link">Customers Profile</a></li>
                                     <li><a href="./pos-report-transaction-orders.html" class="right-nav-link">Reports</a></li>
                                     <li><a href="./pos-end-shift.html" class="right-nav-link">End Shift</a></li>
-                                    <li><a href="./pos-end-day.html" class="right-nav-link">End Day</a></li>
-                                    <li><a href="./pos-settings-profile.html" class="right-nav-link active">POS Settings</a></li>
+                                    <li><a href="./pos-end-day.html" class="right-nav-link active">End Day</a></li>
+                                    <li><a href="./pos-settings-profile.html" class="right-nav-link">POS Settings</a></li>
                                   </ul>
                             </div>
                         </div>
                     </div>
+                </div>
             </main>
         </div>
     </div>
-<!--Add meal Modal -->
-<div class="modal fade item-search-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-      
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         <div class="text-center mb-xl-4 pb-xl-2">
-          <h2>Items</h2>
-          </div>
-          <div class="search-bar mt-3"><input type="search" placeholder="Search item"> <button><svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-            </path>
-          </svg></button></div>
-          <div class="item-select-section px-5 mt-5 pt-2">
-            <table class="table settings-meal-table">
-                <thead >
-                  <tr>
-                    <th scope="col" colspan="2" class="py-2">Breakfast</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row" class="py-3">    
-                        <label class="single-items"><input type="checkbox"> Avocado Toast</label></th>
-                   
-                  </tr>
-                </tbody>
-              </table>
-              <div id="pagingDiv" class="float-right  pt-3"><span class="disableLink"><span class="material-icons">keyboard_arrow_left</span></span><span class="active_page">1</span><a href="#" class="activeLink">2</a><a href="#" class="activeLink">3</a><a href="#" class="activeLink">4</a><a href="#" class="activeLink"><span class="material-icons">keyboard_arrow_right</span></a></div>
+    <!--Add meal Modal -->
+    <div class="modal fade item-search-modal" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="text-center mb-xl-4 pb-xl-2">
+                        <h2>Items</h2>
+                    </div>
+                    <div class="search-bar mt-3"><input type="search" placeholder="Search item"> <button><svg
+                                class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                </path>
+                            </svg></button></div>
+                    <div class="item-select-section px-5 mt-5 pt-2">
+                        <table class="table settings-meal-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2" class="py-2">Breakfast</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="py-3">
+                                        <label class="single-items"><input type="checkbox"> Avocado Toast</label>
+                                    </th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="pagingDiv" class="float-right  pt-3"><span class="disableLink"><span
+                                    class="material-icons">keyboard_arrow_left</span></span><span
+                                class="active_page">1</span><a href="#" class="activeLink">2</a><a href="#"
+                                class="activeLink">3</a><a href="#" class="activeLink">4</a><a href="#"
+                                class="activeLink"><span class="material-icons">keyboard_arrow_right</span></a></div>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
-       
-      </div>
     </div>
-  </div>
-  <!-- Model end -->
+    </div>
+    <!-- Model end -->
     <div id="notificationsOverlay" class="overlay"></div>
     <input type="hidden" id="hdnSystemTime" />
     <input type="hidden" id="hdnPO" value="0" />

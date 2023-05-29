@@ -1057,12 +1057,17 @@ ul.tab-menu {
     color: #aaa;
 }
 
+.servic-type .delete {
+    margin-left: auto;
+}
 .servic-type {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #707070;
     padding: 9px 15px;
+}
+.servic-type div:first-child {
+    width: 25%;
 }
 
 .servic-type p {
@@ -1744,8 +1749,8 @@ td.addons ul {
     border-radius: 0px;
     border: none;
 }
-.nav-tabs .nav-link.active {
-    background: #343A40;
+.checkout-tabs .nav-tabs .nav-link.active {
+    background: #343A40 !important;
     color: #fff !important;
 }
 .green-input {
@@ -1814,6 +1819,49 @@ td.addons ul {
     width: 100px !important;
     margin-top: 15px;
 } 
+#bootstrap-confirm-dialog .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 100%;
+}
+#bootstrap-confirm-dialog-delete-btn {
+    border-radius: 30px;
+    padding: 3px 25px;
+}
+#bootstrap-confirm-dialog .modal-body p {
+    margin: 0px;
+}
+.right-cart p:first-child {
+    max-width: 74%;
+}
+.end-day-section .d-flex::-webkit-scrollbar {
+    height: 7px;
+    background: #dfdfdf;
+    border-radius: 5px;
+}
+.end-day-section .d-flex::-webkit-scrollbar-thumb{
+    background-color: #E32328;
+    border-radius:5px ;
+}
+.register-card-wrap::-webkit-scrollbar {
+    width: 7px;
+    background: #dfdfdf;
+    border-radius: 5px;
+}
+.register-card-wrap::-webkit-scrollbar-thumb{
+    background-color: #E32328;
+    border-radius:5px ;
+}
+.end-day-section .d-flex.justify-content-between {
+    overflow-x: auto;
+    gap: 61px;
+    padding-bottom: 20px;
+}
+.accepted-radio-btn.marketSide input[type='checkbox'] {
+    display: none;
+}
+
 /* inventory-css */
 .inventory-top-section .add-btn {
     background-color: #E32328;
